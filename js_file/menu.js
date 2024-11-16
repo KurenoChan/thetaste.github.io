@@ -271,69 +271,69 @@
 
     //**Chop-Steak**//
     //1. Chicken Chop//
-    // function chicken_chop(){
-    //     let popupImage = document.getElementById('popupImg');
-    //     popupImage.src = "pictures/menu/food-drinks/chop-steak/chicken_chop.jpg";
+    function chicken_chop(){
+        let popupImage = document.getElementById('popupImg');
+        popupImage.src = "pictures/menu/food-drinks/chop-steak/chicken_chop.jpg";
         
-    //     let popupDetails = document.getElementById('popup_details');
-    //     popupDetails.innerHTML = "Ingredients: Fried/Grilled Tender Chicken Breast, Black Pepper/Mushroom Sauce, Fresh-Made Coleslaw, Fried Eggs, Fries, Sliced Cucumber & Tomatoes" + "<br><br>" + "Category: Chop-Steak" + "<br>" + "Texture&nbsp;&nbsp;: Meaty, Flavorful, Tender"
+        let popupDetails = document.getElementById('popup_details');
+        popupDetails.innerHTML = "Ingredients: Fried/Grilled Tender Chicken Breast, Black Pepper/Mushroom Sauce, Fresh-Made Coleslaw, Fried Eggs, Fries, Sliced Cucumber & Tomatoes" + "<br><br>" + "Category: Chop-Steak" + "<br>" + "Texture&nbsp;&nbsp;: Meaty, Flavorful, Tender"
 
-    //     // AI-Generated
-    //     document.getElementById('popup-option').style.display = "block";
-    //     var popupMainOption = document.getElementById('main_option');
-    //     var mainOptionValues = ['Select Cooking Type', 'Fried', 'Grilled'];
+        // AI-Generated
+        document.getElementById('popup-option').style.display = "block";
+        var popupMainOption = document.getElementById('main_option');
+        var mainOptionValues = ['Select Cooking Type', 'Fried', 'Grilled'];
         
-    //     for (let i = 0; i < mainOptionValues.length; i++) {
-    //       let mainOption = document.createElement('option');
-    //       mainOption.text = mainOptionValues[i];
-    //       if (i === 0) {
-    //         mainOption.disabled = true;
-    //         mainOption.selected = true;
-    //       }
+        for (let i = 0; i < mainOptionValues.length; i++) {
+          let mainOption = document.createElement('option');
+          mainOption.text = mainOptionValues[i];
+          if (i === 0) {
+            mainOption.disabled = true;
+            mainOption.selected = true;
+          }
         
-    //       mainOption.value = mainOptionValues[i];
-    //       popupMainOption.add(mainOption);
-    //     }
+          mainOption.value = mainOptionValues[i];
+          popupMainOption.add(mainOption);
+        }
         
-    //     var popupSubOption = document.getElementById('sub_option');
-    //     var subOptionValues = ['Select Sauce', 'Mushroom Sauce', 'Black Pepper Sauce'];
-    //     for (let i = 0; i < subOptionValues.length; i++) {
-    //       let subOption = document.createElement('option');
-    //       subOption.text = subOptionValues[i];
-    //       if (i === 0) {
-    //         subOption.disabled = true;
-    //         subOption.selected = true;
-    //       }
+        var popupSubOption = document.getElementById('sub_option');
+        var subOptionValues = ['Select Sauce', 'Mushroom Sauce', 'Black Pepper Sauce'];
+        for (let i = 0; i < subOptionValues.length; i++) {
+          let subOption = document.createElement('option');
+          subOption.text = subOptionValues[i];
+          if (i === 0) {
+            subOption.disabled = true;
+            subOption.selected = true;
+          }
         
-    //       subOption.value = subOptionValues[i];
-    //       popupSubOption.add(subOption);
-    //     }
+          subOption.value = subOptionValues[i];
+          popupSubOption.add(subOption);
+        }
         
-    //     popupMainOption.addEventListener('change', function() {
-    //       if (popupMainOption.value === 'Grilled') {
-    //         document.getElementById('popup-sub_option').style.display = 'block';
-    //       }
-    //       else {
-    //         document.getElementById('popup-sub_option').style.display = 'none';
-    //       }
-    //     });
-    //     // End of AI-Generated
+        popupMainOption.addEventListener('change', function() {
+          if (popupMainOption.value === 'Grilled') {
+            document.getElementById('popup-sub_option').style.display = 'block';
+          }
+          else {
+            document.getElementById('popup-sub_option').style.display = 'none';
+          }
+        });
+        // End of AI-Generated
 
-    //     let foodName = document.getElementById('foodName');
-    //     foodName.innerHTML = 'Chicken Chop';
-    //     foodName.style.fontSize = "50px";
-    //     foodName.style.margin  = "0";
-    //     foodName.style.letterSpacing = "5px";
-    //     foodName.style.fontWeight = "lighter";
+        let foodName = document.getElementById('foodName');
+        foodName.innerHTML = 'Chicken Chop';
+        foodName.style.fontSize = "50px";
+        foodName.style.margin  = "0";
+        foodName.style.letterSpacing = "5px";
+        foodName.style.fontWeight = "lighter";
 
-    //     let foodDescription = document.getElementById('foodDescription');
-    //     foodDescription.innerHTML = 'A succulent and flavorful delight, with its juicy and tender texture, it offers a satisfying bite. Cooked to perfection, the chicken chop boasts a firm and meaty consistency that is both satisfying and enjoyable. The exterior may feature a slightly crispy or charred finish, adding a delightful contrast. Seasoned with care, this premium dish delivers a delectable taste experience that will leave you craving for more.'
-    //     foodDescription.style.fontSize = "20px";
+        let foodDescription = document.getElementById('foodDescription');
+        foodDescription.innerHTML = 'A succulent and flavorful delight, with its juicy and tender texture, it offers a satisfying bite. Cooked to perfection, the chicken chop boasts a firm and meaty consistency that is both satisfying and enjoyable. The exterior may feature a slightly crispy or charred finish, adding a delightful contrast. Seasoned with care, this premium dish delivers a delectable taste experience that will leave you craving for more.'
+        foodDescription.style.fontSize = "20px";
 
-    //     let price = document.getElementById('price');
-    //     price.innerHTML = 'RM 19.99/pax';
-    //     price.style.letterSpacing = "5px";
-    // }
+        let price = document.getElementById('price');
+        price.innerHTML = 'RM 19.99/pax';
+        price.style.letterSpacing = "5px";
+    }
     function chicken_chop() {
         let popupImage = document.getElementById('popupImg');
         popupImage.src = "pictures/menu/food-drinks/chop-steak/chicken_chop.jpg";
