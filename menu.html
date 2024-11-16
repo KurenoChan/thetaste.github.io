@@ -3,9 +3,9 @@
     <head>       
         <meta charset="UTF-8">
         <title>Menu</title>
-        <link rel="stylesheet" href="../css_file/thetaste.css" type="text/css"><!--Link to external thetaste.css style sheet-->
+        <link rel="stylesheet" href="css_file/thetaste.css" type="text/css"><!--Link to external thetaste.css style sheet-->
         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v6.1.1/css/all.css"><!--Import Font Awesome v6.1.1 Icon Library-->
-        <link rel="icon" type="image/x-icon" href="../pictures/icon-logo/thetaste-icon.ico"><!--Setting Up Favicon-->
+        <link rel="icon" type="image/x-icon" href="pictures/icon-logo/thetaste-icon.ico"><!--Setting Up Favicon-->
         <style>
             /*Main Content*/
             /***Button***/
@@ -232,7 +232,7 @@
                 margin-left: auto;
                 margin-right: auto;
                 width: 100%;    
-                background: linear-gradient(rgb(0, 0, 0), rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3), rgba(0, 0, 0)), url("../pictures/background/menu_back.png");
+                background: linear-gradient(rgb(0, 0, 0), rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3), rgba(0, 0, 0)), url("pictures/background/menu_back.png");
                 background-position: center;
                 background-repeat: no-repeat;
                 background-size: cover;
@@ -452,20 +452,20 @@
         </style>
         <script>
             var hoverSound = new Audio(); // Hover Sound Effect
-            hoverSound.src = "../audios/soundEffects/hover.mp3";
+            hoverSound.src = "audios/soundEffects/hover.mp3";
 
             var clickSound = new Audio(); // Click Sound Effect
-            clickSound.src = "../audios/soundEffects/click.mp3";
+            clickSound.src = "audios/soundEffects/click.mp3";
             
             var sidebarhoverSound = new Audio(); // Side & Category Nav Hover Sound Effect
-            sidebarhoverSound.src = "../audios/soundEffects/hover_sidebar.mp3";
+            sidebarhoverSound.src = "audios/soundEffects/hover_sidebar.mp3";
         </script>
     </head>
 
     <body>
         <audio autoplay loop><!--Background Musics-->
-            <source src="../audios/musics/renconcile.mp3" type="audio/mp3">
-            <source src="../audios/musics/angels_dream.mp3" type="audio/mp3">
+            <source src="audios/musics/renconcile.mp3" type="audio/mp3">
+            <source src="audios/musics/angels_dream.mp3" type="audio/mp3">
             This browser does not support HTML5 audio.
         </audio>
         <!--Preloader Scene-->
@@ -481,12 +481,12 @@
         </div>
 
         <header><!--Logo Hotspot-->
-            <a href="index.html" title="The Taste Home Page"><img src="../pictures/icon-logo/thetaste-logo.png" alt="The Taste Logo"></a><!--Hotspot-->
+            <a href="index.html" title="The Taste Home Page"><img src="pictures/icon-logo/thetaste-logo.png" alt="The Taste Logo"></a><!--Hotspot-->
         </header>
 
         <nav><!--Top Navigation Bar & Circle Logo Hotspot-->
             <ul>
-                <li style="transform: translate(-30px, 1px);"><a href="index.html" title="The Taste Home Page"><img src="../pictures/icon-logo/thetaste-icon.ico" alt="The Taste Icon" style="height: 5em;"></a></li>
+                <li style="transform: translate(-30px, 1px);"><a href="index.html" title="The Taste Home Page"><img src="pictures/icon-logo/thetaste-icon.ico" alt="The Taste Icon" style="height: 5em;"></a></li>
                 <li><a href="index.html" title="Home" class="navText" onmouseover="hoverSound.play()" onmousedown="clickSound.play()"><i class="fa fa-home"></i>&nbsp;HOME</a></li>
                 <li id="menu">
                     <a href="menu.html" title="Menu" style="border-bottom: 5px solid rgb(255, 230, 131);" class="navText" onmouseover="hoverSound.play()" onmousedown="clickSound.play()"><i class="fa fa-book"></i>&nbsp;MENU&nbsp;<i class="fa fa-caret-down"></i></a>
@@ -601,25 +601,25 @@
                 <h3>3 PM - 6 PM</h3><br>
                 <div class="row">
                     <div class="card" onmouseover="hoverSound.play()" onmousedown="clickSound.play()" onclick="showhide_order(); big_mamaOffer()">
-                        <img src="../pictures/menu/offer/big_mama-offer.png" alt="Big Mama Offer">
+                        <img src="pictures/menu/offer/big_mama-offer.png" alt="Big Mama Offer">
                         <h4>Big Mama<br>Special</h4>
                         <h3>RM 19.99</h3>
                         <button type="submit" title="Order" class="orderBtn" id="big_mama_Offer-order">Order</button>
                     </div>
                     <div class="card" onmouseover="hoverSound.play()" onmousedown="clickSound.play()" onclick="showhide_order(); aglio_olioOffer()">
-                        <img src="../pictures/menu/offer/aglio_olio_seafood-offer.png" alt="Aglio Olio Offer">
+                        <img src="pictures/menu/offer/aglio_olio_seafood-offer.png" alt="Aglio Olio Offer">
                         <h4>Seafood Aglio Olio<br>Special</h4>
                         <h3>RM 27.90</h3>
                         <button type="submit" title="Order" class="orderBtn" id="aglio_olio_seafood_Offer-order">Order</button>
                     </div>
                     <div class="card" onmouseover="hoverSound.play()" onmousedown="clickSound.play()" onclick="showhide_order(); spicy_bbq_burgerOffer()">
-                        <img src="../pictures/menu/offer/spicy_bbq_burger-offer.png" alt="Spicy BBQ Burger Offer">
+                        <img src="pictures/menu/offer/spicy_bbq_burger-offer.png" alt="Spicy BBQ Burger Offer">
                         <h4>Spicy BBQ Burger<br>Special</h4>
                         <h3>RM 17.80</h3>
                         <button type="submit" title="Order" class="orderBtn" id="spicy_bbq_burger_Offer-order">Order</button>
                     </div>
                     <div class="card" onmouseover="hoverSound.play()" onmousedown="clickSound.play()" onclick="showhide_order(); lamb_shankOffer()">
-                        <img src="../pictures/menu/offer/lamb_shank-offer.png" alt="Lamb Shank Offer">
+                        <img src="pictures/menu/offer/lamb_shank-offer.png" alt="Lamb Shank Offer">
                         <h4>Lamb Shank<br>Special</h4>
                         <h3>RM 29.90</h3>
                         <button type="submit" title="Order" class="orderBtn" id="lamb_shank_Offer-order">Order</button>
@@ -631,19 +631,19 @@
                 <div class="row">
                     <a href="#burger" title="View More Burgers" onmouseover="sidebarhoverSound.play()" onmousedown="clickSound.play()">
                         <div class="card">
-                            <img src="../pictures/menu/category/burger.png" alt="Burger">
+                            <img src="pictures/menu/category/burger.png" alt="Burger">
                             <h2>Burger</h2>
                         </div>
                     </a>
                     <a href="#chop-steak" title="View More Chop-Steaks" onmouseover="sidebarhoverSound.play()" onmousedown="clickSound.play()">
                         <div class="card">
-                            <img src="../pictures/menu/category/chop-steak.png" alt="Chop-Steak">
+                            <img src="pictures/menu/category/chop-steak.png" alt="Chop-Steak">
                             <h2>Chop-Steak</h2>
                         </div>
                     </a>
                     <a href="#pasta" title="View More Pastas" onmouseover="sidebarhoverSound.play()" onmousedown="clickSound.play()">
                         <div class="card">
-                            <img src="../pictures/menu/category/pasta.png" alt="Pasta">
+                            <img src="pictures/menu/category/pasta.png" alt="Pasta">
                             <h2>Pasta</h2>
                         </div>
                     </a>
@@ -651,19 +651,19 @@
                 <div class="row">
                     <a href="#side-dish" title="View More Side Dishes" onmouseover="sidebarhoverSound.play()" onmousedown="clickSound.play()">
                         <div class="card">
-                            <img src="../pictures/menu/category/side-dish.png" alt="Side Dish">
+                            <img src="pictures/menu/category/side-dish.png" alt="Side Dish">
                             <h2>Side Dish</h2>
                         </div>
                     </a>
                     <a href="#beverages" title="View More Beverages" onmouseover="sidebarhoverSound.play()" onmousedown="clickSound.play()">
                         <div class="card">
-                            <img src="../pictures/menu/category/beverages.png" alt="Beverage">
+                            <img src="pictures/menu/category/beverages.png" alt="Beverage">
                             <h2>Beverages</h2>
                         </div>
                     </a>
                     <a href="#desserts" title="View More Desserts" onmouseover="sidebarhoverSound.play()" onmousedown="clickSound.play()">
                         <div class="card">
-                            <img src="../pictures/menu/category/desserts.png" alt="Dessert">
+                            <img src="pictures/menu/category/desserts.png" alt="Dessert">
                             <h2>Desserts</h2>
                         </div>
                     </a>
@@ -675,7 +675,7 @@
                     <h2>Burger</h2>
                     <div class="row">
                         <div class="column" onmouseover="hoverSound.play()" onmousedown="clickSound.play()" id="big_mama-order" onclick="showhide_order(); big_mama()">
-                            <img src="../pictures/menu/food-drinks/burger/big_mama.jpg" alt="Big Mama">
+                            <img src="pictures/menu/food-drinks/burger/big_mama.jpg" alt="Big Mama">
                             <h3 style="margin-bottom: 50px;"><i class="fas fa-bookmark"></i>Big Mama</h3>
                             <i class="fas fa-star"></i>
                             <i class="fas fa-star"></i>
@@ -686,7 +686,7 @@
                             <button type="submit" title="Order" class="orderBtn">Order</button>
                         </div>
                         <div class="column" id="beef_burger-order" onmouseover="hoverSound.play()" onmousedown="clickSound.play()" onclick="showhide_order(); beef_burger()">
-                            <img src="../pictures/menu/food-drinks/burger/beef_burger.jpg" alt="Beef Burger">
+                            <img src="pictures/menu/food-drinks/burger/beef_burger.jpg" alt="Beef Burger">
                             <h3 style="margin-bottom: 50px;">Beef Burger</h3>
                             <i class="fas fa-star"></i>
                             <i class="fas fa-star"></i>
@@ -697,7 +697,7 @@
                             <button type="submit" value="Order" title="Order" class="orderBtn">Order</button>
                         </div>
                         <div class="column" id="spicy_bbq_burger-order" onmouseover="hoverSound.play()" onmousedown="clickSound.play()" onclick="showhide_order(); spicy_bbq_burger()">
-                            <img src="../pictures/menu/food-drinks/burger/spicy_bbq_burger.jpg" alt="Spicy BBQ Burger">
+                            <img src="pictures/menu/food-drinks/burger/spicy_bbq_burger.jpg" alt="Spicy BBQ Burger">
                             <h3>Spicy BBQ<br>Burger</h3>
                             <i class="fas fa-star"></i>
                             <i class="fas fa-star"></i>
@@ -708,7 +708,7 @@
                             <button type="submit" value="Order" title="Order" class="orderBtn">Order</button>                           
                         </div>
                         <div class="column" id="cheezzy_burger-order" onmouseover="hoverSound.play()" onmousedown="clickSound.play()" onclick="showhide_order(); cheezzy_burger()">
-                            <img src="../pictures/menu/food-drinks/burger/cheezzy_burger.jpg" alt="Cheezzy Burger">
+                            <img src="pictures/menu/food-drinks/burger/cheezzy_burger.jpg" alt="Cheezzy Burger">
                             <h3><i class="fas fa-bookmark"></i>Cheezzy<br>Burger</h3>
                             <i class="fas fa-star"></i>
                             <i class="fas fa-star"></i>
@@ -725,7 +725,7 @@
                     <h2>Chop-Steak</h2>
                     <div class="row">
                         <div class="column" id="chicken_chop-order" onmouseover="hoverSound.play()" onmousedown="clickSound.play()" onclick="showhide_order(); chicken_chop()">
-                            <img src="../pictures/menu/food-drinks/chop-steak/chicken_chop.jpg" alt="Chicken Chop">
+                            <img src="pictures/menu/food-drinks/chop-steak/chicken_chop.jpg" alt="Chicken Chop">
                             <h3>Chicken Chop</h3>
                             <i class="fas fa-star"></i>
                             <i class="fas fa-star"></i>
@@ -736,7 +736,7 @@
                             <button type="submit" value="Order" title="Order" class="orderBtn">Order</button>
                         </div>
                         <div class="column" id="fish&chips-order" onmouseover="hoverSound.play()" onmousedown="clickSound.play()" onclick="showhide_order(); fish_n_chips()">
-                            <img src="../pictures/menu/food-drinks/chop-steak/fish&chips.jpg" alt="Fish & Chips">
+                            <img src="pictures/menu/food-drinks/chop-steak/fish&chips.jpg" alt="Fish & Chips">
                             <h3>Fish &amp; Chips</h3>
                             <i class="fas fa-star"></i>
                             <i class="fas fa-star"></i>
@@ -747,7 +747,7 @@
                             <button type="submit" value="Order" title="Order" class="orderBtn">Order</button>
                         </div>
                         <div class="column" id="grilled_steak-order" onmouseover="hoverSound.play()" onmousedown="clickSound.play()" onclick="showhide_order(); grilled_steak()">
-                            <img src="../pictures/menu/food-drinks/chop-steak/grilled_steak.jpg" alt="Grilled Steak">
+                            <img src="pictures/menu/food-drinks/chop-steak/grilled_steak.jpg" alt="Grilled Steak">
                             <h3>Grilled Steak</h3>
                             <i class="fas fa-star"></i>
                             <i class="fas fa-star"></i>
@@ -758,7 +758,7 @@
                             <button type="submit" value="Order" title="Order" class="orderBtn">Order</button>
                         </div>
                         <div class="column" id="lamb_shank-order" onmouseover="hoverSound.play()" onmousedown="clickSound.play()" onclick="showhide_order(); lamb_shank()">
-                            <img src="../pictures/menu/food-drinks/chop-steak/lamb_shank.jpg" alt="Lamb Shank">
+                            <img src="pictures/menu/food-drinks/chop-steak/lamb_shank.jpg" alt="Lamb Shank">
                             <h3><i class="fas fa-bookmark"></i>Lamb Shank</h3>
                             <i class="fas fa-star"></i>
                             <i class="fas fa-star"></i>
@@ -775,7 +775,7 @@
                     <h2>Pasta</h2>
                     <div class="row">
                         <div class="column" id="bolognese-order" onmouseover="hoverSound.play()" onmousedown="clickSound.play()" onclick="showhide_order(); bolognese()">
-                            <img src="../pictures/menu/food-drinks/pasta/bolognese.jpg" alt="Spaghetti Bolognese">
+                            <img src="pictures/menu/food-drinks/pasta/bolognese.jpg" alt="Spaghetti Bolognese">
                             <h3><i class="fas fa-bookmark"></i>Spaghetti<br>Bolognese</h3>
                             <i class="fas fa-star"></i>
                             <i class="fas fa-star"></i>
@@ -786,7 +786,7 @@
                             <button type="submit" value="Order" title="Order" class="orderBtn">Order</button>
                         </div>
                         <div class="column" id="aglio_olio_seafood-order" onmouseover="hoverSound.play()" onmousedown="clickSound.play()" onclick="showhide_order(); aglio_olio()">
-                            <img src="../pictures/menu/food-drinks/pasta/aglio_olio_seafood.jpg" alt="Aglio Olio">
+                            <img src="pictures/menu/food-drinks/pasta/aglio_olio_seafood.jpg" alt="Aglio Olio">
                             <h3>Seafood<br>Aglio Olio</h3>
                             <i class="fas fa-star"></i>
                             <i class="fas fa-star"></i>
@@ -797,7 +797,7 @@
                             <button type="submit" value="Order" title="Order" class="orderBtn">Order</button>
                         </div>
                         <div class="column" id="spaghetti_arrabiata-order" onmouseover="hoverSound.play()" onmousedown="clickSound.play()" onclick="showhide_order(); arrabiata()">
-                            <img src="../pictures/menu/food-drinks/pasta/spaghetti_arrabiata.jpg" alt="Spaghetti Arrabiata">
+                            <img src="pictures/menu/food-drinks/pasta/spaghetti_arrabiata.jpg" alt="Spaghetti Arrabiata">
                             <h3>Spaghetti<br>Arrabiata</h3>
                             <i class="fas fa-star"></i>
                             <i class="fas fa-star"></i>
@@ -808,7 +808,7 @@
                             <button type="submit" value="Order" title="Order" class="orderBtn">Order</button>
                         </div>
                         <div class="column" id="shrimp_alfredo-order" onmouseover="hoverSound.play()" onmousedown="clickSound.play()" onclick="showhide_order(); alfredo()">
-                            <img src="../pictures/menu/food-drinks/pasta/shrimp_alfredo.jpg" alt="Shrimp Alfredo">
+                            <img src="pictures/menu/food-drinks/pasta/shrimp_alfredo.jpg" alt="Shrimp Alfredo">
                             <h3>Shrimp<br>Alfredo</h3>
                             <i class="fas fa-star"></i>
                             <i class="fas fa-star"></i>
@@ -825,7 +825,7 @@
                     <h2>Side Dish</h2>
                     <div class="row">
                         <div class="column" id="lasagna-order" onmouseover="hoverSound.play()" onmousedown="clickSound.play()" onclick="showhide_order(); lasagna()">
-                            <img src="../pictures/menu/food-drinks/side-dish/lasagna.jpg" alt="Lasagna">
+                            <img src="pictures/menu/food-drinks/side-dish/lasagna.jpg" alt="Lasagna">
                             <h3>Baked Lasagna</h3>
                             <i class="fas fa-star"></i>
                             <i class="fas fa-star"></i>
@@ -836,7 +836,7 @@
                             <button type="submit" value="Order" title="Order" class="orderBtn">Order</button>
                         </div>
                         <div class="column" id="garden_salad-order" onmouseover="hoverSound.play()" onmousedown="clickSound.play()" onclick="showhide_order(); garden_salad()">
-                            <img src="../pictures/menu/food-drinks/side-dish/garden_salad.jpg" alt="Garden Salad">
+                            <img src="pictures/menu/food-drinks/side-dish/garden_salad.jpg" alt="Garden Salad">
                             <h3>Garden Salad</h3>
                             <i class="fas fa-star"></i>
                             <i class="fas fa-star"></i>
@@ -847,7 +847,7 @@
                             <button type="submit" value="Order" title="Order" class="orderBtn">Order</button>
                         </div>
                         <div class="column" id="quesadilla-order" onmouseover="hoverSound.play()" onmousedown="clickSound.play()" onclick="showhide_order(); quesadilla()">
-                            <img src="../pictures/menu/food-drinks/side-dish/quesadilla.jpg" alt="Quesadilla">
+                            <img src="pictures/menu/food-drinks/side-dish/quesadilla.jpg" alt="Quesadilla">
                             <h3>Quesadilla</h3>
                             <i class="fas fa-star"></i>
                             <i class="fas fa-star"></i>
@@ -858,7 +858,7 @@
                             <button type="submit" value="Order" title="Order" class="orderBtn">Order</button>
                         </div>
                         <div class="column" id="wedges-order" onmouseover="hoverSound.play()" onmousedown="clickSound.play()" onclick="showhide_order(); wedges()">
-                            <img src="../pictures/menu/food-drinks/side-dish/wedges.jpg" alt="Wedges">
+                            <img src="pictures/menu/food-drinks/side-dish/wedges.jpg" alt="Wedges">
                             <h3>Potato Wedges</h3>
                             <i class="fas fa-star"></i>
                             <i class="fas fa-star"></i>
@@ -875,7 +875,7 @@
                     <h2>Beverages</h2>
                     <div class="row">
                         <div class="column" id="hot_chocolate-order" onmouseover="hoverSound.play()" onmousedown="clickSound.play()" onclick="showhide_order(); hot_chocolate()">
-                            <img src="../pictures/menu/food-drinks/beverages/hot_chocolate.jpg" alt="Hot Chocolate">
+                            <img src="pictures/menu/food-drinks/beverages/hot_chocolate.jpg" alt="Hot Chocolate">
                             <h3>Hot<br>Chocolate</h3>
                             <i class="fas fa-star"></i>
                             <i class="fas fa-star"></i>
@@ -886,7 +886,7 @@
                             <button type="submit" value="Order" title="Order" class="orderBtn">Order</button>
                         </div>
                         <div class="column" id="mixed_berries_smoothie-order" onmouseover="hoverSound.play()" onmousedown="clickSound.play()" onclick="showhide_order(); mixed_berries_smoothie()">
-                            <img src="../pictures/menu/food-drinks/beverages/mixed_berries_smoothie.jpg" alt="Mixed Berries Smoothie">
+                            <img src="pictures/menu/food-drinks/beverages/mixed_berries_smoothie.jpg" alt="Mixed Berries Smoothie">
                             <h3><i class="fas fa-bookmark"></i>Mixed Berries<br>Smoothie</h3>
                             <i class="fas fa-star"></i>
                             <i class="fas fa-star"></i>
@@ -897,7 +897,7 @@
                             <button type="submit" value="Order" title="Order" class="orderBtn">Order</button>
                         </div>
                         <div class="column" id="peach_soda_float-order" onmouseover="hoverSound.play()" onmousedown="clickSound.play()" onclick="showhide_order(); peach_soda_float()">
-                            <img src="../pictures/menu/food-drinks/beverages/peach_soda_float.jpg" alt="Peach Soda Float">
+                            <img src="pictures/menu/food-drinks/beverages/peach_soda_float.jpg" alt="Peach Soda Float">
                             <h3><i class="fas fa-bookmark"></i>Peach Soda<br>Float</h3>
                             <i class="fas fa-star"></i>
                             <i class="fas fa-star"></i>
@@ -908,7 +908,7 @@
                             <button type="submit" value="Order" title="Order" class="orderBtn">Order</button>
                         </div>
                         <div class="column" id="shirley_cocktail-order" onmouseover="hoverSound.play()" onmousedown="clickSound.play()" onclick="showhide_order(); shirley_cocktail()">
-                            <img src="../pictures/menu/food-drinks/beverages/shirley_cocktail.jpg" alt="Shirley Cocktail">
+                            <img src="pictures/menu/food-drinks/beverages/shirley_cocktail.jpg" alt="Shirley Cocktail">
                             <h3>Shirley<br>Cocktail</h3>
                             <i class="fas fa-star"></i>
                             <i class="fas fa-star"></i>
@@ -925,7 +925,7 @@
                     <h2>Desserts</h2>
                     <div class="row">
                         <div class="column" id="cheese_cake-order" onmouseover="hoverSound.play()" onmousedown="clickSound.play()" onclick="showhide_order(); cheese_cake()">
-                            <img src="../pictures/menu/food-drinks/desserts/cheese_cake.jpg" alt="Cheese Cake">
+                            <img src="pictures/menu/food-drinks/desserts/cheese_cake.jpg" alt="Cheese Cake">
                             <h3>New York<br>Cheese Cake</h3>
                             <i class="fas fa-star"></i>
                             <i class="fas fa-star"></i>
@@ -936,7 +936,7 @@
                             <button type="submit" value="Order" title="Order" class="orderBtn">Order</button>
                         </div>
                         <div class="column" id="mango_sago_in_coconut_milk-order" onmouseover="hoverSound.play()" onmousedown="clickSound.play()" onclick="showhide_order(); mango_sago_in_coconut_milk()">
-                            <img src="../pictures/menu/food-drinks/desserts/mango_sago_in_coconut_milk.jpg" alt="Mango Sago">
+                            <img src="pictures/menu/food-drinks/desserts/mango_sago_in_coconut_milk.jpg" alt="Mango Sago">
                             <h3>Mango Sago in<br>Coconut Milk</h3>
                             <i class="fas fa-star"></i>
                             <i class="fas fa-star"></i>
@@ -947,7 +947,7 @@
                             <button type="submit" value="Order" title="Order" class="orderBtn">Order</button>
                         </div>
                         <div class="column" id="matcha_ice_cream-order" onmouseover="hoverSound.play()" onmousedown="clickSound.play()" onclick="showhide_order(); matcha_ice_cream()">
-                            <img src="../pictures/menu/food-drinks/desserts/matcha_ice_cream.jpg" alt="Matcha Ice Cream">
+                            <img src="pictures/menu/food-drinks/desserts/matcha_ice_cream.jpg" alt="Matcha Ice Cream">
                             <h3>Matcha<br>Ice Cream</h3>
                             <i class="fas fa-star"></i>
                             <i class="fas fa-star"></i>
@@ -958,7 +958,7 @@
                             <button type="submit" value="Order" title="Order" class="orderBtn">Order</button>
                         </div>
                         <div class="column" id="red_rubies_in_coconut_milk-order" onmouseover="hoverSound.play()" onmousedown="clickSound.play()" onclick="showhide_order(); red_rubies_in_coconut_milk()">
-                            <img src="../pictures/menu/food-drinks/desserts/red_rubies_in_coconut_milk.jpg" alt="Red Rubbies">
+                            <img src="pictures/menu/food-drinks/desserts/red_rubies_in_coconut_milk.jpg" alt="Red Rubbies">
                             <h3><i class="fas fa-bookmark"></i>Red Rubies in<br>Coconut Milk</h3>
                             <i class="fas fa-star"></i>
                             <i class="fas fa-star"></i>
@@ -983,7 +983,7 @@
 
                 <div id="app"><!--Download App-->
                     <a href="https://www.apple.com/my/app-store/" title="Download on App Store" target="_blank"><img src="https://tools.applemediaservices.com/api/badges/download-on-the-app-store/black/en-us?size=250x83&amp;releaseDate=1276560000&h=7e7b68fad19738b5649a1bfb78ff46e9" alt="Download on App Store" style="height: 60px; transform: translateY(-13px); margin-left: 35px;"></a>
-                    <a href="https://play.google.com/store/games?hl=en" title="Download on Google Play" target="_blank"><img src="../pictures/icon-logo/badge_googleplay.png" alt="Download on Google Play" style="width: 230px;"></a>
+                    <a href="https://play.google.com/store/games?hl=en" title="Download on Google Play" target="_blank"><img src="pictures/icon-logo/badge_googleplay.png" alt="Download on Google Play" style="width: 230px;"></a>
                 </div>
             </div>
             <div class="enquiry">
@@ -1031,6 +1031,6 @@
                 Copyright &copy; 2023 The Taste Malaysia. All Rights Reserved.
             </div>
         </footer>
-        <script src="../js_file/menu.js"></script>
+        <script src="js_file/menu.js"></script>
     </body>
 </html>
