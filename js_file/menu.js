@@ -47,7 +47,7 @@
         document.getElementById('offerTitle').style.display = "block";
 
         let popupImage = document.getElementById('popupImg');
-        popupImage.src = "../pictures/menu/offer/big_mama-offer-home.png";
+        popupImage.src = "pictures/menu/offer/big_mama-offer-home.png";
         
         let popupDetails = document.getElementById('popup_details');
         popupDetails.innerHTML = "Ingredients: Grilled Beef patty, Bacon, Fried Eggs, Cheese, Tomatoes, Toasted Bun" + "<br><br>";
@@ -76,7 +76,7 @@
         document.getElementById('offerTitle').style.display = "block";
 
         let popupImage = document.getElementById('popupImg');
-        popupImage.src = "../../pictures/menu/offer/aglio_olio_seafood-offer-home.png";
+        popupImage.src = "pictures/menu/offer/aglio_olio_seafood-offer-home.png";
         popupImage.style.marginLeft = "30px";
         
         let popupDetails = document.getElementById('popup_details');
@@ -106,7 +106,7 @@
         document.getElementById('offerTitle').style.display = "block";
 
         let popupImage = document.getElementById('popupImg');
-        popupImage.src = "../../pictures/menu/offer/spicy_bbq_burger-offer-home.png";
+        popupImage.src = "pictures/menu/offer/spicy_bbq_burger-offer-home.png";
         popupImage.style.marginLeft = "40px";
         
         let popupDetails = document.getElementById('popup_details');
@@ -136,7 +136,7 @@
         document.getElementById('offerTitle').style.display = "block";
 
         let popupImage = document.getElementById('popupImg');
-        popupImage.src = "../../pictures/menu/offer/lamb_shank-offer-home.png";
+        popupImage.src = "pictures/menu/offer/lamb_shank-offer-home.png";
         popupImage.style.marginLeft = "0";
         
         let popupDetails = document.getElementById('popup_details');
@@ -166,7 +166,7 @@
     //1. Big Mama//
     function big_mama(){
         let popupImage = document.getElementById('popupImg');
-        popupImage.src = "../../pictures/menu/food-drinks/burger/big_mama.jpg";
+        popupImage.src = "pictures/menu/food-drinks/burger/big_mama.jpg";
         
         let popupDetails = document.getElementById('popup_details');
         popupDetails.innerHTML = "Ingredients: Grilled Beef patty, Bacon, Fried Eggs, Cheese, Tomatoes, Toasted Bun" + "<br><br>" + "Category: Burger" +"<br>" + "Texture&nbsp;&nbsp;: Juicy, Crispy, Cheesy";
@@ -192,7 +192,7 @@
     //2. Beef Burger//
     function beef_burger(){
         let popupImage = document.getElementById('popupImg');
-        popupImage.src = "../../pictures/menu/food-drinks/burger/beef_burger.jpg";
+        popupImage.src = "pictures/menu/food-drinks/burger/beef_burger.jpg";
         
         let popupDetails = document.getElementById('popup_details');
         popupDetails.innerHTML = "Ingredients: High-Quality Beef, Brioche Buns, Gourmet Cheese, Specialty Sauces, Fresh Lettuce & Tomatoes" + "<br><br>" + "Category: Burger" + "<br>" + "Texture&nbsp;&nbsp;: Juicy, Tender, Melt-in-your-mouth"
@@ -218,7 +218,7 @@
     //3. Spicy BBQ Burger//
     function spicy_bbq_burger(){
         let popupImage = document.getElementById('popupImg');
-        popupImage.src = "../../pictures/menu/food-drinks/burger/spicy_bbq_burger.jpg";
+        popupImage.src = "pictures/menu/food-drinks/burger/spicy_bbq_burger.jpg";
         
         let popupDetails = document.getElementById('popup_details');
         popupDetails.innerHTML = "Ingredients: Spicy Grilled Chicken Patty, Smoky Barbecue Seasoning, Brioche Buns, Cheddar Cheese, Sliced Pickles & Tomatoes" + "<br><br>" + "Category: Burger" + "<br>" + "Texture&nbsp;&nbsp;: Juicy, Tender"
@@ -244,7 +244,7 @@
     //4. Cheezzy Burger//
     function cheezzy_burger(){
         let popupImage = document.getElementById('popupImg');
-        popupImage.src = "../../pictures/menu/food-drinks/burger/cheezzy_burger.jpg";
+        popupImage.src = "pictures/menu/food-drinks/burger/cheezzy_burger.jpg";
         popupImage.style.marginLeft = "20px";
         
         let popupDetails = document.getElementById('popup_details');
@@ -273,7 +273,7 @@
     //1. Chicken Chop//
     // function chicken_chop(){
     //     let popupImage = document.getElementById('popupImg');
-    //     popupImage.src = "../../pictures/menu/food-drinks/chop-steak/chicken_chop.jpg";
+    //     popupImage.src = "pictures/menu/food-drinks/chop-steak/chicken_chop.jpg";
         
     //     let popupDetails = document.getElementById('popup_details');
     //     popupDetails.innerHTML = "Ingredients: Fried/Grilled Tender Chicken Breast, Black Pepper/Mushroom Sauce, Fresh-Made Coleslaw, Fried Eggs, Fries, Sliced Cucumber & Tomatoes" + "<br><br>" + "Category: Chop-Steak" + "<br>" + "Texture&nbsp;&nbsp;: Meaty, Flavorful, Tender"
@@ -336,7 +336,7 @@
     // }
     function chicken_chop() {
         let popupImage = document.getElementById('popupImg');
-        popupImage.src = "../../pictures/menu/food-drinks/chop-steak/chicken_chop.jpg";
+        popupImage.src = "pictures/menu/food-drinks/chop-steak/chicken_chop.jpg";
     
         let popupDetails = document.getElementById('popup_details');
         popupDetails.innerHTML = "Ingredients: Fried/Grilled Tender Chicken Breast, Black Pepper/Mushroom Sauce, Fresh-Made Coleslaw, Fried Eggs, Fries, Sliced Cucumber & Tomatoes" + "<br><br>" + "Category: Chop-Steak" + "<br>" + "Texture&nbsp;&nbsp;: Meaty, Flavorful, Tender";
@@ -407,7 +407,7 @@
     //2. Fish & Chips//
     function fish_n_chips(){
         let popupImage = document.getElementById('popupImg');
-        popupImage.src = "../../pictures/menu/food-drinks/chop-steak/fish&chips.jpg";
+        popupImage.src = "pictures/menu/food-drinks/chop-steak/fish&chips.jpg";
         
         let popupDetails = document.getElementById('popup_details');
         popupDetails.innerHTML = "Ingredients: Fish Fillet, French Fries, Tartar Sauce, Lemon Plum Dressing, Lemon, Cherry Tomato, Romaine Lettuce" + "<br><br>" + "Category: Chop-Steak" + "<br>" + "Texture&nbsp;&nbsp;: Fresh, Crispy, Tender"
@@ -433,7 +433,7 @@
     //3. Grilled Steak//
     function grilled_steak(){
         let popupImage = document.getElementById('popupImg');
-        popupImage.src = "../../pictures/menu/food-drinks/chop-steak/grilled_steak.jpg";
+        popupImage.src = "pictures/menu/food-drinks/chop-steak/grilled_steak.jpg";
         
         let popupDetails = document.getElementById('popup_details');
         popupDetails.innerHTML = "Ingredients: High-quality Steak Cuts, Olive Oil, Kosher Salt, Black Pepper, Garlic Cloves, Fresh Herbs" + "<br><br>" + "Category: Chop-Steak" + "<br>" + "Texture&nbsp;&nbsp;: Juicy, Tender"
@@ -459,7 +459,7 @@
     //4. Lamb Shank//
     function lamb_shank(){
         let popupImage = document.getElementById('popupImg');
-        popupImage.src = "../../pictures/menu/food-drinks/chop-steak/lamb_shank.jpg";
+        popupImage.src = "pictures/menu/food-drinks/chop-steak/lamb_shank.jpg";
         
         let popupDetails = document.getElementById('popup_details');
         popupDetails.innerHTML = "Ingredients: Irish Lamb Shank, Mashed Potatoes, Fresh Herbs" + "<br><br>" + "Category: Chop-Steak" + "<br>" + "Texture&nbsp;&nbsp;: Juicy, Tender, Melt-in-your-mouth"
@@ -486,7 +486,7 @@
     //1. Spaghetti Bolognese//
     function bolognese(){
         let popupImage = document.getElementById('popupImg');
-        popupImage.src = "../../pictures/menu/food-drinks/pasta/bolognese.jpg";
+        popupImage.src = "pictures/menu/food-drinks/pasta/bolognese.jpg";
         
         let popupDetails = document.getElementById('popup_details');
         popupDetails.innerHTML = "Ingredients: Spaghetti, Homemade Bolognese Sauce, Chicken or Beef, Mozzarella Cheese, Crispy Bacon Strips, Sautéed Mushrooms, Caramelized Onions, Fresh Basil Leaves." + "<br><br>" + "Category: Pasta" + "<br>" + "Texture&nbsp;&nbsp;: Saucy, Savoury"
@@ -529,7 +529,7 @@
     //2. Seafood Aglio Olio//
     function aglio_olio(){
         let popupImage = document.getElementById('popupImg');
-        popupImage.src = "../../pictures/menu/food-drinks/pasta/aglio_olio_seafood.jpg";
+        popupImage.src = "pictures/menu/food-drinks/pasta/aglio_olio_seafood.jpg";
         
         let popupDetails = document.getElementById('popup_details');
         popupDetails.innerHTML = "Ingredients: Linguini, Aglio Olio Seasoning, Cooking Cream, Shrimp, Scallop, Squid Rings, Blue Mussels, Garlic, Lemon, Black Pepper" + "<br><br>" + "Category: Pasta" + "<br>" + "Texture&nbsp;&nbsp;: Creamy, Spicy, Savoury"
@@ -555,7 +555,7 @@
     //3. Spaghetti Arrabiata//
     function arrabiata(){
         let popupImage = document.getElementById('popupImg');
-        popupImage.src = "../../pictures/menu/food-drinks/pasta/spaghetti_arrabiata.jpg";
+        popupImage.src = "pictures/menu/food-drinks/pasta/spaghetti_arrabiata.jpg";
         
         let popupDetails = document.getElementById('popup_details');
         popupDetails.innerHTML = "Ingredients: Spaghetti, Cheese, Arrabiata Sauce" + "<br><br>" + "Category: Pasta" + "<br>" + "Texture&nbsp;&nbsp;: Saucy, Spicy, Savoury"
@@ -581,7 +581,7 @@
     //4. Shrimp Alfredo//
     function alfredo(){
         let popupImage = document.getElementById('popupImg');
-        popupImage.src = "../../pictures/menu/food-drinks/pasta/shrimp_alfredo.jpg";
+        popupImage.src = "pictures/menu/food-drinks/pasta/shrimp_alfredo.jpg";
         
         let popupDetails = document.getElementById('popup_details');
         popupDetails.innerHTML = "Ingredients: Fettuccine Pasta, Alfredo Sauce, Peeled Shrimp" + "<br><br>" + "Category: Pasta" + "<br>" + "Texture&nbsp;&nbsp;: Saucy, Succulent, Creamy"
@@ -609,7 +609,7 @@
     //1. Baked Lasagna//
     function lasagna(){
         let popupImage = document.getElementById('popupImg');
-        popupImage.src = "../../pictures/menu/food-drinks/side-dish/lasagna.jpg";
+        popupImage.src = "pictures/menu/food-drinks/side-dish/lasagna.jpg";
         
         let popupDetails = document.getElementById('popup_details');
         popupDetails.innerHTML = "Ingredients: Lasagne Pasta, Chicken, Cheese, Lasagne Filling, Parsley" + "<br><br>" + "Category: Side Dish" + "<br>" + "Texture&nbsp;&nbsp;: Saucy, Savoury, Cheesy"
@@ -635,7 +635,7 @@
     //2. Garden Salad//
     function garden_salad(){
         let popupImage = document.getElementById('popupImg');
-        popupImage.src = "../../pictures/menu/food-drinks/side-dish/garden_salad.jpg";
+        popupImage.src = "pictures/menu/food-drinks/side-dish/garden_salad.jpg";
         
         let popupDetails = document.getElementById('popup_details');
         popupDetails.innerHTML = "Ingredients: Lettuce, Slices of Tomatoes, Cucumber, Avocadoes, Carrots, Salad Sauce" + "<br><br>" + "Category: Side Dish" + "<br>" + "Texture&nbsp;&nbsp;: Succulent, Juicy, Crunchy"
@@ -661,7 +661,7 @@
     //3. Quesadilla//
     function quesadilla(){
         let popupImage = document.getElementById('popupImg');
-        popupImage.src = "../../pictures/menu/food-drinks/side-dish/quesadilla.jpg";
+        popupImage.src = "pictures/menu/food-drinks/side-dish/quesadilla.jpg";
         
         let popupDetails = document.getElementById('popup_details');
         popupDetails.innerHTML = "Ingredients: High-quality Toasted Tortilla, Cheese, Chicken/Beef/Vegetable Fillings" + "<br><br>" + "Category: Side Dish" + "<br>" + "Texture&nbsp;&nbsp;: Crispy, Melt-in-your-mouth"
@@ -704,7 +704,7 @@
     //4. Potato Wedges//
     function wedges(){
         let popupImage = document.getElementById('popupImg');
-        popupImage.src = "../../pictures/menu/food-drinks/side-dish/wedges.jpg";
+        popupImage.src = "pictures/menu/food-drinks/side-dish/wedges.jpg";
         
         let popupDetails = document.getElementById('popup_details');
         popupDetails.innerHTML = "Ingredients: Potato, Salt" + "<br><br>" + "Category: Side Dish" + "<br>" + "Texture&nbsp;&nbsp;: Crispy, Savoury"
@@ -731,7 +731,7 @@
     //1. Hot Chocolate//
     function hot_chocolate(){
         let popupImage = document.getElementById('popupImg');
-        popupImage.src = "../../pictures/menu/food-drinks/beverages/hot_chocolate.jpg";
+        popupImage.src = "pictures/menu/food-drinks/beverages/hot_chocolate.jpg";
         
         let popupDetails = document.getElementById('popup_details');
         popupDetails.innerHTML = "Ingredients: Premium Dark Chocolate, Milk, Whipped Cream, Cocoa Powder" + "<br><br>" + "Category: Beverage" + "<br>" + "Taste&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;: Creamy, Rich, Thick"
@@ -757,7 +757,7 @@
     //2. Mixed Berries Smoothie//
     function mixed_berries_smoothie(){
         let popupImage = document.getElementById('popupImg');
-        popupImage.src = "../../pictures/menu/food-drinks/beverages/mixed_berries_smoothie.jpg";
+        popupImage.src = "pictures/menu/food-drinks/beverages/mixed_berries_smoothie.jpg";
         
         let popupDetails = document.getElementById('popup_details');
         popupDetails.innerHTML = "Ingredients: Fresh Strawberries, Blueberries, Greek Yogurt, Milk" + "<br><br>" + "Category: Beverage" + "<br>" + "Taste&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;: Creamy, Refreshing, Thick"
@@ -783,7 +783,7 @@
     //3. Peach Soda Float//
     function peach_soda_float(){
         let popupImage = document.getElementById('popupImg');
-        popupImage.src = "../../pictures/menu/food-drinks/beverages/peach_soda_float.jpg";
+        popupImage.src = "pictures/menu/food-drinks/beverages/peach_soda_float.jpg";
         
         let popupDetails = document.getElementById('popup_details');
         popupDetails.innerHTML = "Ingredients: Fresh Peaches, Premium Peach Soda, Vanilla Ice Cream" + "<br><br>" + "Category: Beverage" + "<br>" + "Taste&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;: Creamy, Refreshing, Effervescent"
@@ -809,7 +809,7 @@
     //4. Shirley Cocktail//
     function shirley_cocktail(){
         let popupImage = document.getElementById('popupImg');
-        popupImage.src = "../../pictures/menu/food-drinks/beverages/shirley_cocktail.jpg";
+        popupImage.src = "pictures/menu/food-drinks/beverages/shirley_cocktail.jpg";
         
         let popupDetails = document.getElementById('popup_details');
         popupDetails.innerHTML = "Ingredients: Grenadine Syrup, Lemon-lime Soda, Maraschino Cherries" + "<br><br>" + "Category: Beverage" + "<br>" + "Taste&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;: Syrupy, Juicy, Effervescent"
@@ -836,7 +836,7 @@
     //1. New York Cheese Cake//
     function cheese_cake(){
         let popupImage = document.getElementById('popupImg');
-        popupImage.src = "../../pictures/menu/food-drinks/desserts/cheese_cake.jpg";
+        popupImage.src = "pictures/menu/food-drinks/desserts/cheese_cake.jpg";
         
         let popupDetails = document.getElementById('popup_details');
         popupDetails.innerHTML = "Ingredients: Cream Cheese, Sugar, Eggs, Butter, Cream, Milk, Vanilla, Whipped Cream, Fresh Strawberry" + "<br><br>" + "Category: Dessert" + "<br>" + "Texture&nbsp;&nbsp;: Fluffy, Cheesy"
@@ -862,7 +862,7 @@
     //2. Mango Sago in Coconut Milk//
     function mango_sago_in_coconut_milk(){
         let popupImage = document.getElementById('popupImg');
-        popupImage.src = "../../pictures/menu/food-drinks/desserts/mango_sago_in_coconut_milk.jpg";
+        popupImage.src = "pictures/menu/food-drinks/desserts/mango_sago_in_coconut_milk.jpg";
         
         let popupDetails = document.getElementById('popup_details');
         popupDetails.innerHTML = "Ingredients: Mango Cubes, Sago, Coconut Milk" + "<br><br>" + "Category: Dessert" + "<br>" + "Texture&nbsp;&nbsp;: Refreshing, Succulent"
@@ -888,7 +888,7 @@
     //3. Matcha Ice Cream//
     function matcha_ice_cream(){
         let popupImage = document.getElementById('popupImg');
-        popupImage.src = "../../pictures/menu/food-drinks/desserts/matcha_ice_cream.jpg";
+        popupImage.src = "pictures/menu/food-drinks/desserts/matcha_ice_cream.jpg";
         
         let popupDetails = document.getElementById('popup_details');
         popupDetails.innerHTML = "Ingredients: Matcha Ice Cream, Chocolate Chips, Chocolate Cone/Sundae" + "<br><br>" + "Category: Dessert" + "<br>" + "Texture&nbsp;&nbsp;: Dense, Creamy, Slightly Powdery"
@@ -931,7 +931,7 @@
     //4. Red Rubbies in Coconut Milk//
     function red_rubies_in_coconut_milk(){
         let popupImage = document.getElementById('popupImg');
-        popupImage.src = "../../pictures/menu/food-drinks/desserts/red_rubies_in_coconut_milk.jpg";
+        popupImage.src = "pictures/menu/food-drinks/desserts/red_rubies_in_coconut_milk.jpg";
         
         let popupDetails = document.getElementById('popup_details');
         popupDetails.innerHTML = "Ingredients: Red Rubies, Coconut Milk, Sago" + "<br><br>" + "Category: Dessert" + "<br>" + "Texture&nbsp;&nbsp;: Silky, Tender, Chewy"
