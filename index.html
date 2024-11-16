@@ -3,9 +3,9 @@
     <head>       
         <meta charset="UTF-8">
         <title>The Taste</title>
-        <link rel="stylesheet" href="../css_file/thetaste.css" type="text/css"><!--Link to external thetaste.css style sheet-->
+        <link rel="stylesheet" href="css_file/thetaste.css" type="text/css"><!--Link to external thetaste.css style sheet-->
         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v6.1.1/css/all.css"><!--Import Font Awesome v6.1.1 Icon Library-->
-        <link rel="icon" type="image/x-icon" href="../pictures/icon-logo/thetaste-icon.ico"><!--Setting Up Favicon-->
+        <link rel="icon" type="image/x-icon" href="pictures/icon-logo/thetaste-icon.ico"><!--Setting Up Favicon-->
         <style>
             /*Main Content*/
             /***Button***/
@@ -249,7 +249,7 @@
 
             /**5th Section: Our Recommendations**/
             #recommend{
-                background-image: url("../pictures/background/stonewall.jpg");
+                background-image: url("pictures/background/stonewall.jpg");
                 background-attachment: fixed;
                 padding: 100px 100px;
             }
@@ -375,22 +375,22 @@
         </style>
         <script>
             var hoverSound = new Audio(); // Hover Sound Effect
-            hoverSound.src = "../audios/soundEffects/hover.mp3"; 
+            hoverSound.src = "audios/soundEffects/hover.mp3"; 
 
             var clickSound = new Audio(); // Click Sound Effect
-            clickSound.src = "../audios/soundEffects/click.mp3";
+            clickSound.src = "audios/soundEffects/click.mp3";
         </script>
     </head>
 
     <body>
         <audio autoplay loop><!--Background Musics-->
-            <source src="../audios/musics/renconcile.mp3" type="audio/mp3">
-            <source src="../audios/musics/angels_dream.mp3" type="audio/mp3">
+            <source src="audios/musics/renconcile.mp3" type="audio/mp3">
+            <source src="audios/musics/angels_dream.mp3" type="audio/mp3">
             This browser does not support HTML5 audio.
         </audio>
         
         <video autoplay muted loop id="thetaste_ad"><!--Background Video-->
-            <source src="../videos/thetaste_ad.mp4" type="video/mp4">
+            <source src="videos/thetaste_ad.mp4" type="video/mp4">
         </video>
         
         <!--Preloader Scene-->
@@ -406,12 +406,12 @@
         </div>
 
         <header><!--Logo Hotspot-->
-            <a href="index.html" title="The Taste Home Page"><img src="../pictures/icon-logo/thetaste-logo.png" alt="The Taste Logo"></a><!--Hotspot-->
+            <a href="index.html" title="The Taste Home Page"><img src="pictures/icon-logo/thetaste-logo.png" alt="The Taste Logo"></a><!--Hotspot-->
         </header>
 
         <nav><!--Top Navigation Bar & Circle Logo Hotspot-->
             <ul>
-                <li style="transform: translate(-30px, 1px);"><a href="index.html" title="The Taste Home Page"><img src="../pictures/icon-logo/thetaste-icon.ico" alt="The Taste Icon" style="height: 5em;"></a></li>
+                <li style="transform: translate(-30px, 1px);"><a href="index.html" title="The Taste Home Page"><img src="pictures/icon-logo/thetaste-icon.ico" alt="The Taste Icon" style="height: 5em;"></a></li>
                 <li onmouseover="hoverSound.play()" onmousedown="clickSound.play()"><a href="index.html" title="Home" style="border-bottom: 5px solid rgb(255, 230, 131);" class="navText"><i class="fa fa-home"></i>&nbsp;HOME</a></li>
                 <li onmouseover="hoverSound.play()" onmousedown="clickSound.play()" id="menu">
                     <a href="menu.html" title="Menu" class="navText"><i class="fa fa-book"></i>&nbsp;MENU&nbsp;<i class="fa fa-caret-down"></i></a>
@@ -476,7 +476,7 @@
                 <h5>&mdash;&mdash;&mdash;&mdash;&mdash;&nbsp;&nbsp;ALAN D. WOLFELT&nbsp;&nbsp;&mdash;&mdash;&mdash;&mdash;&mdash;</h5>
                 <div class="row">
                     <div class="card">
-                        <img src="../pictures/menu/food-drinks/burger/beef_burger.jpg" alt="Burgers">
+                        <img src="pictures/menu/food-drinks/burger/beef_burger.jpg" alt="Burgers">
                         <p>Burgers</p>
                         <form action="menu.html#burger">
                             <input type="submit" value="View Menu" title="Our Burgers" onmouseover="hoverSound.play()" onmousedown="clickSound.play()">
@@ -484,7 +484,7 @@
                     </div>
 
                     <div class="card">
-                        <img src="../pictures/menu/food-drinks/chop-steak/grilled_steak.jpg" alt="'Chop-Steak'">
+                        <img src="pictures/menu/food-drinks/chop-steak/grilled_steak.jpg" alt="'Chop-Steak'">
                         <p>&lsquo;Chop-Steak&rsquo;</p>
                         <form action="menu.html#chop-steak">
                             <input type="submit" value="View Menu" title="Our 'Chop-Steak'" onmouseover="hoverSound.play()" onmousedown="clickSound.play()">
@@ -492,7 +492,7 @@
                     </div>
 
                     <div class="card">
-                        <img src="../pictures/menu/food-drinks/beverages/shirley_cocktail.jpg" alt="Beverages">
+                        <img src="pictures/menu/food-drinks/beverages/shirley_cocktail.jpg" alt="Beverages">
                         <p>Beverages</p>
                         <form action="menu.html#beverages">
                             <input type="submit" value="View Menu" title="Our Beverages" onmouseover="hoverSound.play()" onmousedown="clickSound.play()">
@@ -504,7 +504,7 @@
             <section id="specialOffer"><!--3rd Section: Special Offer Dishes-->
                 <div class="offer-container">
                     <div class="offer-img">
-                        <img src="../pictures/menu/offer/big_mama-offer-home.png" alt="Big Mama Offer">
+                        <img src="pictures/menu/offer/big_mama-offer-home.png" alt="Big Mama Offer">
                     </div>
                     <div class="offer-text">
                         <p class="p-title">&#10031;&mdash;&mdash;&mdash;&nbsp;Special Offer&nbsp;&mdash;&mdash;&mdash;&#10031;<br><br>3 PM - 6 PM</p>
@@ -522,8 +522,8 @@
             <section id="aboutUs"><!--4th Section: All About Us-->
                 <div class="about-container">
                     <div class="about-img">
-                        <img src="../pictures/about/about_bartender.png" alt="Our Bartenders" id="bar">
-                        <img src="../pictures/about/about_waiter.jpg" alt="Our Environment" id="waiter">
+                        <img src="pictures/about/about_bartender.png" alt="Our Bartenders" id="bar">
+                        <img src="pictures/about/about_waiter.jpg" alt="Our Environment" id="waiter">
                     </div>
                     <div class="about-text">
                         <p class="p-title">&#10031;&mdash;&mdash;&mdash;&nbsp;Our Story&nbsp;&mdash;&mdash;&mdash;&#10031;</p>
@@ -541,24 +541,24 @@
                 <div class="recommend-container">
                     <div class="row">
                         <div class="card">
-                            <img src="../pictures/menu/food-drinks/burger/big_mama.jpg" alt="Big Mama" class="card-pic">
+                            <img src="pictures/menu/food-drinks/burger/big_mama.jpg" alt="Big Mama" class="card-pic">
                             <h2>Big Mama</h2>
                             <p>The goodness of the juicy-grilled double South American-style beef patty, served with crispy bacon slices, fresh lettuce and slices of tomatoes, golden fried eggs with our premium creamy melted cheese imported exclusively from Auckland, and with our crispy toasted bun.</p>
                         </div>
                         <div class="card">
-                            <img src="../pictures/menu/food-drinks/burger/cheezzy_burger.jpg" alt="Cheezzy Burger" class="card-pic">
+                            <img src="pictures/menu/food-drinks/burger/cheezzy_burger.jpg" alt="Cheezzy Burger" class="card-pic">
                             <h2>Cheezzy Burger</h2>
                             <p>Are you having a huge craving for cheese and burger? The double BBQ chicken patty topped with the finest Fontina cheese melting over fried onions on our crispy garlic-flavored bread, served with friable fried squids, fried mushrooms, and fries.</p>
                         </div>
                     </div>
                     <div class="row">
                         <div class="card">
-                            <img src="../pictures/menu/food-drinks/pasta/bolognese.jpg" alt="Spaghetti Bolognese" class="card-pic">
+                            <img src="pictures/menu/food-drinks/pasta/bolognese.jpg" alt="Spaghetti Bolognese" class="card-pic">
                             <h2>Spaghetti Bolognese</h2>
                             <p>Our true Italian classic Bolognese, served with slowly cooked minced beef or chicken sauce that comes with rich, thick and has beautiful depth of flavor, as well as topping with mozzarella cheese. You can choose to be either served with the classic spaghetti Bolognese or with chicken or beef meatballs.</p>
                         </div>
                         <div class="card">
-                            <img src="../pictures/menu/food-drinks/chop-steak/lamb_shank.jpg" alt="Lamb Shank" class="card-pic">
+                            <img src="pictures/menu/food-drinks/chop-steak/lamb_shank.jpg" alt="Lamb Shank" class="card-pic">
                             <h2>Lamb Shank</h2>
                             <p>The tenderness and succulence of our first-rate braised Irish Lamb Shank with seasonal vegetables and fresh herbs. Served with mashed baked potatoes and buns. </p>
                         </div>
@@ -578,7 +578,7 @@
                 <div class="row">
                     <div class="column">
                         <div class="card">
-                            <img src="../pictures/icon-logo/icon_food.png" alt="Our Food">
+                            <img src="pictures/icon-logo/icon_food.png" alt="Our Food">
                             <h3>Hygienic Food</h3>
                             <p>Keeping our food served hygienic from time to time is our concern. We keep our operations on preparing and storing food or drink clean and under healthy conditions. We implement efficient cleaning procedures twice a day and our food is always served at a minimum temperature of 63&deg;C.</p>
                         </div>
@@ -586,7 +586,7 @@
 
                     <div class="column">
                         <div class="card">
-                            <img src="../pictures/icon-logo/icon_chef.png" alt="Our Chefs">
+                            <img src="pictures/icon-logo/icon_chef.png" alt="Our Chefs">
                             <h3>Skillful Chefs</h3>
                             <p>Serving good food to customers is our top priority. Our chefs are passionate about creating new recipes, planning menus, as well as ensuring the meals they serve are of good quality. Prioritizing food hygiene and implementing sanitary practices from time to time is our responsibility. </p>
                         </div>
@@ -594,7 +594,7 @@
 
                     <div class="column">
                         <div class="card">
-                            <img src="../pictures/icon-logo/icon_movie.png" alt="Our Movies & Environment">
+                            <img src="pictures/icon-logo/icon_movie.png" alt="Our Movies & Environment">
                             <h3>Movies & Environment</h3>
                             <p>We opt for plush seating, moody tones, and dim lighting, played with relaxing Lo-fi music to create a cosy and comfortable dine-in ambience perfect for experiencing the cinematic restaurant environment. Our restaurants are ornamented with the 1990s American singers and actors&rsquo; wallpapers with a dartboard machine.</p>
                         </div>
@@ -602,7 +602,7 @@
  
                     <div class="column">
                         <div class="card">
-                            <img src="../pictures/icon-logo/icon_party.png" alt="Our Events">
+                            <img src="pictures/icon-logo/icon_party.png" alt="Our Events">
                             <h3>Events</h3>
                             <p>We would love to bring more precious memories to our dear customers. Our yearly event, The Taste Fiesta, offers a great deal of up to 50% for our members to enjoy a better dining experience in our special rooms, and stand a chance to win a mysterious gift.</p>
                         </div>
@@ -621,7 +621,7 @@
 
                 <div id="app"><!--Download App-->
                     <a href="https://www.apple.com/my/app-store/" title="Download on App Store" target="_blank"><img src="https://tools.applemediaservices.com/api/badges/download-on-the-app-store/black/en-us?size=250x83&amp;releaseDate=1276560000&h=7e7b68fad19738b5649a1bfb78ff46e9" alt="Download on App Store" style="height: 60px; transform: translateY(-13px); margin-left: 35px;"></a>
-                    <a href="https://play.google.com/store/games?hl=en" title="Download on Google Play" target="_blank"><img src="../pictures/icon-logo/badge_googleplay.png" alt="Download on Google Play" style="width: 230px;"></a>
+                    <a href="https://play.google.com/store/games?hl=en" title="Download on Google Play" target="_blank"><img src="pictures/icon-logo/badge_googleplay.png" alt="Download on Google Play" style="width: 230px;"></a>
                 </div>
             </div>
             <div class="enquiry">
