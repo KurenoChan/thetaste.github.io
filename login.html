@@ -3,15 +3,15 @@
     <head>       
         <meta charset="UTF-8">
         <title>Login</title>
-        <link rel="stylesheet" href="../css_file/thetaste.css" type="text/css"><!--Link to external thetaste.css style sheet-->
+        <link rel="stylesheet" href="css_file/thetaste.css" type="text/css"><!--Link to external thetaste.css style sheet-->
         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v6.1.1/css/all.css"><!--Import Font Awesome v6.1.1 Icon Library-->
-        <link rel="icon" type="image/x-icon" href="../pictures/icon-logo/thetaste-icon.ico"><!--Setting Up Favicon-->
+        <link rel="icon" type="image/x-icon" href="pictures/icon-logo/thetaste-icon.ico"><!--Setting Up Favicon-->
         <style>
             /*Main Content*/
             main{
                 padding-top: 20px;
                 padding-bottom: 100px;
-                background: linear-gradient(rgba(0,0,0), rgba(0, 0, 0, 0.2), rgba(0,0,0,0.2), rgba(0,0,0)),url('../pictures/background/login_back.jpg'); 
+                background: linear-gradient(rgba(0,0,0), rgba(0, 0, 0, 0.2), rgba(0,0,0,0.2), rgba(0,0,0)),url('pictures/background/login_back.jpg'); 
                 background-position: center;
                 background-repeat: no-repeat;
                 background-size: cover;
@@ -115,10 +115,10 @@
         </style>
         <script>
             var hoverSound = new Audio(); // Hover Sound Effect
-            hoverSound.src = "../audios/soundEffects/hover.mp3"; 
+            hoverSound.src = "audios/soundEffects/hover.mp3"; 
             
             var clickSound = new Audio(); // Click Sound Effect
-            clickSound.src = "../audios/soundEffects/click.mp3";
+            clickSound.src = "audios/soundEffects/click.mp3";
 
             /*Show Password Checkbox*/
             function show_pwd(){    
@@ -152,8 +152,8 @@
 
     <body>
         <audio autoplay loop><!--Background Musics-->
-            <source src="../audios/musics/renconcile.mp3" type="audio/mp3">
-            <source src="../audios/musics/angels_dream.mp3" type="audio/mp3">
+            <source src="audios/musics/renconcile.mp3" type="audio/mp3">
+            <source src="audios/musics/angels_dream.mp3" type="audio/mp3">
             This browser does not support HTML5 audio.
         </audio>
         
@@ -169,12 +169,12 @@
         </div>
 
         <header><!--Logo Hotspot-->
-            <a href="index.html" title="The Taste Home Page"><img src="../pictures/icon-logo/thetaste-logo.png" alt="The Taste Logo"></a><!--Hotspot-->
+            <a href="index.html" title="The Taste Home Page"><img src="pictures/icon-logo/thetaste-logo.png" alt="The Taste Logo"></a><!--Hotspot-->
         </header>
 
         <nav><!--Top Navigation Bar & Circle Logo Hotspot-->
             <ul>
-                <li style="transform: translate(-30px, 1px);"><a href="index.html" title="The Taste Home Page"><img src="../pictures/icon-logo/thetaste-icon.ico" alt="The Taste Icon" style="height: 5em;"></a></li>
+                <li style="transform: translate(-30px, 1px);"><a href="index.html" title="The Taste Home Page"><img src="pictures/icon-logo/thetaste-icon.ico" alt="The Taste Icon" style="height: 5em;"></a></li>
                 <li onmouseover="hoverSound.play()" onmousedown="clickSound.play()"><a href="index.html" title="Home" style="border-bottom: 5px solid rgb(255, 230, 131);" class="navText"><i class="fa fa-home"></i>&nbsp;HOME</a></li>
                 <li onmouseover="hoverSound.play()" onmousedown="clickSound.play()" id="menu">
                     <a href="menu.html" title="Menu" class="navText"><i class="fa fa-book"></i>&nbsp;MENU&nbsp;<i class="fa fa-caret-down"></i></a>
@@ -266,7 +266,7 @@
 
                 <div id="app"><!--Download App-->
                     <a href="https://www.apple.com/my/app-store/" title="Download on App Store" target="_blank"><img src="https://tools.applemediaservices.com/api/badges/download-on-the-app-store/black/en-us?size=250x83&amp;releaseDate=1276560000&h=7e7b68fad19738b5649a1bfb78ff46e9" alt="Download on App Store" style="height: 60px; transform: translateY(-13px); margin-left: 35px;"></a>
-                    <a href="https://play.google.com/store/games?hl=en" title="Download on Google Play" target="_blank"><img src="../pictures/icon-logo/badge_googleplay.png" alt="Download on Google Play" style="width: 230px;"></a>
+                    <a href="https://play.google.com/store/games?hl=en" title="Download on Google Play" target="_blank"><img src="pictures/icon-logo/badge_googleplay.png" alt="Download on Google Play" style="width: 230px;"></a>
                 </div>
             </div>
             <div class="enquiry">
