@@ -3,13 +3,13 @@
     <head>       
         <meta charset="UTF-8">
         <title>About</title>
-        <link rel="stylesheet" href="../css_file/thetaste.css" type="text/css"><!--Link to external thetaste.css style sheet-->
+        <link rel="stylesheet" href="css_file/thetaste.css" type="text/css"><!--Link to external thetaste.css style sheet-->
         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v6.1.1/css/all.css"><!--Import Font Awesome v6.1.1 Icon Library-->
-        <link rel="icon" type="image/x-icon" href="../pictures/icon-logo/thetaste-icon.ico"><!--Setting Up Favicon-->
+        <link rel="icon" type="image/x-icon" href="pictures/icon-logo/thetaste-icon.ico"><!--Setting Up Favicon-->
         <style>
             /*Main Content*/
             main{
-                background-image: linear-gradient(rgb(0, 0, 0, 0.5), rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1), rgba(0,0,0)),url("../pictures/background/stonewall.jpg");
+                background-image: linear-gradient(rgb(0, 0, 0, 0.5), rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1), rgba(0,0,0)),url("pictures/background/stonewall.jpg");
                 background-attachment: fixed;
             }
 
@@ -33,7 +33,7 @@
             #story{
                 width: auto;
                 padding: 70px 150px 0 130px;
-                background-image: url('../pictures/about/about_back.png');
+                background-image: url('pictures/about/about_back.png');
                 background-repeat: no-repeat;
                 background-size: cover;
                 margin-left: 100px;
@@ -67,7 +67,7 @@
                 margin-right: 100px;
                 width: auto;
                 padding: 80px 150px 10px 130px;
-                background-image: url('../pictures/about/about_back.png');
+                background-image: url('pictures/about/about_back.png');
                 background-repeat: no-repeat;
                 background-size: cover;
             }
@@ -87,7 +87,7 @@
                 margin-right: 100px;
                 width: auto;
                 padding: 130px 150px 80px 130px;
-                background-image: url('../pictures/about/about_back.png');
+                background-image: url('pictures/about/about_back.png');
                 background-repeat: no-repeat;
                 background-size: cover;                
             }
@@ -142,17 +142,17 @@
         </style>
         <script>
             var hoverSound = new Audio(); // Hover Sound Effect
-            hoverSound.src = "../audios/soundEffects/hover.mp3"; 
+            hoverSound.src = "audios/soundEffects/hover.mp3"; 
             
             var clickSound = new Audio(); // Click Sound Effect
-            clickSound.src = "../audios/soundEffects/click.mp3";
+            clickSound.src = "audios/soundEffects/click.mp3";
         </script>
     </head>
 
     <body>
         <audio autoplay loop><!--Background Musics-->
-            <source src="../audios/musics/renconcile.mp3" type="audio/mp3">
-            <source src="../audios/musics/angels_dream.mp3" type="audio/mp3">
+            <source src="audios/musics/renconcile.mp3" type="audio/mp3">
+            <source src="audios/musics/angels_dream.mp3" type="audio/mp3">
             This browser does not support HTML5 audio.
         </audio>
 
@@ -168,12 +168,12 @@
         </div>
 
         <header><!--Logo Hotspot-->
-            <a href="index.html" title="The Taste Home Page"><img src="../pictures/icon-logo/thetaste-logo.png" alt="The Taste Logo"></a><!--Hotspot-->
+            <a href="index.html" title="The Taste Home Page"><img src="pictures/icon-logo/thetaste-logo.png" alt="The Taste Logo"></a><!--Hotspot-->
         </header>
 
         <nav><!--Top Navigation Bar & Circle Logo Hotspot-->
             <ul>
-                <li style="transform: translate(-30px, 1px);"><a href="index.html" title="The Taste Home Page"><img src="../pictures/icon-logo/thetaste-icon.ico" alt="The Taste Icon" style="height: 5em;"></a></li>
+                <li style="transform: translate(-30px, 1px);"><a href="index.html" title="The Taste Home Page"><img src="pictures/icon-logo/thetaste-icon.ico" alt="The Taste Icon" style="height: 5em;"></a></li>
                 <li onmouseover="hoverSound.play()" onmousedown="clickSound.play()"><a href="index.html" title="Home" class="navText"><i class="fa fa-home"></i>&nbsp;HOME</a></li>
                 <li onmouseover="hoverSound.play()" onmousedown="clickSound.play()" id="menu">
                     <a href="menu.html" title="Menu" class="navText"><i class="fa fa-book"></i>&nbsp;MENU&nbsp;<i class="fa fa-caret-down"></i></a>
@@ -228,30 +228,30 @@
         <main>
             <section id="story"><!--1st Section: Our Story-->
                 <h2>&ldquo;A Taste, A Story&rdquo;</h2>
-                <img src="../pictures/about/about_history_cooking.jpg" alt="Chef Stanley cooking" class="rightImg" style="margin-top: 70px;">
-                <img src="../pictures/about/about_history_bar.jpg" alt="The Taste Bar in 1998" class="leftImg" style="position: absolute; right: 200px; top: 300px;">
+                <img src="pictures/about/about_history_cooking.jpg" alt="Chef Stanley cooking" class="rightImg" style="margin-top: 70px;">
+                <img src="pictures/about/about_history_bar.jpg" alt="The Taste Bar in 1998" class="leftImg" style="position: absolute; right: 200px; top: 300px;">
                 <p style="margin-right: 400px;"><span>T</span>he Taste, an American Hollywood-themed cinema restaurant, began on April 26<sup>th</sup>, 1996, founded by Chef Stanley Liew Seok Chang. Chef Stanley was a student when he was 20 years old who studied abroad and met a group of friends who shared his aspirations. While they went on their separate ways, Emilia Rayne stayed with him and supported his dream. Stanley&rsquo;s dream is to create a place where everyone could feel comfortable. To meet the need of the general public, he dropped out of school and travelled to different countries to learn about their cultures. After a few years, Stanley learned culinary skills and decided to open a restaurant called &ldquo;THE TASTE&rdquo;, which was inspired by the famous American food show. He was obsessed with exquisite food on the show and couldn&rsquo;t wait for others to taste it. However, Stanley struggled with funding, until Emilia and his other business partners joined to help him. Even his family, relatives, and neighbours supported him. He became more determined to pursue his dream and started his legend in a new city nearby.</p>
 
-                <img src="../pictures/about/about_stanley.jpeg" alt="Chef Stanley Solo" class="leftImg" style="height: 200px;">
-                <img src="../pictures/about/about_restaurant_out.jpeg" alt="The Taste Restaurant Outside" style="height: 170px; transform: translateX(10px);">
-                <img src="../pictures/about/about_brothers.jpeg" alt="Chef Stanley with his Brothers" class="rightImg" style="height: 200px;">
+                <img src="pictures/about/about_stanley.jpeg" alt="Chef Stanley Solo" class="leftImg" style="height: 200px;">
+                <img src="pictures/about/about_restaurant_out.jpeg" alt="The Taste Restaurant Outside" style="height: 170px; transform: translateX(10px);">
+                <img src="pictures/about/about_brothers.jpeg" alt="Chef Stanley with his Brothers" class="rightImg" style="height: 200px;">
 
                 <p><br><br>Emilia&rsquo;s team helped him establish the restaurant with a Western-style interior design, including a small entertainment room with a dartboard. Customers could enjoy playing darts at the restaurant, and there was also a bar, a reading area, a computer area, and a large screen that could play some movies. The design and facilities combined all his hobbies and interests, all of them are made by Emilia&rsquo;s team. Word quickly spread about his restaurant, and people from nearby streets came to visit. His business gradually grew, thanks to his unique design style and various entertainment areas in the restaurant.</p>
 
-                <img src="../pictures/about/about_restaurant_in.jpeg" alt="The Taste Restaurant Inside" class="rightImg">
-                <img src="../pictures/about/about_star.jpeg" alt="The Taste Restaurant Star" class="rightImg" style="position: absolute; right: 200px; top: 1200px; transform: rotateZ(8deg); height: 150px;">
+                <img src="pictures/about/about_restaurant_in.jpeg" alt="The Taste Restaurant Inside" class="rightImg">
+                <img src="pictures/about/about_star.jpeg" alt="The Taste Restaurant Star" class="rightImg" style="position: absolute; right: 200px; top: 1200px; transform: rotateZ(8deg); height: 150px;">
                 <p>As the years passed, &ldquo;THE TASTE&rdquo; became a well-known destination for food lovers and entertainment seekers alike. Chef Stanley continued to experiment with new flavours and dishes, always striving to surprise and delight his customers. His passion for food and dedication to his craft earned him numerous awards and recognition in the culinary world. Despite his success, Chef Stanley never forgot the people who helped him along the way. He made sure to give back to his community by hosting charity events and donating a portion of his profits to local causes. His kindness and generosity only added to his popularity, and &ldquo;THE TASTE&rdquo; became not just a restaurant, but a beloved part of the neighbourhood. The Taste is Stanley&rsquo;s dream come true as he long wanted to own a family-friendly, movie-themed, American-style casual dining restaurant featuring his favourite movies.</p>
 
                 <p>Looking back on his journey, Chef Stanley knew that he couldn&rsquo;t have done it alone. It was the support of his friends, family, and community that helped him realize his dream. And he was grateful every day for the opportunity to share his love of food and hospitality with the world.</p>
-                <img src="../pictures/about/about_restaurant_outNight.jpg" alt="The Taste Restaurant Outside Night">
-                <img src="../pictures/about/about_group.jpg" alt="The Taste Restaurant Group Photo" width="330">
-                <img src="../pictures/about/about_desk_view.jpg" alt="The Taste Restaurant Desk View" style="position: absolute; transform: translateX(3px);">
+                <img src="pictures/about/about_restaurant_outNight.jpg" alt="The Taste Restaurant Outside Night">
+                <img src="pictures/about/about_group.jpg" alt="The Taste Restaurant Group Photo" width="330">
+                <img src="pictures/about/about_desk_view.jpg" alt="The Taste Restaurant Desk View" style="position: absolute; transform: translateX(3px);">
             </section>
 
             <section id="food-environment"><!--2nd Section: Our Food & Environment-->
                 <h2>&ldquo;Our Food, Our Environment&rdquo;</h2>
                 <video autoplay muted loop controls id="thetaste-ad">
-                    <source src="../videos/thetaste_ad.mp4" type="video/mp4">
+                    <source src="videos/thetaste_ad.mp4" type="video/mp4">
                 </video>
                 <p style="margin-bottom: 10px;">Our food is crafted by experienced chefs and bartenders who use only the freshest ingredients to create mouth-watering dishes like burgers and pasta. From locally sourced produce to secret sauces, we strive to offer the best dining experience for our customers and satisfy every palate.</p>
                 <p>Our cinematic ambience is exclusively designed to transport you back to the 1990s with our unique wallpaper and cosy setting to enjoy a delicious meal and watch a movie with family and friends. Experience the perfect blend of nostalgia and comfort, as well as discover the ultimate culinary adventure.</p>
@@ -260,10 +260,10 @@
             <section id="service"><!--3rd Section: Our Services-->
                 <h2>&ldquo;Our Services&rdquo;</h2>
                 <div class="serviceImg">
-                    <img src="../pictures/about/about_bartender.png" alt="Our Bartenders" id="bartender">
-                    <img src="../pictures/about/about_chef-garnish.png" alt="Chef Garnishing" id="chef-garnish">
-                    <img src="../pictures/about/about_waiter.jpg" alt="Our Waiters" id="waiter">
-                    <img src="../pictures/about/about_chef-cooking.jpg" alt="Chef Cooking" id="chef-cook">
+                    <img src="pictures/about/about_bartender.png" alt="Our Bartenders" id="bartender">
+                    <img src="pictures/about/about_chef-garnish.png" alt="Chef Garnishing" id="chef-garnish">
+                    <img src="pictures/about/about_waiter.jpg" alt="Our Waiters" id="waiter">
+                    <img src="pictures/about/about_chef-cooking.jpg" alt="Chef Cooking" id="chef-cook">
                 </div>
 
                 <p>Our team of experienced chefs, bartenders, and waiters offer the finest food and drinks. We are passionate about creating new recipes, planning menus, as well as ensuring the meals they serve are of good quality. Prioritizing food hygiene and implementing sanitary practices from time to time is our responsibility. With patience and dedication, we provide top-notch service and hospitality to each of our guests, and we are committed to exceeding your expectations. Enjoy our impeccable service and delicious food with a smile!</p>
@@ -281,7 +281,7 @@
 
                 <div id="app"><!--Download App-->
                     <a href="https://www.apple.com/my/app-store/" title="Download on App Store" target="_blank"><img src="https://tools.applemediaservices.com/api/badges/download-on-the-app-store/black/en-us?size=250x83&amp;releaseDate=1276560000&h=7e7b68fad19738b5649a1bfb78ff46e9" alt="Download on App Store" style="height: 60px; transform: translateY(-13px); margin-left: 35px;"></a>
-                    <a href="https://play.google.com/store/games?hl=en" title="Download on Google Play" target="_blank"><img src="../pictures/icon-logo/badge_googleplay.png" alt="Download on Google Play" style="width: 230px;"></a>
+                    <a href="https://play.google.com/store/games?hl=en" title="Download on Google Play" target="_blank"><img src="pictures/icon-logo/badge_googleplay.png" alt="Download on Google Play" style="width: 230px;"></a>
                 </div>
             </div>
             <div class="enquiry">
