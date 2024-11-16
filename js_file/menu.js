@@ -47,7 +47,7 @@
         document.getElementById('offerTitle').style.display = "block";
 
         let popupImage = document.getElementById('popupImg');
-        popupImage.src = "../../pictures/menu/offer/big_mama-offer-home.png";
+        popupImage.src = "../pictures/menu/offer/big_mama-offer-home.png";
         
         let popupDetails = document.getElementById('popup_details');
         popupDetails.innerHTML = "Ingredients: Grilled Beef patty, Bacon, Fried Eggs, Cheese, Tomatoes, Toasted Bun" + "<br><br>";
