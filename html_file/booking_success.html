@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="keywords" content="Lazy, Monday, western, burger, fries, restaurant, food" />
+    <title>Booking Success</title>
+    <link rel="icon" href="../images/icon-logo/logo/lm_logo_circle.png" type="image/x-icon" />
+    <link rel="stylesheet" href="../css_file/reset.css" />
+    <link rel="stylesheet" href="../css_file/lazyMonday.css" />
+    <link rel="stylesheet" href="../css_file/bookingSuccess.css" />
+    <script src="../js_file/lazyMonday.js" type="text/javascript" defer></script>
+    <script src="../js_file/bookingSuccess.js" type="text/javascript" defer></script>
+</head>
+
+<body>
+    <audio autoplay id="musicPlayer">
+        <source src="../audios/musics/coffee_cup.mp3" type="audio/mp3">
+        <source src="../audios/musics/italy.mp3" type="audio/mp3">
+        <source src="../audios/musics/vintage.mp3" type="audio/mp3">
+        <source src="../audios/musics/dream.mp3" type="audio/mp3">
+        Your browser does not support the audio element.
+    </audio>
+
+    <header id="navBar">
+        <nav>
+            <div id="logo">
+                <a href="index.html" title="Home" onclick="return checkBookingConfirm();"><img
+                        src="../images/icon-logo/logo/lm_logo.png" alt="Lazy Monday Logo"></a>
+            </div>
+            <ul id="txtLink">
+                <li><a href="index.html" title="Home" onmouseover="hoverSound.play();" onmousedown="clickSound.play();"
+                        onclick="return checkBookingConfirm();"><img src="../images/icon-logo/icon/home.png"
+                            alt="Home" />&nbsp;HOME</a>
+                </li>
+                <li>
+                    <a href="menu.html" title="Menu" onmouseover="hoverSound.play();" onmousedown="clickSound.play();"
+                        onclick="return checkBookingConfirm();"><img src="../images/icon-logo/icon/menu.png"
+                            alt="Menu" />&nbsp;MENU&nbsp;&nbsp;</a>
+                </li>
+                <li><a href="news.html" title="News" onmouseover="hoverSound.play();" onmousedown="clickSound.play();"
+                        onclick="return checkBookingConfirm();"><img src="../images/icon-logo/icon/news.png"
+                            alt="News" />&nbsp;NEWS</a></li>
+                <li><a href="about.html" title="About Us" onmouseover="hoverSound.play();"
+                        onmousedown="clickSound.play();" onclick="return checkBookingConfirm();"><img
+                            src="../images/icon-logo/icon/about.png" alt="About Us" />&nbsp;ABOUT</a></li>
+                <li><a href="contact.html" title="Contact Us" onmouseover="hoverSound.play();"
+                        onmousedown="clickSound.play();" onclick="return checkBookingConfirm();"><img
+                            src="../images/icon-logo/icon/contact.png" alt="Contact Us" />&nbsp;CONTACT</a>
+                </li>
+                <li><a href="career.html" title="Career" onmouseover="hoverSound.play();"
+                        onmousedown="clickSound.play();" onclick="return checkBookingConfirm();"><img
+                            src="../images/icon-logo/icon/career.png" alt="Career" />&nbsp;CAREER</a></li>
+            </ul>
+
+            <ul id="iconLink">
+                <li class="dropdown">
+                    <a href="account.html" title="Account" class="toPage" onmouseover="hoverSound.play();"
+                        onmousedown="clickSound.play();" onclick="return checkBookingConfirm();"><img
+                            src="../images/icon-logo/icon/account.png" alt="Account" /></a>
+                    <ul class="dropdown-content">
+                        <li>
+                            <p class="User" id="Username"></p>
+                        </li>
+                        <li><a href="account.html" onclick="return checkBookingConfirm(); logout();"
+                                id="loginLogoutLink" title="logout"></a></li>
+                    </ul>
+                </li>
+                <li><a href="#cart.html" title="Cart" class="toPage" id="cart" style="display: none;"
+                        onclick="return checkBookingConfirm();"><img src="../images/icon-logo/icon/shopping-cart.png"
+                            alt="Cart" /></a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <div id="loader">
+            <h2>L<div class="spinner"></div>ADING <span></span></h2>
+            <p>Processing Booking Request</p>
+        </div>
+
+        <section id="reservationSuccess">
+            <img src="../images/booking/booking_bg.jpg" alt="Booking Page Background" />
+            <div class="container">
+                <div class="reserveSuccessCard">
+                    <div class="reserveDetailsCard">
+                        <div class="reserveDetails">
+                            <div class="bookingStatus">
+                                <p id="bookingID"></p>
+                                <p id="bookingStatusIcon">&check;</p>
+                                <p id="bookingThank"></p>
+                                <p id="bookingStatusWord">Your booking at Lazy Monday is accepted</p>
+                            </div>
+
+                            <div class="reserveCustDetails">
+                                <div class="reserveCustDetailsHead">
+                                    <div class="reserveGuestNo">
+                                        <p>No. of Guest</p>
+                                    </div>
+                                    <div class="reserveDate">
+                                        <p>Date</p>
+                                    </div>
+                                    <div class="reserveTime">
+                                        <p>Time</p>
+                                    </div>
+                                    <div class="reserveRequest">
+                                        <p>Special Request</p>
+                                    </div>
+                                </div>
+
+                                <div class="reserveCustDetailsData">
+                                    <div class="reserveGuestNo">
+                                        <p id="guestNoData"></p>
+                                    </div>
+                                    <div class="reserveDate">
+                                        <p id="bookDateData"></p>
+                                    </div>
+                                    <div class="reserveTime">
+                                        <p id="bookTimeData"></p>
+                                    </div>
+                                    <div class="reserveRequest">
+                                        <p id="requestData"></p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="reserveTnC">
+                                <h3>Terms & Conditions</h3>
+                                <p>Note : Should something come up and you are unable to attend, kindly cancel your
+                                    booking. Thank You.</p>
+                            </div>
+
+                            <div class="reserveSuccessBtn">
+                                <button title="Cancel Booking" onclick="cancelBooking();"
+                                    onmouseover="hoverSound.play();" onmousedown="clickSound.play();">Cancel
+                                    Booking</button>
+                                <button title="Confirm Booking" onclick="window.location.href = 'index.html';"
+                                    onmouseover="hoverSound.play();" onmousedown="clickSound.play();">Confirm
+                                    Booking</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="reserveEnquiry">
+                        <h2>Contact Us</h2>
+
+                        <div class="bookCall">
+                            <p>Booking Request</p>
+                            <h3><a class="contact" href="tel:+60166660604" onmouseover="hoverSound.play();"
+                                onmousedown="clickSound.play();">+60-16-666-0604</a></h3>
+                        </div>
+
+                        <div class="bookInfo" id="bookLocation">
+                            <h3>Location</h3>
+                            <p>Lazy Monday HQ, 71A, Jalan Abdul Samad 1,
+                                Sri Gelam, 80100 Johor Bahru, Johor
+                            </p>
+                        </div>
+                        <div class="bookInfo" id="bookOperateHour">
+                            <h3>Operating Hours</h3>
+                            <p>Mon - Sun</p>
+                            <p>10:00 am - 11:00 pm</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <hr />
+        <h2>&#10023;&nbsp;Find Us At&nbsp;&#10023;</h2>
+        <div class="socialMedia">
+            <a href="https://web.facebook.com/lazymondaykitchen" title="Lazy Monday Facebook"
+                onclick="return checkBookingConfirm();"><img src="../images/icon-logo/icon/facebook.png"
+                    alt="Facebook" /></a>
+            <a href="https://www.tiktok.com/@lazymondayhq" title="Lazy Monday TikTok"
+                onclick="return checkBookingConfirm();"><img src="../images/icon-logo/icon/tiktok.png"
+                    alt="TikTok" /></a>
+            <a href="https://www.instagram.com/lazymondayhq/" title="Lazy Monday Instagram"
+                onclick="return checkBookingConfirm();"><img src="../images/icon-logo/icon/instagram.png"
+                    alt="Instagram" /></a>
+        </div>
+        <hr />
+
+        <div class="quickLinks">
+            <div class="contact">
+                <h3>Contacts</h3><br />
+                <a href="mailto:lazymonday@gmail.com" title="Lazy Monday Email"
+                    onclick="return checkBookingConfirm();"><img src="../images/icon-logo/icon/email.png"
+                        alt="Email" />&nbsp;lazymonday@gmail.com</a><br />
+                <a href="tel:+1072335546" title="Lazy Monday Contact Number"
+                    onclick="return checkBookingConfirm();"><img src="../images/icon-logo/icon/phone.png"
+                        alt="Phone">&nbsp;+07-233-5546</a>
+            </div>
+            <div class="about">
+                <h3>About Us</h3><br />
+                <a href="about.html#story" onclick="return checkBookingConfirm();">Our Story</a><br />
+                <a href="contact.html#location" onclick="return checkBookingConfirm();">Our Location</a><br />
+                <a href="about.html#customers" onclick="return checkBookingConfirm();">Our Customers</a><br />
+                <a href="about.html#ingredient" onclick="return checkBookingConfirm();">Our Ingredients</a><br />
+                <a href="about.html#environment" onclick="return checkBookingConfirm();">Our Environment</a>
+            </div>
+            <div class="menu">
+                <h3>Menu</h3><br />
+                <a href="menu.html#menu" onclick="return checkBookingConfirm();">Specials</a><br />
+                <a href="menu.html#menu" onclick="return checkBookingConfirm();">Lobster Rolls</a><br />
+                <a href="menu.html#menu" onclick="return checkBookingConfirm();">Burgers</a><br />
+                <a href="menu.html#menu" onclick="return checkBookingConfirm();">Pastas</a><br />
+                <a href="menu.html#menu" onclick="return checkBookingConfirm();">Sides</a><br />
+                <a href="menu.html#menu" onclick="return checkBookingConfirm();">Beverages</a><br />
+                <a href="menu.html#menu" onclick="return checkBookingConfirm();">Desserts</a><br />
+            </div>
+            <div class="help">
+                <h3>Get Help</h3><br />
+                <a href="account.html" onclick="return checkBookingConfirm();">Login</a><br />
+                <a href="account.html" onclick="return checkBookingConfirm();">Sign Up</a><br />
+                <a href="career.html" onclick="return checkBookingConfirm();">Career</a><br />
+                <a href="https://example.com" onclick="return checkBookingConfirm();">Privacy Policy</a><br />
+                <a href="https://example.com" onclick="return checkBookingConfirm();">Terms & Conditions</a><br />
+            </div>
+        </div>
+        <hr />
+        <p>Copyright 2024 &copy; Lazy Monday Malaysia. All Rights Reserved.</p>
+    </footer>
+
+    <script>
+        window.onload = loaderScreen;
+
+        function loaderScreen() {
+            // Add animation to show the loader
+            document.getElementById('loader').style.animation = 'screenLoad 4s ease-in-out forwards';
+        }
+    </script>
+</body>
+
+</html>

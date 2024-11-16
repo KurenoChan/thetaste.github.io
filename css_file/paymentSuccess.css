@@ -1,0 +1,328 @@
+#loader {
+    width: 100%;
+    height: 100%;
+    background-color: rgb(36, 36, 36);
+    position: fixed;
+    flex-flow: column wrap;
+    justify-content: center;
+    align-content: center;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    margin: auto;
+    user-select: none;
+    z-index: 999999;
+    animation: screenLoad 2s;
+}
+
+#loader h2 {
+    font-size: 5vw;
+    font-family: Lancelot, Garamond, 'Times New Roman', Times, serif;
+    font-weight: lighter;
+    color: #F9BF65;
+}
+
+#loader p {
+    font-weight: lighter;
+    color: #F9BF65;
+    font-size: 1.5vw;
+    font-variant: small-caps;
+}
+
+.spinner {
+    display: inline-block;
+    height: 3vw;
+    width: 3vw;
+    border-radius: 50%;
+    border: 0.32vw dashed white;
+    animation: spin 5s infinite ease;
+}
+
+#loader span::after {
+    position: absolute;
+    width: 10vw;
+    margin-left: 1vw;
+    content: '     ';
+    animation: loadDot 2s infinite ease-in-out;
+}
+
+@keyframes screenLoad {
+    90% {
+        opacity: 1;
+        display: flex;
+    }
+
+    100% {
+        opacity: 0;
+        display: none;
+    }
+}
+
+@keyframes spin {
+    25% {
+        transform: rotate(90deg);
+    }
+
+    50% {
+        transform: rotate(180deg);
+    }
+
+    75% {
+        transform: rotate(270deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes loadDot {
+    25% {
+        content: '     ';
+    }
+
+    50% {
+        content: '.    ';
+    }
+
+    75% {
+        content: '. .  ';
+    }
+
+    100% {
+        content: '. . .';
+    }
+}
+
+/*=======================================*/
+section#printHeading{
+    display: none;
+}
+
+#paymentSuccessDisplay {
+    padding-top: 12vh;
+    text-align: center;
+}
+
+#paySuccessMsg1,
+#paySuccessMsg2,
+#paySuccessMsg3 {
+    color: #F9BF65;
+    font-variant: small-caps;
+    font-family: Lancelot, Garamond, 'Times New Roman', Times, serif;
+    user-select: none;
+}
+
+#paySuccessMsg1 {
+    font-size: 4vw;
+    letter-spacing: 0.2vw;
+}
+
+#paySuccessMsg2 {
+    color: #ffd390;
+    font-size: 2vw;
+    letter-spacing: 0.2vw;
+    word-spacing: 0.4vw;
+    margin-bottom: 3vh;
+    font-weight: lighter;
+}
+
+#paySuccessMsg2::before,
+#paySuccessMsg2::after {
+    content: '  \2606  ';
+    font-size: 1.5vw;
+    vertical-align: middle;
+}
+
+#paySuccessMsg3 {
+    font-size: 3vw;
+    letter-spacing: 0.2vw;
+    font-weight: bold;
+}
+
+/*--------------------------*/
+/* Payment Success Details */
+#paySuccessDetails {
+    margin-top: 2%;
+}
+
+#paySuccess-ReceiptNo-DateTime {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    border-top: 0.1vh solid #F9BF65;
+    border-bottom: 0.1vh solid #F9BF65;
+    padding: 1% 1.5% 1% 1.5%;
+    margin-bottom: 2%;
+}
+
+#paySuccessReceiptNo,
+#paySuccessDateTime {
+    color: #ffffff;
+    font-size: 1.2vw;
+    letter-spacing: 0.2vw;
+    font-variant: small-caps;
+}
+
+#paySuccessReceiptNo::before,
+#paySuccessDateTime::before {
+    content: attr(data-label);
+}
+
+/* Purchase Summary */
+.purchaseDetails {
+    color: #F9BF65;
+    padding: 1%;
+    border-top: 0.1vw solid #ffffff;
+    border-bottom: 0.1vw solid #ffffff;
+    user-select: none;
+    display: flex;
+    justify-content: space-between;
+}
+
+#purchaseSummaryList {
+    position: relative;
+    background-color: #353535af;
+    color: #ffffff;
+    max-height: 24.8vw;
+    overflow-y: auto;
+}
+
+.purchaseSummaryHeading {
+    top: 0;
+    position: sticky;
+    background-color: #000000f0;
+    user-select: none;
+    color: #F9BF65;
+    padding: 1%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.purchaseSummaryHeading p {
+    text-align: center;
+    font-size: 1.5vw;
+    font-variant: small-caps;
+}
+
+.purchaseItmDesc {
+    width: 34%;
+}
+
+.purchaseItmIndex {
+    width: 5%;
+    font-size: 1.2vw;
+    color: #ffffff;
+    text-align: center;
+    align-content: center;
+}
+
+.purchaseItmImg {
+    width: 15%;
+    height: 20vh;
+    object-fit: cover;
+}
+
+.purchaseItmName,
+.purchaseItmPrice,
+.purchaseItmAmount {
+    width: 15%;
+    align-content: center;
+    text-align: center;
+    font-size: 1.2vw;
+}
+
+.purchaseItmQty {
+    width: 15%;
+    align-content: center;
+    text-align: center;
+    font-size: 1.2vw;
+}
+
+#purchaseSummaryCalc {
+    user-select: none;
+    position: relative;
+    background-color: #000000;
+    color: #F9BF65;
+    padding: 2.5%;
+}
+
+.subtotalBox,
+.servicetaxBox,
+.processfeeBox,
+.memberdiscBox,
+.grandtotalBox {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 0.5vh;
+    padding-bottom: 0.5vh;
+}
+
+.subtotalBox,
+.grandtotalBox {
+    font-size: 2vw;
+    line-height: 8vh;
+    font-weight: bold;
+}
+
+.servicetaxBox,
+.processfeeBox,
+.memberdiscBox {
+    text-indent: 2vw;
+    font-size: 1.2vw;
+    color: rgba(255, 255, 255, 0.847);
+}
+
+.subtotalBox {
+    color: #cf9e54d7;
+}
+
+#purchaseSummaryCalc p {
+    font-family: Garamond, 'Times New Roman', Times, serif;
+    font-variant: small-caps;
+}
+
+/*===============================*/
+/*PAYMENT SUCCESS BUTTONS*/
+#paySuccessButtons {
+    padding: 5%;
+    display: flex;
+    justify-content: space-evenly;
+    user-select: none;
+}
+
+.paySuccessBtn {
+    color: #ffffff;
+    padding: 2% 5%;
+    border-radius: 1vw;
+    font-variant: small-caps;
+    font-family: Quintessential, Garamond, 'Times New Roman', Times, serif;
+    font-weight: bold;
+    font-size: 1.5vw;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+}
+
+.paySuccessBtn img {
+    width: 1.2vw;
+}
+
+#printReceipt {
+    border: 0.25vw double #ffffff;
+}
+
+#printReceipt:hover {
+    border-color: transparent;
+    background-color: #ffffff46;
+}
+
+#paySuccessToHome {
+    border: 0.25vw double #ffb444;
+}
+
+#paySuccessToHome:hover {
+    border-color: transparent;
+    background-color: #ffb44450;
+}

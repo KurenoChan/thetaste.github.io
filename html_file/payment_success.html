@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="keywords" content="Lazy, Monday, western, burger, fries, restaurant, food" />
+    <title>Payment Success</title>
+    <link rel="icon" href="../images/icon-logo/logo/lm_logo_circle.png" type="image/x-icon" />
+    <link rel="stylesheet" href="../css_file/reset.css" />
+    <link rel="stylesheet" href="../css_file/lazyMonday.css" />
+    <link rel="stylesheet" href="../css_file/paymentSuccess.css" />
+    <link rel="stylesheet" href="../css_file/printReceipt.css" media="print" />
+
+    <script type="text/javascript" src="../js_file/lazyMonday.js" defer></script>
+    <script src="../js_file/paymentSuccess.js" defer></script>
+</head>
+
+<body>
+    <audio autoplay id="musicPlayer">
+        <source src="../audios/musics/coffee_cup.mp3" type="audio/mp3">
+        <source src="../audios/musics/italy.mp3" type="audio/mp3">
+        <source src="../audios/musics/vintage.mp3" type="audio/mp3">
+        <source src="../audios/musics/dream.mp3" type="audio/mp3">
+        Your browser does not support the audio element.
+    </audio>
+
+    <header id="navBar">
+        <nav>
+            <div id="logo">
+                <a href="index.html" title="Home"><img src="../images/icon-logo/logo/lm_logo.png"
+                        alt="Lazy Monday Logo"></a>
+            </div>
+            <ul id="txtLink">
+                <li><a href="index.html" title="Home" onmouseover="hoverSound.play();"
+                        onmousedown="clickSound.play();"><img src="../images/icon-logo/icon/home.png"
+                            alt="Home" />&nbsp;HOME</a>
+                </li>
+                <li class="dropdown">
+                    <a href="menu.html" title="Menu" onmouseover="hoverSound.play();"
+                        onmousedown="clickSound.play();"><img src="../images/icon-logo/icon/menu.png"
+                            alt="Menu" />&nbsp;MENU</a>
+                </li>
+                <li><a href="news.html" title="News" onmouseover="hoverSound.play();"
+                        onmousedown="clickSound.play();"><img src="../images/icon-logo/icon/news.png"
+                            alt="News" />&nbsp;NEWS</a></li>
+                <li><a href="about.html" title="About Us" onmouseover="hoverSound.play();"
+                        onmousedown="clickSound.play();"><img src="../images/icon-logo/icon/about.png"
+                            alt="About Us" />&nbsp;ABOUT</a></li>
+                <li><a href="contact.html" title="Contact Us" onmouseover="hoverSound.play();"
+                        onmousedown="clickSound.play();"><img src="../images/icon-logo/icon/contact.png"
+                            alt="Contact Us" />&nbsp;CONTACT</a>
+                </li>
+                <li><a href="career.html" title="Career" onmouseover="hoverSound.play();"
+                        onmousedown="clickSound.play();"><img src="../images/icon-logo/icon/career.png"
+                            alt="Career" />&nbsp;CAREER</a></li>
+            </ul>
+            <ul id="iconLink" style="display: none;">
+                <li class="dropdown">
+                    <a href="account.html" title="Account" class="toPage" onmouseover="hoverSound.play();"
+                        onmousedown="clickSound.play();"><img src="../images/icon-logo/icon/account.png"
+                            alt="Account" /></a>
+                    <ul class="dropdown-content">
+                        <li>
+                            <p class="User" id="Username"></p>
+                        </li>
+                        <li><a href="account.html" onclick="logout()" id="loginLogoutLink" title="logout"></a></li>
+                    </ul>
+                </li>
+                <li><a href="#cart.html" title="Cart" class="toPage" id="cart"><img
+                            src="../images/icon-logo/icon/shopping-cart.png" alt="Cart" /></a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <div id="loader">
+            <h2>L<div class="spinner"></div>ADING <span></span></h2>
+            <p>Processing Payment</p>
+        </div>
+
+        <section id="printHeading">
+            <div class="container">
+                <div class="receiptLogo">
+                    <img src="../images/icon-logo/logo/lm_logo.png" alt="Lazy Monday Logo" />
+                </div>
+                <div class="receiptAddress">
+
+                    <address>
+                        <p>~ I ONLY HAVE EYES FOR BURGERS & FRIES ~</p>
+                        Lazy Monday Sdn. Bhd.<br />
+                        License of Lazy Monday's<br />
+                        71A, Jalan Abdul Samad 1, Sri Gelam,<br />
+                        Johor Bahru, Johor, Malaysia<br /><br />
+                        Tel No : <a href="tel:+1072335546">+07-233-5546</a><br />
+                        Email : <a href="mailto:lazymonday@gmail.com">lazymonday@gmail.com</a><br />
+                        Visit Us : <a href="index.html">https://www.lazymonday.com.my</a><br />
+                    </address>
+                </div>
+            </div>
+        </section>
+
+        <section id="paymentSuccessDisplay">
+            <div class="container">
+                <div id="paySuccessTitle">
+                    <h1 id="paySuccessMsg1">Your Meal Is Ready</h1>
+                    <p id="paySuccessMsg2">Thank You For Your Order</p>
+                    <p id="paySuccessMsg3">Receipt</p>
+                </div>
+                <div id="paySuccessDetails">
+                    <div id="paySuccess-ReceiptNo-DateTime">
+                        <p id="paySuccessReceiptNo" data-label="Receipt No : "></p>
+                        <p id="paySuccessDateTime" data-label="Order Date  : "></p>
+                    </div>
+                    <div id="paySuccess-PurchasedItem">
+                        <div id="purchaseSummaryList">
+                            <div class="purchaseSummaryHeading">
+                                <p class="purchaseItmIndex" style="color: #F9BF65;">No.</p>
+                                <p class="purchaseItmDesc">Description</p>
+                                <p class="purchaseItmQty">Quantity</p>
+                                <p class="purchaseItmPrice">Price</p>
+                                <p class="purchaseItmAmount">Amount</p>
+                            </div>
+                        </div>
+                        <div id="purchaseSummaryCalc">
+                            <div class="subtotalBox">
+                                <p id="subtotalMsg">Subtotal</p>
+                                <p id="subtotal"></p>
+                            </div>
+                            <div class="servicetaxBox">
+                                <p id="servicetaxMsg">Service Tax (6%)</p>
+                                <p id="servicetax"></p>
+                            </div>
+                            <div class="processfeeBox">
+                                <p id="processfeeMsg">Processing Fee (2.5%)</p>
+                                <p id="processfee"></p>
+                            </div>
+                            <div class="memberdiscBox">
+                                <p id="memberdiscMsg">Member Discount (30%)</p>
+                                <p id="memberdisc"></p>
+                            </div>
+                            <div class="grandtotalBox">
+                                <p id="grandtotalMsg">Grand Total</p>
+                                <p id="grandtotal"></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div id="paySuccessButtons">
+                    <div class="paySuccessBtn" id="printReceipt" onclick="window.print();" title="Print Receipt"
+                        onmousedown="clickSound.play();"><img src="../images/icon-logo/icon/printer.png"
+                            alt="Home">&nbsp;&nbsp;Print Receipt</div>
+                    <div class="paySuccessBtn" id="paySuccessToHome" onclick="window.location.href = 'index.html';"
+                        title="Back to Home" onmousedown="clickSound.play();"><img
+                            src="../images/icon-logo/icon/home.png" alt="Home">&nbsp;&nbsp;Back To
+                        Home</div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer>
+        <hr />
+        <h2>&#10023;&nbsp;Find Us At&nbsp;&#10023;</h2>
+        <div class="socialMedia">
+            <a href="https://web.facebook.com/lazymondaykitchen" title="Lazy Monday Facebook"><img
+                    src="../images/icon-logo/icon/facebook.png" alt="Facebook" /></a>
+            <a href="https://www.tiktok.com/@lazymondayhq" title="Lazy Monday TikTok"><img
+                    src="../images/icon-logo/icon/tiktok.png" alt="TikTok" /></a>
+            <a href="https://www.instagram.com/lazymondayhq/" title="Lazy Monday Instagram"><img
+                    src="../images/icon-logo/icon/instagram.png" alt="Instagram" /></a>
+        </div>
+        <hr />
+
+        <div class="quickLinks">
+            <div class="contact">
+                <h3>Contacts</h3><br />
+                <a href="mailto:lazymonday@gmail.com" title="Lazy Monday Email"><img
+                        src="../images/icon-logo/icon/email.png" alt="Email" />&nbsp;lazymonday@gmail.com</a><br />
+                <a href="tel:+1072335546" title="Lazy Monday Contact Number"><img
+                        src="../images/icon-logo/icon/phone.png" alt="Phone">&nbsp;+07-233-5546</a>
+            </div>
+            <div class="about">
+                <h3>About Us</h3><br />
+                <a href="about.html#story">Our Story</a><br />
+                <a href="contact.html#location">Our Location</a><br />
+                <a href="about.html#customers">Our Customers</a><br />
+                <a href="about.html#ingredient">Our Ingredients</a><br />
+                <a href="about.html#environment">Our Environment</a>
+            </div>
+            <div class="menu">
+                <h3>Menu</h3><br />
+                <a href="menu.html#menu">Specials</a><br />
+                <a href="menu.html#menu">Lobster Rolls</a><br />
+                <a href="menu.html#menu">Burgers</a><br />
+                <a href="menu.html#menu">Pastas</a><br />
+                <a href="menu.html#menu">Sides</a><br />
+                <a href="menu.html#menu">Beverages</a><br />
+                <a href="menu.html#menu">Desserts</a><br />
+            </div>
+            <div class="help">
+                <h3>Get Help</h3><br />
+                <a href="account.html">Login</a><br />
+                <a href="account.html">Sign Up</a><br />
+                <a href="career.html">Career</a><br />
+                <a href="https://example.com">Privacy Policy</a><br />
+                <a href="https://example.com">Terms & Conditions</a><br />
+            </div>
+        </div>
+        <hr />
+        <p>Copyright 2024 &copy; Lazy Monday Malaysia. All Rights Reserved.</p>
+    </footer>
+
+    <script>
+        window.onload = loaderScreen;
+        function loaderScreen() {
+            // Add animation to show the loader
+            document.getElementById('loader').style.animation = 'screenLoad 4s ease-in-out forwards';
+        }
+    </script>
+</body>
+
+</html>

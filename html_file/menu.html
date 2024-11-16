@@ -1,0 +1,1500 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="keywords" content="Lazy, Monday, western, burger, fries, restaurant, food" />
+    <title>Menu</title>
+    <link rel="icon" href="../images/icon-logo/logo/lm_logo_circle.png" type="image/x-icon" />
+    <link rel="stylesheet" href="../css_file/reset.css" />
+    <link rel="stylesheet" href="../css_file/lazyMonday.css" />
+    <link rel="stylesheet" href="../css_file/menu.css" />
+    <script src="../js_file/lazyMonday.js" type="text/javascript" defer></script>
+    <script src="../js_file/menu.js" type="text/javascript" defer></script>
+    <script src="../js_file/cart.js" type="text/javascript" defer></script>
+</head>
+
+<body>
+    <audio autoplay id="musicPlayer">
+        <source src="../audios/musics/coffee_cup.mp3" type="audio/mp3">
+        <source src="../audios/musics/italy.mp3" type="audio/mp3">
+        <source src="../audios/musics/vintage.mp3" type="audio/mp3">
+        <source src="../audios/musics/dream.mp3" type="audio/mp3">
+        Your browser does not support the audio element.
+    </audio>
+
+    <header id="navBar">
+        <nav>
+            <div id="logo">
+                <a href="index.html" title="Home" onclick="return checkCart();"><img
+                        src="../images/icon-logo/logo/lm_logo.png" alt="Lazy Monday Logo"></a>
+            </div>
+            <ul id="txtLink">
+                <li><a href="index.html" title="Home" onclick="return checkCart();" onmouseover="hoverSound.play();"
+                        onmousedown="clickSound.play();"><img src="../images/icon-logo/icon/home.png"
+                            alt="Home" />&nbsp;HOME</a>
+                </li>
+                <li class="dropdown" id="dropdown">
+                    <a href="menu.html" title="Menu" class="activePage" onclick="return checkCart();"
+                        onmouseover="hoverSound.play();" onmousedown="clickSound.play();"><img
+                            src="../images/icon-logo/icon/menu.png" alt="Menu" />&nbsp;MENU&nbsp;&nbsp;<span
+                            style="font-size: 0.7vw;">&#x25BC;</span></a>
+                    <ul class="dropdown-content">
+                        <li><a href="menu.html#menu" title="Specials" class="specialsBtn"
+                                onclick="filterMenu(this.classList)" onmouseover="hoverSound.play();"
+                                onmousedown="clickSound.play();">Specials</a></li>
+                        <li><a href="menu.html#menu" title="Lobster Rolls" class="lobstersBtn"
+                                onclick="filterMenu(this.classList)" onmouseover="hoverSound.play();"
+                                onmousedown="clickSound.play();">Lobster Rolls</a></li>
+                        <li><a href="menu.html#menu" title="Burgers" class="burgersBtn"
+                                onclick="filterMenu(this.classList)" onmouseover="hoverSound.play();"
+                                onmousedown="clickSound.play();">Burgers</a></li>
+                        <li><a href="menu.html#menu" title="Pastas" class="pastasBtn"
+                                onclick="filterMenu(this.classList)" onmouseover="hoverSound.play();"
+                                onmousedown="clickSound.play();">Pastas</a></li>
+                        <li><a href="menu.html#menu" title="Sides" class="sidesBtn" onclick="filterMenu(this.classList)"
+                                onmouseover="hoverSound.play();" onmousedown="clickSound.play();">Sides</a></li>
+                        <li><a href="menu.html#menu" title="Beverages" class="beveragesBtn"
+                                onclick="filterMenu(this.classList)" onmouseover="hoverSound.play();"
+                                onmousedown="clickSound.play();">Beverages</a></li>
+                        <li><a href="menu.html#menu" title="Desserts" class="dessertsBtn"
+                                onclick="filterMenu(this.classList)" onmouseover="hoverSound.play();"
+                                onmousedown="clickSound.play();">Desserts</a></li>
+                    </ul>
+                </li>
+                <li><a href="news.html" title="News" onclick="return checkCart();" onmouseover="hoverSound.play();"
+                        onmousedown="clickSound.play();"><img src="../images/icon-logo/icon/news.png"
+                            alt="News" />&nbsp;NEWS</a></li>
+                <li><a href="about.html" title="About Us" onclick="return checkCart();" onmouseover="hoverSound.play();"
+                        onmousedown="clickSound.play();"><img src="../images/icon-logo/icon/about.png"
+                            alt="About Us" />&nbsp;ABOUT</a></li>
+                <li><a href="contact.html" title="Contact Us" onclick="return checkCart();"
+                        onmouseover="hoverSound.play();" onmousedown="clickSound.play();"><img
+                            src="../images/icon-logo/icon/contact.png" alt="Contact Us" />&nbsp;CONTACT</a>
+                </li>
+                <li><a href="career.html" title="Career" onclick="return checkCart();" onmouseover="hoverSound.play();"
+                        onmousedown="clickSound.play();"><img src="../images/icon-logo/icon/career.png"
+                            alt="Career" />&nbsp;CAREER</a></li>
+            </ul>
+            <ul id="iconLink">
+                <li class="dropdown">
+                    <a href="account.html" onclick="return checkCart();" title="Account" class="toPage" onmouseover="hoverSound.play();"
+                        onmousedown="clickSound.play();"><img src="../images/icon-logo/icon/account.png"
+                            alt="Account" /></a>
+                    <ul class="dropdown-content">
+                        <li>
+                            <p class="User" id="Username"></p>
+                        </li>
+                        <li><a href="account.html" onclick="return checkCart(); logout();" id="loginLogoutLink" title="logout"></a></li>
+                    </ul>
+                </li>
+
+                <li id="cart">
+                    <div class="cartCountBox">
+                        <p class="cartCounter">0</p>
+                    </div>
+                    <div id="itmCart" class="toPage" title="Cart" onclick="showCart();" onmouseover="hoverSound.play();"
+                        onmousedown="clickSound.play();">
+                        <img src="../images/icon-logo/icon/shopping-cart.png" alt="Cart" />
+                    </div>
+                </li>
+            </ul>
+
+            <div id="cartBox">
+                <h2 class="cartTitle">Item Cart</h2>
+                <div class="cartContainer"></div>
+
+
+                <div class="cartBtn">
+                    <button class="closeCart" title="Close Cart" onclick="hideCart();" onmouseover="hoverSound.play();"
+                        onmousedown="clickSound.play();">Close</button>
+                    <button type="submit" class="checkoutCart" title="Check Out" onclick="checkOut();"
+                        onmouseover="hoverSound.play();" onmousedown="clickSound.play();">Checkout</button>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <!--Popup Box for Section 4-->
+        <div id="popupMenu">
+            <input type="submit" value="&times;" title="Close" id="close_popup" onclick="hidePopup();"
+                onmousedown="clickSound.play();" />
+            <div class="popupLeft">
+                <img id="popupImg" />
+                <h4>Details</h4>
+                <p id="popup_details"></p><br />
+            </div>
+            <div class="popupRight">
+                <h3 id="foodName"></h3>
+                <p id="foodDescription"></p>
+                <h2 id="price" style="user-select: none;"></h2>
+
+                <div class="popupOrder">
+                    <div class="popupQty">
+                        <button id="decreaseBtn" type="submit" style="font-weight: bold;">&#8722;</button>
+                        <h3 id="qty"></h3>
+                        <button id="increaseBtn" type="submit" style="font-weight: bold;">&#43;</button>
+                    </div>
+                    <div id="popup-takeaway" title="Take Away">
+                        <input type="checkbox" name="takeAway" id="takeAway" onchange="checkTakeAway(this);"
+                            onmousedown="clickSound.play();" />
+                        <label for="takeAway">&nbsp;Take Away</label><br />
+                        <label for="takeAway" id="takeAwayPrice" data-takeaway="1.20">+ RM 1.20</label>
+                    </div>
+                    <div class="popup-remark">
+                        <textarea name="remark" id="remark" cols="30" rows="5"
+                            placeholder="Your Remark (optional)"></textarea>
+                    </div>
+                </div>
+                <div class="popup-submit">
+                    <button id="popupAddCart" title="Add to Cart"
+                        onclick="checkSingleItemOrder(); addToCart(); hidePopup();" onmouseover="hoverSound.play();"
+                        onmousedown="clickSound.play();">Add to
+                        Cart</button>
+                    <button id="popupOrderNow" title="Order Now" onclick="addToCart(); checkOut();"
+                        onmouseover="hoverSound.play();" onmousedown="clickSound.play();">Order Now</button>
+                </div>
+
+            </div>
+        </div>
+
+        <!--Section 1: About Menu-->
+        <section id="aboutMenu">
+            <div class="slider">
+                <div class="list">
+                    <div class="item"
+                        style="background-image: url('../images/menu/lobster_rolls/serrano_peppers.jpg'); background-position: -20vw 60%; filter: contrast(130%);">
+                        <div class="content">
+                            <span>Seaside Elegance</span>
+                            <h3>Lobster Rolls</h3>
+                            <p>At the heart of our Lobster Rolls lies succulent chunks of sweet, tender lobster meat,
+                                gently tossed in a creamy, house-made dressing that accentuates its natural richness.
+                                Nestled within a buttery, toasted brioche bun, every bite is a decadent indulgence that
+                                transports you to the sun-drenched shores of New England.</p>
+                            <a href="#menu" onclick="filterMenu('lobstersBtn');" title="Order Lobster Roll"
+                                onmouseover="hoverSound.play();" onmousedown="clickSound.play();">
+                                <div class="btn toPage">
+                                    <p>ORDER LOBSTER ROLL&nbsp;<img src="../images/icon-logo/icon/shopping-cart.png"
+                                            alt="Order Now" /></p>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="item"
+                        style="background-image: url('../images/menu/aboutMenu/aboutBurger.jpg'); background-position: 25vw -70vh;">
+                        <div class="content">
+                            <span>Our Culinary Masterpiece</span>
+                            <h3>The Burger Symphony</h3>
+                            <p>Prepare to indulge in a culinary symphony that transcends the ordinary – our signature
+                                burger awaits to delight your senses. Crafted with the utmost care and attention to
+                                detail, each component of our burger harmonizes to create an unparalleled gastronomic
+                                experience.</p>
+                            <a href="#menu" onclick="filterMenu('burgersBtn');" title="Order Burger"
+                                onmouseover="hoverSound.play();" onmousedown="clickSound.play();">
+                                <div class="btn toPage">
+                                    <p>ORDER BURGER&nbsp;<img src="../images/icon-logo/icon/shopping-cart.png"
+                                            alt="Order Now" /></p>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="item"
+                        style="background-image: url('../images/menu/aboutMenu/aboutPasta.jpg'); background-position: -10vw -100vh;">
+                        <div class="content">
+                            <span>Artistry on a Plate</span>
+                            <h3>Our Pasta Creations</h3>
+                            <p>Delve into a world of savory indulgence with our pasta dishes, each featuring al dente
+                                noodles perfectly paired with an array of tantalizing sauces. From creamy Alfredo to
+                                zesty marinara, our sauces are crafted with the finest ingredients and simmered to
+                                perfection, ensuring a harmony of flavors in every bite.</p>
+                            <a href="#menu" onclick="filterMenu('pastasBtn');" title="Order Pasta"
+                                onmouseover="hoverSound.play();" onmousedown="clickSound.play();">
+                                <div class="btn toPage">
+                                    <p>ORDER PASTA&nbsp;<img src="../images/icon-logo/icon/shopping-cart.png"
+                                            alt="Order Now" /></p>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="item"
+                        style="background-image: url('../images/menu/sides/bacon_cheese_fries.jpg'); background-position: -10vw -100vh;">
+                        <div class="content">
+                            <span>Flavors of Complement</span>
+                            <h3>Our Side Dishes</h3>
+                            <p>Embark on a journey of indulgence with our tempting array of side dishes, featuring the
+                                irresistible allure of our Bacon Cheese Fries. Prepare your taste buds for a symphony of
+                                flavors as crispy fries mingle with savory bacon and gooey melted cheese, creating a
+                                tantalizing combination that's impossible to resist.</p>
+                            <a href="#menu" onclick="filterMenu('sidesBtn');" title="Order Sides"
+                                onmouseover="hoverSound.play();" onmousedown="clickSound.play();">
+                                <div class="btn toPage">
+                                    <p>ORDER SIDES&nbsp;<img src="../images/icon-logo/icon/shopping-cart.png"
+                                            alt="Order Now" /></p>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="buttons">
+                    <button id="prev" onmousedown="clickSound.play();"></button>
+                    <button id="next" onmousedown="clickSound.play();"></button>
+                </div>
+                <ul class="dots">
+                    <li class="active"></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                </ul>
+            </div>
+        </section>
+
+        <!--Section 2: News & Promotions-->
+        <section id="news">
+            <div class="container">
+                <h2>News & Promotions</h2>
+                <div class="slider">
+                    <div class="slides">
+                        <img src="../images/menu/news/basmathi_chicken_rice.jpg" alt="Ramadan Special" class="slide">
+                        <img src="../images/menu/news/dare.jpg" alt="DARE Burger Challenge" class="slide">
+                        <img src="../images/menu/news/crazy_feast.jpg" alt="Crazy Feast" class="slide">
+                    </div>
+                    <div class="slideBtn">
+                        <button class="prev" onclick="prevSlide()" onmousedown="clickSound.play();">&#10094;</button>
+                        <button class="next" onclick="nextSlide()" onmousedown="clickSound.play();">&#10095;</button>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!--Section 3: Crazy Feast-->
+        <section id="crazyFeast">
+            <div class="container">
+                <h2>&#x25CC; Crazy Feast &#x25CC;</h2>
+                <h4>3PM - 6PM</h4>
+                <img src="../images/menu/crazy-feast/save.png" alt="Save Up to 30%" />
+                <div class="reveal">
+                    <div class="filterContent">
+                        <div class="menuCard crazyFeast" id="crazy_boston" title="Crazy Boston"
+                            onclick="showPopup(this, 'crazy'); crazyBoston();" onmouseover="hoverSound.play();"
+                            onmousedown="clickSound.play();">
+                            <img class="itemImg" src="../images/menu/crazy-feast/crazy_boston.png" alt="Crazy Boston" />
+                            <div class="cardDetails">
+                                <h4 class="itemName">Crazy Boston</h4>
+                                <p class="itemPrice" data-price="149.99">RM 149.99</p>
+                                <div class="btn toPage" title="Order Now">
+                                    <p>ORDER</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="menuCard crazyFeast" id="crazy_eggplosion" title="Crazy Eggplosion"
+                            onclick="showPopup(this, 'crazy'); crazyEggplosion();" onmouseover="hoverSound.play();"
+                            onmousedown="clickSound.play();">
+                            <img class="itemImg" src="../images/menu/crazy-feast/crazy_eggplosion.png"
+                                alt="Crazy Eggplosion" />
+                            <div class="cardDetails">
+                                <h4 class="itemName">Crazy Eggplosion</h4>
+                                <p class="itemPrice" data-price="34.99">RM 34.99</p>
+                                <div class="btn toPage" title="Order Now">
+                                    <p>ORDER</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!--Section 4: Menu-->
+        <section id="menu">
+            <div class="container reveal">
+                <div class="filterTop">
+                    <h1>Our Menu</h1>
+                    <div class="filterBtn">
+                        <button id="allBtn" onclick="filterMenu(this.id)" onmousedown="clickSound.play();">All</button>
+                        <button id="specialsBtn" onclick="filterMenu(this.id)"
+                            onmousedown="clickSound.play();">Specials</button>
+                        <button id="lobstersBtn" onclick="filterMenu(this.id)" onmousedown="clickSound.play();">Lobster
+                            Rolls</button>
+                        <button id="burgersBtn" onclick="filterMenu(this.id)"
+                            onmousedown="clickSound.play();">Burgers</button>
+                        <button id="pastasBtn" onclick="filterMenu(this.id)"
+                            onmousedown="clickSound.play();">Pastas</button>
+                        <button id="sidesBtn" onclick="filterMenu(this.id)"
+                            onmousedown="clickSound.play();">Sides</button>
+                        <button id="beveragesBtn" onclick="filterMenu(this.id)"
+                            onmousedown="clickSound.play();">Beverages</button>
+                        <button id="dessertsBtn" onclick="filterMenu(this.id)"
+                            onmousedown="clickSound.play();">Desserts</button>
+                    </div>
+                </div>
+
+                <div class="filterContent">
+                    <!--Specials-->
+                    <div class="menuCard specials" id="DARE_BURGER" title="D.A.R.E Burger"
+                        onclick="showPopup(this, 'challenge'); dareBurger();" onmouseover="hoverSound.play();"
+                        onmousedown="clickSound.play();">
+                        <img class="itemImg" src="../images/menu/specials/dare_burger.jpg" alt="D.A.R.E Burger">
+                        <div class="cardDetails">
+                            <h4 class="itemName">D.A.R.E Burger</h4>
+                            <p class="itemPrice" data-price="149.00">RM 149.00</p>
+                            <div class="btn toPage" title="Challenge Now">
+                                <p>CHALLENGE</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="menuCard specials" id="basmathi_chicken_rice" title="Basmathi Chicken Rice"
+                        onclick="showPopup(this, 'default'); basmathiChickenRice();" onmouseover="hoverSound.play();"
+                        onmousedown="clickSound.play();">
+                        <img class="itemImg" src="../images/menu/specials/basmathi_chicken_rice.jpg"
+                            alt="Basmathi Chicken Rice">
+                        <div class="cardDetails">
+                            <h4 class="itemName">Basmathi Chicken Rice</h4>
+                            <p class="itemPrice" data-price="20.90">RM 20.90</p>
+                            <div class="btn toPage" title="Order Now">
+                                <p>ORDER</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!--Lobster Rolls-->
+                    <div class="menuCard lobster_rolls" id="classic_boston" title="Classic Boston"
+                        onclick="showPopup(this, 'default'); classicBoston();" onmouseover="hoverSound.play();"
+                        onmousedown="clickSound.play();">
+                        <img class="itemImg" src="../images/menu/lobster_rolls/classic_boston.jpg" alt="Classic Boston">
+                        <div class="cardDetails">
+                            <h4 class="itemName">Classic Boston</h4>
+                            <p class="itemPrice" data-price="142.00">RM 142.00</p>
+                            <div class="btn toPage" title="Order Now">
+                                <p>ORDER</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="menuCard lobster_rolls" id="serrano_peppers" title="Serrano Peppers"
+                        onclick="showPopup(this, 'default'); serranoPeppers();" onmouseover="hoverSound.play();"
+                        onmousedown="clickSound.play();">
+                        <img class="itemImg" src="../images/menu/lobster_rolls/serrano_peppers.jpg"
+                            alt="Serrano Peppers">
+                        <div class="cardDetails">
+                            <h4 class="itemName">Serrano Peppers</h4>
+                            <p class="itemPrice" data-price="155.00">RM 155.00</p>
+                            <div class="btn toPage" title="Order Now">
+                                <p>ORDER</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="menuCard lobster_rolls" id="whipped_herbs" title="Whipped Herbs"
+                        onclick="showPopup(this, 'default'); whippedHerbs();" onmouseover="hoverSound.play();"
+                        onmousedown="clickSound.play();">
+                        <img class="itemImg" src="../images/menu/lobster_rolls/whipped_herbs.jpg" alt="Whipped Herbs">
+                        <div class="cardDetails">
+                            <h4 class="itemName">Whipped Herbs</h4>
+                            <p class="itemPrice" data-price="148.00">RM 148.00</p>
+                            <div class="btn toPage" title="Order Now">
+                                <p>ORDER</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!--Burgers-->
+                    <div class="menuCard burgers" id="lazy_signature" title="Lazy Signature"
+                        onclick="showPopup(this, 'default'); lazySignature();" onmouseover="hoverSound.play();"
+                        onmousedown="clickSound.play();">
+                        <img class="itemImg" src="../images/menu/burgers/lazy_signature.png" alt="Lazy Signature">
+                        <div class="cardDetails">
+                            <h4 class="itemName">Lazy Signature</h4>
+                            <p class="itemPrice" data-price="26.70">RM 26.70</p>
+                            <div class="btn toPage" title="Order Now">
+                                <p>ORDER</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="menuCard burgers" id="smoked_beef_brisket" title="Smoked Beef Brisket"
+                        onclick="showPopup(this, 'default'); smokedBeefBrisket();" onmouseover="hoverSound.play();"
+                        onmousedown="clickSound.play();">
+                        <img class="itemImg" src="../images/menu/burgers/smoked_beef_brisket.png"
+                            alt="Smoked Beef Brisket">
+                        <div class="cardDetails">
+                            <h4 class="itemName">Smoked Beef Brisket</h4>
+                            <p class="itemPrice" data-price="40.90">RM 40.90</p>
+                            <div class="btn toPage" title="Order Now">
+                                <p>ORDER</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="menuCard burgers" id="eggplosion" title="Eggplosion"
+                        onclick="showPopup(this, 'default'); eggplosion();" onmouseover="hoverSound.play();"
+                        onmousedown="clickSound.play();">
+                        <img class="itemImg" src="../images/menu/burgers/eggplosion.png" alt="Eggplosion">
+                        <div class="cardDetails">
+                            <h4 class="itemName">Eggplosion</h4>
+                            <p class="itemPrice" data-price="32.30">RM 32.30</p>
+                            <div class="btn toPage" title="Order Now">
+                                <p>ORDER</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="menuCard burgers" id="northender" title="Northender"
+                        onclick="showPopup(this, 'default'); northender();" onmouseover="hoverSound.play();"
+                        onmousedown="clickSound.play();">
+                        <img class="itemImg" src="../images/menu/burgers/northender.png" alt="Northender">
+                        <div class="cardDetails">
+                            <h4 class="itemName">Northender</h4>
+                            <p class="itemPrice" data-price="22.70">RM 22.70</p>
+                            <div class="btn toPage" title="Order Now">
+                                <p>ORDER</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="menuCard burgers" id="hot_mexican" title="Hot Mexican"
+                        onclick="showPopup(this, 'default'); hotMexican();" onmouseover="hoverSound.play();"
+                        onmousedown="clickSound.play();">
+                        <img class="itemImg" src="../images/menu/burgers/hot_mexican.png" alt="Hot Mexican">
+                        <div class="cardDetails">
+                            <h4 class="itemName">Hot Mexican</h4>
+                            <p class="itemPrice" data-price="34.90">RM 34.90</p>
+                            <div class="btn toPage" title="Order Now">
+                                <p>ORDER</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="menuCard burgers" id="wincosin" title="Wincosin"
+                        onclick="showPopup(this, 'default'); wincosin();" onmouseover="hoverSound.play();"
+                        onmousedown="clickSound.play();">
+                        <img class="itemImg" src="../images/menu/burgers/wincosin.png" alt="Wincosin">
+                        <div class="cardDetails">
+                            <h4 class="itemName">Wincosin</h4>
+                            <p class="itemPrice" data-price="22.80">RM 22.80</p>
+                            <div class="btn toPage" title="Order Now">
+                                <p>ORDER</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="menuCard burgers" id="salted_egg" title="Salted Egg"
+                        onclick="showPopup(this, 'default'); saltedEgg();" onmouseover="hoverSound.play();"
+                        onmousedown="clickSound.play();">
+                        <img class="itemImg" src="../images/menu/burgers/salted_egg.png" alt="Salted Egg">
+                        <div class="cardDetails">
+                            <h4 class="itemName">Salted Egg</h4>
+                            <p class="itemPrice" data-price="30.90">RM 30.90</p>
+                            <div class="btn toPage" title="Order Now">
+                                <p>ORDER</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="menuCard burgers" id="bbq_chicken" title="BBQ Chicken"
+                        onclick="showPopup(this, 'default'); bbqChicken();" onmouseover="hoverSound.play();"
+                        onmousedown="clickSound.play();">
+                        <img class="itemImg" src="../images/menu/burgers/bbq_chicken.png" alt="BBQ Chicken">
+                        <div class="cardDetails">
+                            <h4 class="itemName">BBQ Chicken</h4>
+                            <p class="itemPrice" data-price="24.90">RM 24.90</p>
+                            <div class="btn toPage" title="Order Now">
+                                <p>ORDER</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!--Pastas-->
+                    <div class="menuCard pastas" id="bolognese" title="Bolognese"
+                        onclick="showPopup(this, 'default'); bolognese();" onmouseover="hoverSound.play();"
+                        onmousedown="clickSound.play();">
+                        <img class="itemImg" src="../images/menu/pastas/bolognese.jpg" alt="Bolognese">
+                        <div class="cardDetails">
+                            <h4 class="itemName">Bolognese</h4>
+                            <p class="itemPrice" data-price="19.90">RM 19.90</p>
+                            <div class="btn toPage" title="Order Now">
+                                <p>ORDER</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="menuCard pastas" id="pescatora" title="Pescatora"
+                        onclick="showPopup(this, 'default'); pescatora();" onmouseover="hoverSound.play();"
+                        onmousedown="clickSound.play();">
+                        <img class="itemImg" src="../images/menu/pastas/pescatora.jpg" alt="Pescatora">
+                        <div class="cardDetails">
+                            <h4 class="itemName">Pescatora</h4>
+                            <p class="itemPrice" data-price="26.90">RM 26.90</p>
+                            <div class="btn toPage" title="Order Now">
+                                <p>ORDER</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="menuCard pastas" id="chilli_salted_egg" title="Chilli Salted Egg"
+                        onclick="showPopup(this, 'default'); chilliSaltedEgg();" onmouseover="hoverSound.play();"
+                        onmousedown="clickSound.play();">
+                        <img class="itemImg" src="../images/menu/pastas/chilli_salted_egg.jpg" alt="Chilli Salted Egg">
+                        <div class="cardDetails">
+                            <h4 class="itemName">Chilli Salted Egg</h4>
+                            <p class="itemPrice" data-price="21.50">RM 21.50</p>
+                            <div class="btn toPage" title="Order Now">
+                                <p>ORDER</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="menuCard pastas" id="smoked_beef_carbonara" title="Smoked Beef Carbonara"
+                        onclick="showPopup(this, 'default'); smokedBeefCarbonara();" onmouseover="hoverSound.play();"
+                        onmousedown="clickSound.play();">
+                        <img class="itemImg" src="../images/menu/pastas/smoked_beef_carbonara.jpg"
+                            alt="Smoked Beef Carbonara">
+                        <div class="cardDetails">
+                            <h4 class="itemName" style="font-size: 15px;">Smoked Beef
+                                Carbonara</h4>
+                            <p class="itemPrice" data-price="22.90">RM 22.90</p>
+                            <div class="btn toPage" title="Order Now">
+                                <p>ORDER</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!--Sides-->
+                    <div class="menuCard sides" id="korean_chicken_spicy" title="Korean Chicken Spicy"
+                        onclick="showPopup(this, 'default'); koreanChickenSpicy();" onmouseover="hoverSound.play();"
+                        onmousedown="clickSound.play();">
+                        <img class="itemImg" src="../images/menu/sides/korean_chicken_spicy.jpg"
+                            alt="Korean Chicken Spicy">
+                        <div class="cardDetails">
+                            <h4 class="itemName" style="font-size: 15px;">Korean Chicken
+                                Spicy</h4>
+                            <p class="itemPrice" data-price="20.00">RM 20.00</p>
+                            <div class="btn toPage" title="Order Now">
+                                <p>ORDER</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="menuCard sides" id="wingZilla" title="WingZilla"
+                        onclick="showPopup(this, 'default'); wingzilla();" onmouseover="hoverSound.play();"
+                        onmousedown="clickSound.play();">
+                        <img class="itemImg" src="../images/menu/sides/wingZilla.jpg" alt="WingZilla">
+                        <div class="cardDetails">
+                            <h4 class="itemName">WingZilla</h4>
+                            <p class="itemPrice" data-price="19.50">RM 19.50</p>
+                            <div class="btn toPage" title="Order Now">
+                                <p>ORDER</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="menuCard sides" id="royal_wing" title="Royal Wing"
+                        onclick="showPopup(this, 'default'); royalWing();" onmouseover="hoverSound.play();"
+                        onmousedown="clickSound.play();">
+                        <img class="itemImg" src="../images/menu/sides/royal_wing.jpg" alt="Royal Wing">
+                        <div class="cardDetails">
+                            <h4 class="itemName">Royal Wing</h4>
+                            <p class="itemPrice" data-price="15.50">RM 15.50</p>
+                            <div class="btn toPage" title="Order Now">
+                                <p>ORDER</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="menuCard sides" id="chicken_nachos" title="Chicken Nachos"
+                        onclick="showPopup(this, 'default'); chickenNachos();" onmouseover="hoverSound.play();"
+                        onmousedown="clickSound.play();">
+                        <img class="itemImg" src="../images/menu/sides/chicken_nachos.jpg" alt="Chicken Nachos">
+                        <div class="cardDetails">
+                            <h4 class="itemName">Chicken Nachos</h4>
+                            <p class="itemPrice" data-price="26.50">RM 26.50</p>
+                            <div class="btn toPage" title="Order Now">
+                                <p>ORDER</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="menuCard sides" id="beef_nachos" title="Beef Nachos"
+                        onclick="showPopup(this, 'default'); beefNachos();" onmouseover="hoverSound.play();"
+                        onmousedown="clickSound.play();">
+                        <img class="itemImg" src="../images/menu/sides/beef_nachos.jpg" alt="Beef Nachos">
+                        <div class="cardDetails">
+                            <h4 class="itemName">Beef Nachos</h4>
+                            <p class="itemPrice" data-price="29.60">RM 29.60</p>
+                            <div class="btn toPage" title="Order Now">
+                                <p>ORDER</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="menuCard sides" id="bacon_cheese_fries" title="Bacon Cheese Fries"
+                        onclick="showPopup(this, 'default'); baconCheeseFries();" onmouseover="hoverSound.play();"
+                        onmousedown="clickSound.play();">
+                        <img class="itemImg" src="../images/menu/sides/bacon_cheese_fries.jpg" alt="Bacon Cheese Fries">
+                        <div class="cardDetails">
+                            <h4 class="itemName">Bacon Cheese Fries</h4>
+                            <p class="itemPrice" data-price="19.00">RM 19.00</p>
+                            <div class="btn toPage" title="Order Now">
+                                <p>ORDER</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="menuCard sides" id="onion_ring" title="Onion Ring"
+                        onclick="showPopup(this, 'default'); onionRing();" onmouseover="hoverSound.play();"
+                        onmousedown="clickSound.play();">
+                        <img class="itemImg" src="../images/menu/sides/onion_ring.jpg" alt="Onion Ring">
+                        <div class="cardDetails">
+                            <h4 class="itemName">Onion Ring</h4>
+                            <p class="itemPrice" data-price="12.50">RM 12.50</p>
+                            <div class="btn toPage" title="Order Now">
+                                <p>ORDER</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="menuCard sides" id="curly_fries" title="Curly Fries"
+                        onclick="showPopup(this, 'default'); curlyFries();" onmouseover="hoverSound.play();"
+                        onmousedown="clickSound.play();">
+                        <img class="itemImg" src="../images/menu/sides/curly_fries.jpg" alt="Curly Fries">
+                        <div class="cardDetails">
+                            <h4 class="itemName">Curly Fries</h4>
+                            <p class="itemPrice" data-price="15.50">RM 15.50</p>
+                            <div class="btn toPage" title="Order Now">
+                                <p>ORDER</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!--Beverages-->
+                    <div class="menuCard beverages" id="peach_passion_tea" title="Peach Passion Tea"
+                        onclick="showPopup(this, 'default'); peachPassionTea();" onmouseover="hoverSound.play();"
+                        onmousedown="clickSound.play();">
+                        <img class="itemImg" src="../images/menu/beverages/peach_passion_tea.jpg"
+                            alt="Peach Passion Tea">
+                        <div class="cardDetails">
+                            <h4 class="itemName">Peach Passion Tea</h4>
+                            <p class="itemPrice" data-price="13.90">RM 13.90</p>
+                            <div class="btn toPage" title="Order Now">
+                                <p>ORDER</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="menuCard beverages" id="peach_belini" title="Peach Belini"
+                        onclick="showPopup(this, 'default'); peachBelini();" onmouseover="hoverSound.play();"
+                        onmousedown="clickSound.play();">
+                        <img class="itemImg" src="../images/menu/beverages/peach_belini.jpg" alt="Peach Belini">
+                        <div class="cardDetails">
+                            <h4 class="itemName">Peach Belini</h4>
+                            <p class="itemPrice" data-price="15.00">RM 15.00</p>
+                            <div class="btn toPage" title="Order Now">
+                                <p>ORDER</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="menuCard beverages" id="lychee_punch" title="Lychee Punch"
+                        onclick="showPopup(this, 'default'); lycheePunch();" onmouseover="hoverSound.play();"
+                        onmousedown="clickSound.play();">
+                        <img class="itemImg" src="../images/menu/beverages/lychee_punch.jpg" alt="Lychee Punch">
+                        <div class="cardDetails">
+                            <h4 class="itemName">Lychee Punch</h4>
+                            <p class="itemPrice" data-price="13.90">RM 13.90</p>
+                            <div class="btn toPage" title="Order Now">
+                                <p>ORDER</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="menuCard beverages" id="japanese_matcha_latte" title="Japanese Matcha Latte"
+                        onclick="showPopup(this, 'default'); japaneseMatchaLatte();" onmouseover="hoverSound.play();"
+                        onmousedown="clickSound.play();">
+                        <img class="itemImg" src="../images/menu/beverages/japanese_matcha_latte.jpg"
+                            alt="Japanese Matcha Latte">
+                        <div class="cardDetails">
+                            <h4 class="itemName">Japanese Matcha Latte</h4>
+                            <p class="itemPrice" data-price="16.00">RM 16.00</p>
+                            <div class="btn toPage" title="Order Now">
+                                <p>ORDER</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="menuCard beverages" id="yuzu_matcha" title="Yuzu Matcha"
+                        onclick="showPopup(this, 'default'); yuzuMatcha();" onmouseover="hoverSound.play();"
+                        onmousedown="clickSound.play();">
+                        <img class="itemImg" src="../images/menu/beverages/yuzu_matcha.jpg" alt="Yuzu Matcha">
+                        <div class="cardDetails">
+                            <h4 class="itemName">Yuzu Matcha</h4>
+                            <p class="itemPrice" data-price="14.20">RM 14.20</p>
+                            <div class="btn toPage" title="Order Now">
+                                <p>ORDER</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="menuCard beverages" id="strawberry_lemonade" title="Strawberry Lemonade"
+                        onclick="showPopup(this, 'default'); strawberryLemonade();" onmouseover="hoverSound.play();"
+                        onmousedown="clickSound.play();">
+                        <img class="itemImg" src="../images/menu/beverages/strawberry_lemonade.jpg"
+                            alt="Strawberry Lemonade">
+                        <div class="cardDetails">
+                            <h4 class="itemName">Strawberry Lemonade</h4>
+                            <p class="itemPrice" data-price="13.90">RM 13.90</p>
+                            <div class="btn toPage" title="Order Now">
+                                <p>ORDER</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="menuCard beverages" id="strawberry_paradise" title="Strawberry Paradise"
+                        onclick="showPopup(this, 'default'); strawberryParadise();" onmouseover="hoverSound.play();"
+                        onmousedown="clickSound.play();">
+                        <img class="itemImg" src="../images/menu/beverages/strawberry_paradise.jpg"
+                            alt="Strawberry Paradise">
+                        <div class="cardDetails">
+                            <h4 class="itemName">Strawberry Paradise</h4>
+                            <p class="itemPrice" data-price="15.00">RM 15.00</p>
+                            <div class="btn toPage" title="Order Now">
+                                <p>ORDER</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="menuCard beverages" id="oreo_slush" title="Orea Slush"
+                        onclick="showPopup(this, 'default'); oreoSlush();" onmouseover="hoverSound.play();"
+                        onmousedown="clickSound.play();">
+                        <img class="itemImg" src="../images/menu/beverages/oreo_slush.jpg" alt="Oreo Slush">
+                        <div class="cardDetails">
+                            <h4 class="itemName">Oreo Slush</h4>
+                            <p class="itemPrice" data-price="17.50">RM 17.50</p>
+                            <div class="btn toPage" title="Order Now">
+                                <p>ORDER</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="menuCard beverages" id="strawberry_lychee" title="Strawberry Lychee"
+                        onclick="showPopup(this, 'default'); strawberryLychee();" onmouseover="hoverSound.play();"
+                        onmousedown="clickSound.play();">
+                        <img class="itemImg" src="../images/menu/beverages/strawberry_lychee.jpg"
+                            alt="Strawberry Lychee">
+                        <div class="cardDetails">
+                            <h4 class="itemName">Strawberry Lychee</h4>
+                            <p class="itemPrice" data-price="16.20">RM 16.20</p>
+                            <div class="btn toPage" title="Order Now">
+                                <p>ORDER</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="menuCard beverages" id="double_mango" title="Double Mango"
+                        onclick="showPopup(this, 'default'); doubleMango();" onmouseover="hoverSound.play();"
+                        onmousedown="clickSound.play();">
+                        <img class="itemImg" src="../images/menu/beverages/double_mango.jpg" alt="Double Mango">
+                        <div class="cardDetails">
+                            <h4 class="itemName">Double Mango</h4>
+                            <p class="itemPrice" data-price="16.90">RM 16.90</p>
+                            <div class="btn toPage" title="Order Now">
+                                <p>ORDER</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="menuCard beverages" id="kiwi_fury" title="Kiwi Fury"
+                        onclick="showPopup(this, 'default'); kiwiFury();" onmouseover="hoverSound.play();"
+                        onmousedown="clickSound.play();">
+                        <img class="itemImg" src="../images/menu/beverages/kiwi_fury.jpg" alt="Kiwi Fury">
+                        <div class="cardDetails">
+                            <h4 class="itemName">Kiwi Fury</h4>
+                            <p class="itemPrice" data-price="17.50">RM 17.50</p>
+                            <div class="btn toPage" title="Order Now">
+                                <p>ORDER</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="menuCard beverages" id="japanese_matcha_milkshake" title="Japanese Matcha Milkshake"
+                        onclick="showPopup(this, 'default'); japaneseMatchaMilkshake();"
+                        onmouseover="hoverSound.play();" onmousedown="clickSound.play();">
+                        <img class="itemImg" src="../images/menu/beverages/japanese_matcha_milkshake.jpg"
+                            alt="Japanese Matcha Milkshake">
+                        <div class="cardDetails">
+                            <h4 class="itemName">Japanese Matcha Milkshake</h4>
+                            <p class="itemPrice" data-price="16.90">RM 16.90</p>
+                            <div class="btn toPage" title="Order Now">
+                                <p>ORDER</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="menuCard beverages" id="cocoa_nut" title="Cocoa Nut"
+                        onclick="showPopup(this, 'default'); cocoaNut();" onmouseover="hoverSound.play();"
+                        onmousedown="clickSound.play();">
+                        <img class="itemImg" src="../images/menu/beverages/cocoa_nut.jpg" alt="Cocoa Nut">
+                        <div class="cardDetails">
+                            <h4 class="itemName">Cocoa Nut</h4>
+                            <p class="itemPrice" data-price="17.00">RM 17.00</p>
+                            <div class="btn toPage" title="Order Now">
+                                <p>ORDER</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="menuCard beverages" id="classic_mojito" title="Classic Mojito"
+                        onclick="showPopup(this, 'default'); classicMojito();" onmouseover="hoverSound.play();"
+                        onmousedown="clickSound.play();">
+                        <img class="itemImg" src="../images/menu/beverages/classic_mojito.jpg" alt="Classic Mojito">
+                        <div class="cardDetails">
+                            <h4 class="itemName">Classic Mojito</h4>
+                            <p class="itemPrice" data-price="14.50">RM 14.50</p>
+                            <div class="btn toPage" title="Order Now">
+                                <p>ORDER</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="menuCard beverages" id="apple_haze" title="Apple Haze"
+                        onclick="showPopup(this, 'default'); appleHaze();" onmouseover="hoverSound.play();"
+                        onmousedown="clickSound.play();">
+                        <img class="itemImg" src="../images/menu/beverages/apple_haze.jpg" alt="Apple Haze">
+                        <div class="cardDetails">
+                            <h4 class="itemName">Apple Haze</h4>
+                            <p class="itemPrice" data-price="14.00">RM 14.00</p>
+                            <div class="btn toPage" title="Order Now">
+                                <p>ORDER</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="menuCard beverages" id="watermelon_rush" title="Watermelon Rush"
+                        onclick="showPopup(this, 'default'); watermelonRush();" onmouseover="hoverSound.play();"
+                        onmousedown="clickSound.play();">
+                        <img class="itemImg" src="../images/menu/beverages/watermelon_rush.jpg" alt="Watermelon Rush">
+                        <div class="cardDetails">
+                            <h4 class="itemName">Watermelon Rush</h4>
+                            <p class="itemPrice" data-price="14.40">RM 14.40</p>
+                            <div class="btn toPage" title="Order Now">
+                                <p>ORDER</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="menuCard beverages" id="americano" title="Americano"
+                        onclick="showPopup(this, 'default'); americano();" onmouseover="hoverSound.play();"
+                        onmousedown="clickSound.play();">
+                        <img class="itemImg" src="../images/menu/beverages/americano.jpg" alt="Americano">
+                        <div class="cardDetails">
+                            <h4 class="itemName">Americano</h4>
+                            <p class="itemPrice" data-price="9.90">RM 9.90</p>
+                            <div class="btn toPage" title="Order Now">
+                                <p>ORDER</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="menuCard beverages" id="caffe_latte" title="Caffe Latte"
+                        onclick="showPopup(this, 'default'); caffeLatte();" onmouseover="hoverSound.play();"
+                        onmousedown="clickSound.play();">
+                        <img class="itemImg" src="../images/menu/beverages/caffe_latte.jpg" alt="Caffe Latte">
+                        <div class="cardDetails">
+                            <h4 class="itemName">Caffe Latte</h4>
+                            <p class="itemPrice" data-price="14.40">RM 14.40</p>
+                            <div class="btn toPage" title="Order Now">
+                                <p>ORDER</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="menuCard beverages" id="mocha" title="Mocha"
+                        onclick="showPopup(this, 'default'); mocha();" onmouseover="hoverSound.play();"
+                        onmousedown="clickSound.play();">
+                        <img class="itemImg" src="../images/menu/beverages/mocha.jpg" alt="Mocha">
+                        <div class="cardDetails">
+                            <h4 class="itemName">Mocha</h4>
+                            <p class="itemPrice" data-price="14.90">RM 14.90</p>
+                            <div class="btn toPage" title="Order Now">
+                                <p>ORDER</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="menuCard beverages" id="aussie_cappucino" title="Aussie Cappucino"
+                        onclick="showPopup(this, 'default'); aussieCappucino();" onmouseover="hoverSound.play();"
+                        onmousedown="clickSound.play();">
+                        <img class="itemImg" src="../images/menu/beverages/aussie_cappucino.jpg" alt="Aussie Cappucino">
+                        <div class="cardDetails">
+                            <h4 class="itemName">Aussie Cappucino</h4>
+                            <p class="itemPrice" data-price="14.00">RM 14.00</p>
+                            <div class="btn toPage" title="Order Now">
+                                <p>ORDER</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="menuCard beverages" id="lazy_caramel_machiato" title="Lazy Caramel Machiato"
+                        onclick="showPopup(this, 'default'); lazyCaramelMachiato();" onmouseover="hoverSound.play();"
+                        onmousedown="clickSound.play();">
+                        <img class="itemImg" src="../images/menu/beverages/lazy_caramel_machiato.jpg"
+                            alt="Lazy Caramel Machiato">
+                        <div class="cardDetails">
+                            <h4 class="itemName">Lazy Caramel Machiato</h4>
+                            <p class="itemPrice" data-price="16.00">RM 16.00</p>
+                            <div class="btn toPage" title="Order Now">
+                                <p>ORDER</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="menuCard beverages" id="classic_chocolate" title="Classic Chocolate"
+                        onclick="showPopup(this, 'default'); classicChocolate();" onmouseover="hoverSound.play();"
+                        onmousedown="clickSound.play();">
+                        <img class="itemImg" src="../images/menu/beverages/classic_chocolate.jpg"
+                            alt="Classic Chocolate">
+                        <div class="cardDetails">
+                            <h4 class="itemName">Classic Chocolate</h4>
+                            <p class="itemPrice" data-price="13.50">RM 13.50</p>
+                            <div class="btn toPage" title="Order Now">
+                                <p>ORDER</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!--Desserts-->
+                    <div class="menuCard desserts" id="cheese_cake" title="Cheese Cake"
+                        onclick="showPopup(this, 'default'); cheeseCake();" onmouseover="hoverSound.play();"
+                        onmousedown="clickSound.play();">
+                        <img class="itemImg" src="../images/menu/desserts/cheese_cake.jpg" alt="Cheese Cake">
+                        <div class="cardDetails">
+                            <h4 class="itemName">Cheese Cake</h4>
+                            <p class="itemPrice" data-price="10.90">RM 10.90</p>
+                            <div class="btn toPage" title="Order Now">
+                                <p>ORDER</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="menuCard desserts" id="chocolate_brownie_cake" title="Chocolate Brownie Cake"
+                        onclick="showPopup(this, 'default'); chocolateBrownieCake();" onmouseover="hoverSound.play();"
+                        onmousedown="clickSound.play();">
+                        <img class="itemImg" src="../images/menu/desserts/chocolate_brownie_cake.jpg"
+                            alt="Chocolate Brownie Cake">
+                        <div class="cardDetails">
+                            <h4 class="itemName">Chocolate Brownie Cake</h4>
+                            <p class="itemPrice" data-price="8.50">RM 8.50</p>
+                            <div class="btn toPage" title="Order Now">
+                                <p>ORDER</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="menuCard desserts" id="honeydew_sago" title="Honeydew Sago"
+                        onclick="showPopup(this, 'default'); honeydewSago();" onmouseover="hoverSound.play();"
+                        onmousedown="clickSound.play();">
+                        <img class="itemImg" src="../images/menu/desserts/honeydew_sago.jpg" alt="Honeydew Sago">
+                        <div class="cardDetails">
+                            <h4 class="itemName">Honeydew Sago</h4>
+                            <p class="itemPrice" data-price="10.00">RM 10.00</p>
+                            <div class="btn toPage" title="Order Now">
+                                <p>ORDER</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="menuCard desserts" id="hwachae_watermelon_punch" title="Hwachae Watermelon Punch"
+                        onclick="showPopup(this, 'default'); hwachaeWatermelonPunch();" onmouseover="hoverSound.play();"
+                        onmousedown="clickSound.play();">
+                        <img class="itemImg" src="../images/menu/desserts/hwachae_watermelon_punch.jpg"
+                            alt="Hwachae Watermelon Punch">
+                        <div class="cardDetails">
+                            <h4 class="itemName">Hwachae Watermelon Punch</h4>
+                            <p class="itemPrice" data-price="15.50">RM 15.50</p>
+                            <div class="btn toPage" title="Order Now">
+                                <p>ORDER</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="menuCard desserts" id="mango_sago" title="Mango Sago"
+                        onclick="showPopup(this, 'default'); mangoSago();" onmouseover="hoverSound.play();"
+                        onmousedown="clickSound.play();">
+                        <img class="itemImg" src="../images/menu/desserts/mango_sago.jpg" alt="Mango Sago">
+                        <div class="cardDetails">
+                            <h4 class="itemName">Mango Sago</h4>
+                            <p class="itemPrice" data-price="10.00">RM 10.00</p>
+                            <div class="btn toPage" title="Order Now">
+                                <p>ORDER</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <hr />
+        <h2>&#10023;&nbsp;Find Us At&nbsp;&#10023;</h2>
+        <div class="socialMedia">
+            <a href="https://web.facebook.com/lazymondaykitchen" title="Lazy Monday Facebook"
+                onclick="return checkCart();"><img src="../images/icon-logo/icon/facebook.png" alt="Facebook" /></a>
+            <a href="https://www.tiktok.com/@lazymondayhq" title="Lazy Monday TikTok" onclick="return checkCart();"><img
+                    src="../images/icon-logo/icon/tiktok.png" alt="TikTok" /></a>
+            <a href="https://www.instagram.com/lazymondayhq/" title="Lazy Monday Instagram"
+                onclick="return checkCart();"><img src="../images/icon-logo/icon/instagram.png" alt="Instagram" /></a>
+        </div>
+        <hr />
+
+        <div class="quickLinks">
+            <div class="contact">
+                <h3>Contacts</h3><br />
+                <a href="mailto:lazymonday@gmail.com" title="Lazy Monday Email" onclick="return checkCart();"><img
+                        src="../images/icon-logo/icon/email.png" alt="Email" />&nbsp;lazymonday@gmail.com</a><br />
+                <a href="tel:+1072335546" title="Lazy Monday Contact Number" onclick="return checkCart();"><img
+                        src="../images/icon-logo/icon/phone.png" alt="Phone">&nbsp;+07-233-5546</a>
+            </div>
+            <div class="about">
+                <h3>About Us</h3><br />
+                <a href="about.html#story" onclick="return checkCart();">Our Story</a><br />
+                <a href="contact.html#location" onclick="return checkCart();">Our Location</a><br />
+                <a href="about.html#customers" onclick="return checkCart();">Our Customers</a><br />
+                <a href="about.html#ingredient" onclick="return checkCart();">Our Ingredients</a><br />
+                <a href="about.html#environment" onclick="return checkCart();">Our Environment</a>
+            </div>
+            <div class="menu">
+                <h3>Menu</h3><br />
+                <a href="menu.html#menu" onclick="filterMenu('specialsBtn');">Specials</a><br />
+                <a href="menu.html#menu" onclick="filterMenu('lobstersBtn');">Lobster Rolls</a><br />
+                <a href="menu.html#menu" onclick="filterMenu('burgersBtn');">Burgers</a><br />
+                <a href="menu.html#menu" onclick="filterMenu('pastasBtn');">Pastas</a><br />
+                <a href="menu.html#menu" onclick="filterMenu('sidesBtn');">Sides</a><br />
+                <a href="menu.html#menu" onclick="filterMenu('beveragesBtn');">Beverages</a><br />
+                <a href="menu.html#menu" onclick="filterMenu('dessertsBtn');">Desserts</a><br />
+            </div>
+            <div class="help">
+                <h3>Get Help</h3><br />
+                <a href="account.html" onclick="return checkCart();">Login</a><br />
+                <a href="account.html" onclick="return checkCart();">Sign Up</a><br />
+                <a href="career.html" onclick="return checkCart();">Career</a><br />
+                <a href="https://example.com" onclick="return checkCart();">Privacy Policy</a><br />
+                <a href="https://example.com" onclick="return checkCart();">Terms & Conditions</a><br />
+            </div>
+        </div>
+        <hr />
+        <p>Copyright 2024 &copy; Lazy Monday Malaysia. All Rights Reserved.</p>
+    </footer>
+
+
+    <script type="text/javascript">
+        // Image Slider
+        const slides = document.querySelectorAll(".slides img");
+        let slideIndex = 0;
+        let intervalId = null;
+
+        document.addEventListener("DOMContentLoaded", initializeSlider);
+
+        function initializeSlider() {
+            // If we have slides (pictures)
+            if (slides.length > 0) {
+                slides[slideIndex].classList.add("displaySlide");
+                intervalId = setInterval(nextSlide, 5000);
+                console.log(intervalId);
+            }
+        }
+
+        function showSlide(index) {
+            // If reach to the end of slides
+            if (index >= slides.length) {
+                slideIndex = 0;
+            }
+            else if (index < 0) {
+                slideIndex = slides.length - 1;
+            }
+            slides.forEach(slide => {
+                slide.classList.remove("displaySlide");
+            })
+            slides[slideIndex].classList.add("displaySlide");
+        }
+
+        function prevSlide() {
+            clearInterval(intervalId);
+            slideIndex--;
+            showSlide(slideIndex);
+        }
+
+        function nextSlide(index) {
+            slideIndex++;
+            showSlide(slideIndex);
+        }
+
+        // --------------------------------------------------
+        let slider = document.querySelector('.slider .list');
+        let items = document.querySelectorAll('.slider .list .item');
+        let next = document.getElementById('next');
+        let prev = document.getElementById('prev');
+        let dots = document.querySelectorAll('.slider .dots li');
+
+        let lengthItems = items.length - 1;
+        let active = 0;
+        next.onclick = function () {
+            active = active + 1 <= lengthItems ? active + 1 : 0;
+            reloadSlider();
+        }
+        prev.onclick = function () {
+            active = active - 1 >= 0 ? active - 1 : lengthItems;
+            reloadSlider();
+        }
+        let refreshInterval = setInterval(() => { next.click() }, 3000);
+        function reloadSlider() {
+            slider.style.left = -items[active].offsetLeft + 'px';
+            let last_active_dot = document.querySelector('.slider .dots li.active');
+            last_active_dot.classList.remove('active');
+            dots[active].classList.add('active');
+
+            clearInterval(refreshInterval);
+            refreshInterval = setInterval(() => { next.click() }, 3000);
+        }
+
+        dots.forEach((li, key) => {
+            li.addEventListener('click', () => {
+                active = key;
+                reloadSlider();
+            })
+        })
+        window.onresize = function (event) {
+            reloadSlider();
+        };
+
+        // Section 2 : News & Promotions [Image Slider]
+        const slidesNews = document.querySelectorAll(".slides img");
+        let slideIndexNews = 0;
+        let intervalIdNews = null;
+
+        document.addEventListener("DOMContentLoaded", initializeSlider);
+
+        function initializeSlider() {
+            // If we have slides (pictures)
+            if (slidesNews.length > 0) {
+                slidesNews[slideIndexNews].classList.add("displaySlide");
+                intervalIdNews = setInterval(nextSlide, 5000);
+            }
+        }
+
+        function showSlide(index) {
+            // If reach to the end of slides
+            if (index >= slidesNews.length) {
+                slideIndexNews = 0;
+            }
+            else if (index < 0) {
+                slideIndexNews = slidesNews.length - 1;
+            }
+            slidesNews.forEach(slide => {
+                slide.classList.remove("displaySlide");
+            })
+            slidesNews[slideIndexNews].classList.add("displaySlide");
+        }
+
+        function prevSlide() {
+            clearInterval(intervalIdNews);
+            slideIndexNews--;
+            showSlide(slideIndexNews);
+        }
+
+        function nextSlide(index) {
+            slideIndexNews++;
+            showSlide(slideIndexNews);
+        }
+
+        //Section 4: Menu//
+        function filterMenu(clickFilterID) {
+            var special = document.getElementsByClassName('specials');
+            var lobster = document.getElementsByClassName('lobster_rolls');
+            var burger = document.getElementsByClassName('burgers');
+            var pasta = document.getElementsByClassName('pastas');
+            var side = document.getElementsByClassName('sides');
+            var beverage = document.getElementsByClassName('beverages');
+            var dessert = document.getElementsByClassName('desserts');
+
+            if (clickFilterID == 'allBtn') {
+                document.getElementById('allBtn').classList.add('filterActive');
+                document.getElementById('specialsBtn').removeAttribute('class');;
+                document.getElementById('lobstersBtn').removeAttribute('class');;
+                document.getElementById('burgersBtn').removeAttribute('class');;
+                document.getElementById('pastasBtn').removeAttribute('class');;
+                document.getElementById('sidesBtn').removeAttribute('class');;
+                document.getElementById('beveragesBtn').removeAttribute('class');;
+                document.getElementById('dessertsBtn').removeAttribute('class');;
+
+                for (var h = 0; h < special.length; h++) {
+                    special[h].style.display = 'block';
+                }
+                for (var i = 0; i < lobster.length; i++) {
+                    lobster[i].style.display = 'block';
+                }
+                for (var j = 0; j < burger.length; j++) {
+                    burger[j].style.display = 'block';
+                }
+                for (var k = 0; k < pasta.length; k++) {
+                    pasta[k].style.display = 'block';
+                }
+                for (var m = 0; m < side.length; m++) {
+                    side[m].style.display = 'block';
+                }
+                for (var n = 0; n < beverage.length; n++) {
+                    beverage[n].style.display = 'block';
+                }
+                for (var p = 0; p < dessert.length; p++) {
+                    dessert[p].style.display = 'block';
+                }
+            }
+            else if (clickFilterID == 'specialsBtn') {
+                document.getElementById('allBtn').removeAttribute('class');;
+                document.getElementById('specialsBtn').classList.add('filterActive');
+                document.getElementById('lobstersBtn').removeAttribute('class');;
+                document.getElementById('burgersBtn').removeAttribute('class');;
+                document.getElementById('pastasBtn').removeAttribute('class');;
+                document.getElementById('sidesBtn').removeAttribute('class');;
+                document.getElementById('beveragesBtn').removeAttribute('class');;
+                document.getElementById('dessertsBtn').removeAttribute('class');;
+
+                for (var h = 0; h < special.length; h++) {
+                    special[h].style.display = 'block';
+                }
+                for (var i = 0; i < lobster.length; i++) {
+                    lobster[i].style.display = 'none';
+                }
+                for (var j = 0; j < burger.length; j++) {
+                    burger[j].style.display = 'none';
+                }
+                for (var k = 0; k < pasta.length; k++) {
+                    pasta[k].style.display = 'none';
+                }
+                for (var m = 0; m < side.length; m++) {
+                    side[m].style.display = 'none';
+                }
+                for (var n = 0; n < beverage.length; n++) {
+                    beverage[n].style.display = 'none';
+                }
+                for (var p = 0; p < dessert.length; p++) {
+                    dessert[p].style.display = 'none';
+                }
+            }
+            else if (clickFilterID == 'lobstersBtn') {
+                document.getElementById('allBtn').removeAttribute('class');;
+                document.getElementById('specialsBtn').removeAttribute('class');;
+                document.getElementById('lobstersBtn').classList.add('filterActive');
+                document.getElementById('burgersBtn').removeAttribute('class');;
+                document.getElementById('pastasBtn').removeAttribute('class');;
+                document.getElementById('sidesBtn').removeAttribute('class');;
+                document.getElementById('beveragesBtn').removeAttribute('class');;
+                document.getElementById('dessertsBtn').removeAttribute('class');;
+
+                for (var h = 0; h < special.length; h++) {
+                    special[h].style.display = 'none';
+                }
+                for (var i = 0; i < lobster.length; i++) {
+                    lobster[i].style.display = 'block';
+                }
+                for (var j = 0; j < burger.length; j++) {
+                    burger[j].style.display = 'none';
+                }
+                for (var k = 0; k < pasta.length; k++) {
+                    pasta[k].style.display = 'none';
+                }
+                for (var m = 0; m < side.length; m++) {
+                    side[m].style.display = 'none';
+                }
+                for (var n = 0; n < beverage.length; n++) {
+                    beverage[n].style.display = 'none';
+                }
+                for (var p = 0; p < dessert.length; p++) {
+                    dessert[p].style.display = 'none';
+                }
+            }
+            else if (clickFilterID == 'burgersBtn') {
+                document.getElementById('allBtn').removeAttribute('class');;
+                document.getElementById('specialsBtn').removeAttribute('class');;
+                document.getElementById('lobstersBtn').removeAttribute('class');;
+                document.getElementById('burgersBtn').classList.add('filterActive');
+                document.getElementById('pastasBtn').removeAttribute('class');;
+                document.getElementById('sidesBtn').removeAttribute('class');;
+                document.getElementById('beveragesBtn').removeAttribute('class');;
+                document.getElementById('dessertsBtn').removeAttribute('class');;
+                for (var h = 0; h < special.length; h++) {
+                    special[h].style.display = 'none';
+                }
+                for (var i = 0; i < lobster.length; i++) {
+                    lobster[i].style.display = 'none';
+                }
+                for (var j = 0; j < burger.length; j++) {
+                    burger[j].style.display = 'block';
+                }
+                for (var k = 0; k < pasta.length; k++) {
+                    pasta[k].style.display = 'none';
+                }
+                for (var m = 0; m < side.length; m++) {
+                    side[m].style.display = 'none';
+                }
+                for (var n = 0; n < beverage.length; n++) {
+                    beverage[n].style.display = 'none';
+                }
+                for (var p = 0; p < dessert.length; p++) {
+                    dessert[p].style.display = 'none';
+                }
+            }
+            else if (clickFilterID == 'pastasBtn') {
+                document.getElementById('allBtn').removeAttribute('class');;
+                document.getElementById('specialsBtn').removeAttribute('class');;
+                document.getElementById('lobstersBtn').removeAttribute('class');;
+                document.getElementById('burgersBtn').removeAttribute('class');;
+                document.getElementById('pastasBtn').classList.add('filterActive');
+                document.getElementById('sidesBtn').removeAttribute('class');;
+                document.getElementById('beveragesBtn').removeAttribute('class');;
+                document.getElementById('dessertsBtn').removeAttribute('class');;
+                for (var h = 0; h < special.length; h++) {
+                    special[h].style.display = 'none';
+                }
+                for (var i = 0; i < lobster.length; i++) {
+                    lobster[i].style.display = 'none';
+                }
+                for (var j = 0; j < burger.length; j++) {
+                    burger[j].style.display = 'none';
+                }
+                for (var k = 0; k < pasta.length; k++) {
+                    pasta[k].style.display = 'block';
+                }
+                for (var m = 0; m < side.length; m++) {
+                    side[m].style.display = 'none';
+                }
+                for (var n = 0; n < beverage.length; n++) {
+                    beverage[n].style.display = 'none';
+                }
+                for (var p = 0; p < dessert.length; p++) {
+                    dessert[p].style.display = 'none';
+                }
+            }
+            else if (clickFilterID == 'sidesBtn') {
+                document.getElementById('allBtn').removeAttribute('class');;
+                document.getElementById('specialsBtn').removeAttribute('class');;
+                document.getElementById('lobstersBtn').removeAttribute('class');;
+                document.getElementById('burgersBtn').removeAttribute('class');;
+                document.getElementById('pastasBtn').removeAttribute('class');;
+                document.getElementById('sidesBtn').classList.add('filterActive');
+                document.getElementById('beveragesBtn').removeAttribute('class');;
+                document.getElementById('dessertsBtn').removeAttribute('class');;
+                for (var h = 0; h < special.length; h++) {
+                    special[h].style.display = 'none';
+                }
+                for (var i = 0; i < lobster.length; i++) {
+                    lobster[i].style.display = 'none';
+                }
+                for (var j = 0; j < burger.length; j++) {
+                    burger[j].style.display = 'none';
+                }
+                for (var k = 0; k < pasta.length; k++) {
+                    pasta[k].style.display = 'none';
+                }
+                for (var m = 0; m < side.length; m++) {
+                    side[m].style.display = 'block';
+                }
+                for (var n = 0; n < beverage.length; n++) {
+                    beverage[n].style.display = 'none';
+                }
+                for (var p = 0; p < dessert.length; p++) {
+                    dessert[p].style.display = 'none';
+                }
+            }
+            else if (clickFilterID == 'beveragesBtn') {
+                document.getElementById('allBtn').removeAttribute('class');;
+                document.getElementById('specialsBtn').removeAttribute('class');;
+                document.getElementById('lobstersBtn').removeAttribute('class');;
+                document.getElementById('burgersBtn').removeAttribute('class');;
+                document.getElementById('pastasBtn').removeAttribute('class');;
+                document.getElementById('sidesBtn').removeAttribute('class');;
+                document.getElementById('beveragesBtn').classList.add('filterActive');
+                document.getElementById('dessertsBtn').removeAttribute('class');;
+                for (var h = 0; h < special.length; h++) {
+                    special[h].style.display = 'none';
+                }
+                for (var i = 0; i < lobster.length; i++) {
+                    lobster[i].style.display = 'none';
+                }
+                for (var j = 0; j < burger.length; j++) {
+                    burger[j].style.display = 'none';
+                }
+                for (var k = 0; k < pasta.length; k++) {
+                    pasta[k].style.display = 'none';
+                }
+                for (var m = 0; m < side.length; m++) {
+                    side[m].style.display = 'none';
+                }
+                for (var n = 0; n < beverage.length; n++) {
+                    beverage[n].style.display = 'block';
+                }
+                for (var p = 0; p < dessert.length; p++) {
+                    dessert[p].style.display = 'none';
+                }
+            }
+            else if (clickFilterID == 'dessertsBtn') {
+                document.getElementById('allBtn').removeAttribute('class');;
+                document.getElementById('specialsBtn').removeAttribute('class');;
+                document.getElementById('lobstersBtn').removeAttribute('class');;
+                document.getElementById('burgersBtn').removeAttribute('class');;
+                document.getElementById('pastasBtn').removeAttribute('class');;
+                document.getElementById('sidesBtn').removeAttribute('class');;
+                document.getElementById('beveragesBtn').removeAttribute('class');;
+                document.getElementById('dessertsBtn').classList.add('filterActive');
+                for (var h = 0; h < special.length; h++) {
+                    special[h].style.display = 'none';
+                }
+                for (var i = 0; i < lobster.length; i++) {
+                    lobster[i].style.display = 'none';
+                }
+                for (var j = 0; j < burger.length; j++) {
+                    burger[j].style.display = 'none';
+                }
+                for (var k = 0; k < pasta.length; k++) {
+                    pasta[k].style.display = 'none';
+                }
+                for (var m = 0; m < side.length; m++) {
+                    side[m].style.display = 'none';
+                }
+                for (var n = 0; n < beverage.length; n++) {
+                    beverage[n].style.display = 'none';
+                }
+                for (var p = 0; p < dessert.length; p++) {
+                    dessert[p].style.display = 'block';
+                }
+            }
+        }
+
+        //================================================================
+        setInterval(function () {
+            // Real-Time Check on Crazy Feast Items
+            crazyFeastTime(document.getElementById('crazy_boston'));
+            crazyFeastTime(document.getElementById('crazy_eggplosion'));
+
+            // Real-Time Check on Default Menu Items
+            // SPECIALS
+            defaultMenuTime(document.getElementById('DARE_BURGER'));
+            defaultMenuTime(document.getElementById('basmathi_chicken_rice'));
+            // LOBSTER ROLLS
+            defaultMenuTime(document.getElementById('classic_boston'));
+            defaultMenuTime(document.getElementById('serrano_peppers'));
+            defaultMenuTime(document.getElementById('whipped_herbs'));
+            // BURGERS
+            defaultMenuTime(document.getElementById('lazy_signature'));
+            defaultMenuTime(document.getElementById('smoked_beef_brisket'));
+            defaultMenuTime(document.getElementById('eggplosion'));
+            defaultMenuTime(document.getElementById('northender'));
+            defaultMenuTime(document.getElementById('hot_mexican'));
+            defaultMenuTime(document.getElementById('wincosin'));
+            defaultMenuTime(document.getElementById('salted_egg'));
+            defaultMenuTime(document.getElementById('bbq_chicken'));
+            // PASTAS
+            defaultMenuTime(document.getElementById('bolognese'));
+            defaultMenuTime(document.getElementById('pescatora'));
+            defaultMenuTime(document.getElementById('chilli_salted_egg'));
+            defaultMenuTime(document.getElementById('smoked_beef_carbonara'));
+            // SIDES
+            defaultMenuTime(document.getElementById('korean_chicken_spicy'));
+            defaultMenuTime(document.getElementById('wingZilla'));
+            defaultMenuTime(document.getElementById('royal_wing'));
+            defaultMenuTime(document.getElementById('chicken_nachos'));
+            defaultMenuTime(document.getElementById('beef_nachos'));
+            defaultMenuTime(document.getElementById('bacon_cheese_fries'));
+            defaultMenuTime(document.getElementById('onion_ring'));
+            defaultMenuTime(document.getElementById('curly_fries'));
+            // BEVERAGES
+            defaultMenuTime(document.getElementById('peach_passion_tea'));
+            defaultMenuTime(document.getElementById('peach_belini'));
+            defaultMenuTime(document.getElementById('lychee_punch'));
+            defaultMenuTime(document.getElementById('japanese_matcha_latte'));
+            defaultMenuTime(document.getElementById('yuzu_matcha'));
+            defaultMenuTime(document.getElementById('strawberry_lemonade'));
+            defaultMenuTime(document.getElementById('strawberry_paradise'));
+            defaultMenuTime(document.getElementById('oreo_slush'));
+            defaultMenuTime(document.getElementById('strawberry_lychee'));
+            defaultMenuTime(document.getElementById('double_mango'));
+            defaultMenuTime(document.getElementById('kiwi_fury'));
+            defaultMenuTime(document.getElementById('japanese_matcha_milkshake'));
+            defaultMenuTime(document.getElementById('cocoa_nut'));
+            defaultMenuTime(document.getElementById('classic_mojito'));
+            defaultMenuTime(document.getElementById('apple_haze'));
+            defaultMenuTime(document.getElementById('watermelon_rush'));
+            defaultMenuTime(document.getElementById('americano'));
+            defaultMenuTime(document.getElementById('caffe_latte'));
+            defaultMenuTime(document.getElementById('mocha'));
+            defaultMenuTime(document.getElementById('aussie_cappucino'));
+            defaultMenuTime(document.getElementById('lazy_caramel_machiato'));
+            defaultMenuTime(document.getElementById('classic_chocolate'));
+            // DESSERTS
+            defaultMenuTime(document.getElementById('cheese_cake'));
+            defaultMenuTime(document.getElementById('chocolate_brownie_cake'));
+            defaultMenuTime(document.getElementById('honeydew_sago'));
+            defaultMenuTime(document.getElementById('hwachae_watermelon_punch'));
+            defaultMenuTime(document.getElementById('mango_sago'));
+        }, 1);
+    </script>
+</body>
+
+</html>

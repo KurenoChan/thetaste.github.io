@@ -1,0 +1,177 @@
+/*=======================================*/
+/*           PRINTING RECEIPT            */
+/*=======================================*/
+
+/* Page Box Styles */
+/*Printed page (@page)*/
+@page {
+    size: 8.5in 11in;
+    margin: 0.5in;
+}
+
+.container{
+    width: 100%;
+}
+
+header,
+footer,
+div#paySuccessButtons {
+    display: none;
+}
+
+html {
+    background-color: #ffffff;
+}
+
+/* PRINT RECEIPT HEADING */
+section#printHeading{
+    display: block;
+    margin-bottom: 0.2in;
+}
+
+section#printHeading div.container{
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.receiptLogo{
+    display: flex;
+    justify-content: center;
+    border-top: 2pt dotted #000000;
+    border-bottom: 2pt dotted #000000;
+}
+
+.receiptLogo img{
+    filter: invert(100%);
+    width: 30%;
+    position: relative;
+}
+
+.receiptAddress address{
+    text-align: center;
+    font-size: 10pt;
+}
+
+.receiptAddress p{
+    font-weight: bold;
+    line-height: 0.3in;
+    font-size: 8pt;
+}
+
+.receiptAddress a{
+    color: #000000
+}
+
+#paymentSuccessDisplay {
+    padding-top: 0;
+}
+
+#paySuccessMsg1,
+#paySuccessMsg2 {
+    display: none;
+}
+
+#paySuccessMsg3{
+    font-size: 30pt;
+    color: #000000;
+}
+
+#paySuccess-ReceiptNo-DateTime {
+    box-shadow: inset 0 0 100pt rgb(192, 192, 192);
+    border-top: 0.1vh solid #000000;
+    border-bottom: 0.1vh solid #000000;
+}
+
+#paySuccess-ReceiptNo-DateTime p{
+    color: #000000;
+    font-weight: bold;
+    font-size: 12pt;
+}
+
+.purchaseDetails{
+    page-break-inside: avoid;
+    border-top: 1pt solid #000000;
+}
+
+.purchaseItmIndex,
+.purchaseItmName,
+.purchaseItmPrice,
+.purchaseItmAmount,
+.purchaseItmQty {
+    color: #000000;
+    font-weight: normal;
+    font-size: 10pt;
+}
+
+span.takeaway-label{
+    color: #000000 !important;
+    font-size: 8pt;
+    font-weight: bold;
+}
+
+.purchaseSummaryHeading {
+    border-bottom: 2pt solid #000000;
+    background-color: rgb(192, 192, 192);
+    box-shadow: inset 0 0 100pt rgb(192, 192, 192);
+}
+
+.purchaseSummaryHeading p {
+    color: #000000 !important;
+    font-weight: bold;
+    font-size: 15pt;
+}
+
+#purchaseSummaryList {
+    background-color: #cdcdcd;
+    max-height: max-content;
+    border-top: 2pt solid #000000;
+    border-bottom: 2pt solid #000000;
+}
+
+.purchaseItmDesc {
+    width: 15%;
+}
+
+.purchaseItmImg {
+    display: none;
+}
+
+#purchaseSummaryCalc{
+    content: '';
+    border-top: 2pt dashed #000000;
+    border-bottom: 2pt dashed #000000;
+    page-break-inside: avoid;
+    background-color: transparent;
+}
+
+#purchaseSummaryCalc::after{
+    position: absolute;
+    left: 0;
+    right: 0;
+    font-size: 15pt;
+    line-height: 1in;
+    font-style: italic;
+    color: #000000;
+    content : '\2756\00a0Thank You & Please Come Again\00a0\2756';
+}
+
+.subtotalBox,
+.servicetaxBox,
+.processfeeBox,
+.memberdiscBox,
+.grandtotalBox{
+    color: #000000;
+}
+
+.subtotalBox,
+.grandtotalBox{
+    line-height: 10pt;
+    font-size: 20pt;
+}
+
+.servicetaxBox,
+.processfeeBox,
+.memberdiscBox {
+    font-size: 15pt;
+    color: #595959;
+}

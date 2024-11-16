@@ -1,0 +1,303 @@
+h1#paymentTitle {
+    padding-top: 15vh;
+    padding-bottom: 5vh;
+    color: #F9BF65;
+    font-family: "Cinzel Regular", Garamond, 'Times New Roman', Times, serif;
+    font-size: 1.5vw;
+    letter-spacing: 1vw;
+    text-align: center;
+    user-select: none;
+}
+
+/* Payment Form */
+#paymentForm {
+    background-color: #3b3b3b;
+    padding: 3% 5% 3% 5%;
+    box-shadow: 0 0 2vw #c29047;
+    border-radius: 0 10vh 0 10vh;
+    margin-bottom: 10vh;
+    display: flex;
+    flex-flow: row wrap;
+}
+
+#paymentDetails {
+    width: 50%;
+    user-select: none;
+    padding-right: 2vw;
+    border-right: 0.25vw double #F9BF65;
+}
+
+#paymentDetails h2,
+#orderSummary h2 {
+    color: #F9BF65;
+    font-size: 2vw;
+    font-family: Quintessential, 'Times New Roman', Times, serif;
+    font-weight: lighter;
+    letter-spacing: 0.2vw;
+    text-transform: uppercase;
+}
+
+div#paymentType {
+    padding-top: 5%;
+    padding-bottom: 5%;
+    display: flex;
+    justify-content: space-between;
+}
+
+div#paymentType img {
+    margin-right: 1vw;
+}
+
+/* PAYMENT TYPE */
+div#payTypeCard,
+div#payTypePaypal {
+    cursor: pointer;
+    padding: 3%;
+    width: 45%;
+    border-radius: 1vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    user-select: none;
+    color: #F9BF65;
+    background-color: #1f1f1f;
+    transition: all 0.2s ease;
+}
+
+span#creditCardChecked, span#paypalChecked{
+    font-size: 1.5vw;
+}
+
+div#payTypeCard h3,
+div#payTypePaypal h3 {
+    font-family: Garamond, 'Times New Roman', Times, serif;
+    font-weight: lighter;
+    text-transform: uppercase;
+    font-size: 1.2vw;
+}
+
+div#payTypeCard:hover img,
+div#payTypePaypal:hover img {
+    animation: vibrate 1.5s infinite;
+}
+
+div#payTypeCard img,
+div#payTypePaypal img {
+    width: 2vw;
+}
+
+/* CREDIT CARD DETAILS */
+#payCardDetails {
+    display: none;
+}
+
+#payCardDetails img {
+    width: 2.5vw;
+    vertical-align: middle;
+    user-select: none;
+}
+
+#payCardDetails p {
+    color: rgb(0, 0, 0);
+    padding-left: 2vw;
+    user-select: none;
+    background-color: rgb(132, 132, 132);
+    margin-bottom: 2vh;
+    border-bottom-left-radius: 0.2em;
+    border-bottom-right-radius: 0.2em;
+    margin-bottom: 4vh;
+    font-size: 1vw;
+}
+
+#paymentTypeDetails input {
+    background-color: rgb(182, 182, 182);
+    color: #000000;
+    width: 100%;
+    height: 5vh;
+    font-size: 3vh;
+    padding: 1vw 1vw 1vw 2vw;
+    border-radius: 0.2em;
+    border: none;
+    margin-bottom: 1vw;
+}
+
+/* PAYPAL DETAILS */
+#payPaypalDetails {
+    display: none;
+}
+
+#payPaypalDetails input[type=text] {
+    background-image: url(../images/icon-logo/icon/account.png);
+}
+
+#payPaypalDetails input[type=password] {
+    background-image: url(../images/icon-logo/icon/password.png);
+}
+
+#payPaypalDetails input {
+    background-repeat: no-repeat;
+    background-position: 0.5vw center;
+    background-size: 1.1vw;
+}
+
+/* Submit Payment */
+#paymentSubmit {
+    display: none;
+    justify-content: space-between;
+}
+
+#paymentSubmit input {
+    cursor: pointer;
+    padding: 3%;
+    width: 45%;
+    border: none;
+    border-radius: 1vw;
+    user-select: none;
+    color: #F9BF65;
+    background-color: #1f1f1f;
+    font-family: Garamond, 'Times New Roman', Times, serif;
+    font-weight: lighter;
+    letter-spacing: 0.2vw;
+    text-transform: uppercase;
+    font-size: 1.2vw;
+    transition: all 0.2s ease;
+}
+
+#paymentSubmit input[type=submit] {
+    background-color: #ff99004b;
+}
+
+#paymentSubmit input:hover {
+    background-color: #F9BF65;
+    color: #000000;
+    box-shadow: 0 0 2vh #f9be659d;
+}
+
+/*==========================================*/
+/* ORDER SUMMARY */
+#orderSummary {
+    width: 50%;
+    user-select: none;
+    padding-left: 2vw;
+}
+
+.orderSummaryBox {
+    margin-top: 5%;
+}
+
+#orderSummaryList {
+    position: relative;
+    background-color: #00000048;
+    color: #ffffff;
+    max-height: 14vw;
+    overflow-y: auto;
+}
+
+.orderSummaryHeading {
+    top: 0;
+    position: sticky;
+    background-color: #000000e0;
+    user-select: none;
+    color: #F9BF65;
+    padding: 2% 1% 2% 1%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.orderSummaryHeading p {
+    text-align: center;
+    font-size: 1.1vw;
+    font-variant: small-caps;
+}
+
+.orderItmDesc {
+    width: 38%;
+}
+
+.orderDetails {
+    padding: 1%;
+    border-top: 0.1px solid #ffffff;
+    border-bottom: 0.1vw solid #ffffff;
+    user-select: none;
+    display: flex;
+    justify-content: space-between;
+}
+
+.orderItmIndex {
+    width: 5%;
+    font-size: 1vw;
+    text-align: center;
+    align-content: center;
+}
+
+.orderItmImg {
+    width: 20%;
+    height: 11vh;
+    object-fit: cover;
+}
+
+.orderItmName,
+.orderItmPrice,
+.orderItmAmount {
+    width: 15%;
+    align-content: center;
+    text-align: center;
+    font-size: 1vw;
+}
+
+.orderItmQty {
+    width: 15%;
+    align-content: center;
+    text-align: center;
+    font-size: 1vw;
+}
+
+#orderSummaryCalc {
+    user-select: none;
+    position: relative;
+    background-color: #000000;
+    color: #F9BF65;
+    padding: 2.5%;
+}
+
+.subtotalBox,
+.servicetaxBox,
+.processfeeBox,
+.memberdiscBox,
+.grandtotalBox {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 0.5vh;
+    padding-bottom: 0.5vh;
+}
+
+.subtotalBox,
+.grandtotalBox {
+    line-height: 4vh;
+    font-size: 1.8vw;
+    font-weight: bold;
+}
+
+.servicetaxBox,
+.processfeeBox,
+.memberdiscBox {
+    text-indent: 2vw;
+    font-size: 1.2vw;
+    color: rgba(255, 255, 255, 0.847);
+}
+
+.subtotalBox {
+    color: #cf9e54d7;
+}
+
+#orderSummaryCalc p {
+    font-family: Garamond, 'Times New Roman', Times, serif;
+    font-variant: small-caps;
+}
+
+/*====================================*/
+/* PAYMENT SUCCESS BUTTONS */
+#paySuccessBtn {
+    width: 10vw;
+    height: 10vh;
+}

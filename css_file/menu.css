@@ -1,0 +1,789 @@
+/*Navigation Bar*/
+.dropdown {
+    position: relative;
+}
+
+.dropdown-content {
+    list-style-type: none;
+    padding: 20px 0px 0px 0px;
+    background-color: rgb(19, 19, 19);
+    position: absolute;
+    left: -3px;
+    top: 160%;
+    display: none;
+    width: 106.8%;
+    border-radius: 20px;
+}
+
+.dropdown-content li a {
+    display: block;
+    padding: 10px;
+    text-align: center;
+    font-size: 15px;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.dropdown-content a:hover {
+    background-color: rgb(211, 179, 99);
+    box-shadow: 0 0 15px 1px rgb(211, 179, 99);
+}
+
+.dropdown-content a:active {
+    background-color: rgb(255, 255, 255);
+    box-shadow: 0 0 15px 1px #ffffff;
+    color: rgb(0, 0, 0);
+}
+
+/***MENU SECTION***/
+/*Main Content*/
+/**Section 1 : About Menu**/
+section#aboutMenu {
+    width: 100%;
+}
+
+#aboutMenu .slider .item {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    padding-top: 100px;
+    padding-bottom: 100px;
+    position: relative;
+}
+
+#aboutMenu .slider {
+    width: 100%;
+    height: 500px;
+    position: relative;
+    overflow: hidden;
+}
+
+#aboutMenu .slider .list {
+    position: absolute;
+    width: max-content;
+    height: 100%;
+    left: 0;
+    top: 0;
+    display: flex;
+    transition: 1s;
+}
+
+#aboutMenu .item::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    width: 60%;
+    background: linear-gradient(to left, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.808), rgb(0, 0, 0));
+}
+
+#aboutMenu .item {
+    color: #FFFFFF;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+#aboutMenu .container {
+    color: #FFFFFF;
+    width: 100%;
+    height: 85vh;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+#aboutMenu .content {
+    color: #fff;
+    z-index: 1000;
+}
+
+section#aboutMenu .slider .item .content {
+    position: relative;
+    left: 10rem;
+    z-index: 1000;
+    user-select: none;
+    width: 35%;
+
+}
+
+section#aboutMenu .slider .item .content span {
+    font-size: 1.5rem;
+    letter-spacing: 2px;
+    font-family: Quintessential, Garamond, 'Times New Roman', Times, serif;
+}
+
+section#aboutMenu .slider .item .content h3 {
+    margin-top: 2.5%;
+    margin-bottom: 2.5%;
+    font-size: 4rem;
+    font-family: "Cinzel Regular", Garamond, 'Times New Roman', Times, serif;
+}
+
+section#aboutMenu .slider .item .content>p {
+    font-size: 1.2rem;
+    text-align: justify;
+    font-style: oblique;
+    font-family: Garamond, 'Times New Roman', Times, serif;
+    letter-spacing: 1px;
+}
+
+section#aboutMenu div.btn {
+    position: relative;
+    top: 2rem;
+    cursor: pointer;
+}
+
+section#aboutMenu .slider .buttons {
+    position: absolute;
+    top: 45%;
+    left: 5%;
+    width: 90%;
+    display: flex;
+    justify-content: space-between;
+}
+
+section#aboutMenu .slider .buttons button {
+    width: 50px;
+    height: 50px;
+    border-radius: 10%;
+    background-color: rgba(255, 255, 255, 0.82);
+    color: #000000;
+    border: none;
+    font-family: monospace;
+    font-weight: bold;
+    font-size: 2em;
+    text-align: center;
+    vertical-align: middle;
+    transition: background-color 0.5s ease;
+}
+
+section#aboutMenu .slider .buttons button:nth-of-type(1)::before {
+    content: '<';
+}
+
+section#aboutMenu .slider .buttons button:nth-of-type(2)::before {
+    content: '>';
+}
+
+section#aboutMenu .slider .buttons button:hover {
+    background-color: #fed16f;
+}
+
+section#aboutMenu .slider .buttons button:active {
+    background-color: #ffffff;
+}
+
+section#aboutMenu .slider .dots {
+    position: absolute;
+    bottom: 10px;
+    left: 0;
+    color: #fff;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+}
+
+section#aboutMenu .slider .dots li {
+    list-style: none;
+    width: 10px;
+    height: 10px;
+    background-color: #fff;
+    margin: 10px;
+    border-radius: 20px;
+    transition: 0.5s;
+}
+
+section#aboutMenu .slider .dots li.active {
+    width: 30px;
+}
+
+/**Section 2 : News & Promotions**/
+section#news {
+    position: relative;
+    margin-top: 40vh;
+    margin-bottom: 10vh;
+}
+
+section#news h2 {
+    user-select: none;
+    color: #F9BF65;
+    font-family: "Cinzel Regular", Garamond, 'Times New Roman', Times, serif;
+    font-size: 3vw;
+    line-height: 15vh;
+    text-align: center;
+    border-radius: 0.5vw;
+    border-top: 0.3vw groove rgb(232, 191, 87);
+    border-bottom: 0.3vw groove rgb(232, 191, 87);
+    margin-bottom: 5vh;
+}
+
+section#news div.slider {
+    text-align: center;
+}
+
+section#news div.slider img {
+    width: 40%;
+    display: none;
+}
+
+section#news div.slides>img.displaySlide {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+div.slideBtn {
+    user-select: none;
+    margin-top: 2%;
+    width: 10%;
+    display: flex;
+    justify-content: space-between;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+section#news div.slideBtn button {
+    padding: 1vw;
+    background-color: transparent;
+    border: 0.2vw solid rgb(232, 191, 87);
+    color: goldenrod;
+    font-size: 2vw;
+    cursor: pointer;
+    transition: all 100ms ease-in-out;
+}
+
+div.slideBtn button:nth-child(1) {
+    border-top-left-radius: 1vw;
+    border-bottom-left-radius: 1vw;
+}
+
+div.slideBtn button:nth-child(2) {
+    border-top-right-radius: 1vw;
+    border-bottom-right-radius: 1vw;
+}
+
+section#news div.slideBtn button:hover {
+    color: #000000;
+    background-color: #F9BF65;
+    transform: scale(1.1);
+    animation-name: arrowLeft;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+}
+
+section#news div.slideBtn button:active {
+    color: #000000;
+    background-color: #ffffff;
+    border-color: #ffffff;
+    transform: scale(1);
+}
+
+/**Section 3 : Specials**/
+section#crazyFeast {
+    position: relative;
+    margin-top: 20vh;
+    margin-bottom: 20vh;
+}
+
+section#crazyFeast h2 {
+    user-select: none;
+    color: #F9BF65;
+    font-family: "Boucherie Block Bold", Garamond, 'Times New Roman', Times, serif;
+    font-size: 5vw;
+    font-weight: bold;
+    letter-spacing: 0.1vw;
+    word-spacing: 0.2vw;
+    line-height: 12vh;
+    text-align: center;
+    vertical-align: middle;
+}
+
+section#crazyFeast div.container>h4 {
+    user-select: none;
+    color: #FC9E20;
+    font-family: Courgette, Garamond, 'Times New Roman', Times, serif;
+    font-size: 2vw;
+    letter-spacing: 0.5vw;
+    word-spacing: 1vw;
+    text-align: center;
+    margin-bottom: 5vh;
+}
+
+section#crazyFeast div.container button {
+    background-color: rgba(211, 179, 99, 0.212);
+    border: 2px solid rgb(211, 179, 99);
+    color: rgb(211, 179, 99);
+    padding: 10px;
+    margin-top: 20px;
+    min-width: 10vw;
+    border-radius: 10px;
+    font-size: 1.5vw;
+    letter-spacing: 1.5px;
+    cursor: pointer;
+    box-shadow: inset 0px 3px 10px 1px #000000;
+    transition: all 0.2s ease-in-out;
+    text-align: center;
+}
+
+section#crazyFeast .container>img {
+    position: absolute;
+    width: 10vw;
+    top: 0;
+    right: 9vw;
+    user-select: none;
+}
+
+section#crazyFeast div.menuCard {
+    border: 0.3vw double #FC9E20;
+    background-color: #fc9d2031;
+}
+
+section#crazyFeast div.cardDetails>h4 {
+    font-size: 1.3vw;
+    color: #F9BF65;
+    font-family: "Boucherie Block Bold", Garamond, 'Times New Roman', Times, serif;
+}
+
+section#crazyFeast div.filterContent {
+    display: flex;
+    padding-left: 18%;
+    padding-right: 18%;
+    justify-content: space-evenly;
+}
+
+section#crazyFeast div.cardDetails>p {
+    color: #ffffff;
+}
+
+section#crazyFeast div.cardDetails div.toPage {
+    border-color: #FC9E20;
+    background-color: #fc9d203a;
+}
+
+section#crazyFeast div.cardDetails div.toPage:hover {
+    box-shadow: 0 0 20px 1px #FC9E20;
+    background-color: #FC9E20;
+}
+
+/**Section 4: Menu**/
+section#menu {
+    padding-top: 4%;
+    padding-bottom: 150px;
+}
+
+div.filterBtn {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin-bottom: 5%;
+}
+
+section#menu h1 {
+    font-family: "Cinzel Regular", Garamond, 'Times New Roman', Times, serif;
+    color: white;
+    font-size: 3vw;
+    line-height: 10vh;
+    letter-spacing: 0.2vw;
+    position: relative;
+    left: 0;
+}
+
+section#menu div.container button {
+    background-color: rgba(211, 179, 99, 0.212);
+    border: 2px solid rgb(211, 179, 99);
+    color: rgb(211, 179, 99);
+    padding: 0.5vw;
+    margin-top: 20px;
+    min-width: 8vw;
+    border-radius: 1vw;
+    font-size: 1.5vw;
+    letter-spacing: 0.1vw;
+    cursor: pointer;
+    box-shadow: inset 0px 3px 10px 1px #000000;
+    transition: all 0.2s ease-in-out;
+    text-align: center;
+}
+
+section#menu div.container button.filterActive {
+    background-color: rgba(211, 179, 99, 0.733);
+    color: rgb(0, 0, 0);
+}
+
+section#menu div.filterBtn button:hover {
+    background-color: rgba(165, 141, 78, 0.808);
+    color: #ffffff;
+}
+
+section#menu button:active {
+    background-color: rgb(255, 255, 255);
+    color: #000000;
+}
+
+div.filterContent {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+    gap: 20px;
+    /* gap between items */
+}
+
+div.menuCard {
+    border-radius: 1vw;
+    transition: transform 600ms;
+    background-color: #00000061;
+    border: 0.3vw double #fed16f;
+    margin-bottom: 5%;
+    cursor: pointer;
+    user-select: none;
+}
+
+div#DARE_BURGER {
+    border-color: rgb(186, 46, 10);
+    box-shadow: 0 0 20px 1px rgb(186, 46, 10);
+}
+
+div.menuCard img {
+    width: 87%;
+    height: 200px;
+    border-top-left-radius: 1vw;
+    border-top-right-radius: 1vw;
+    margin: 15px;
+    margin-bottom: -10px;
+    object-fit: cover;
+}
+
+div.menuCard:hover {
+    transform: scale(1.1);
+}
+
+div.cardDetails {
+    background: url("../images/home/bricks.png");
+    border-bottom-left-radius: 1vw;
+    border-bottom-right-radius: 1vw;
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    width: 87%;
+    padding-bottom: 5%;
+    margin: 15px;
+}
+
+div.cardDetails>h4 {
+    color: #ffffff;
+    font-size: 15px;
+    text-align: center;
+    margin: 25px 0 10px 0;
+    font-family: Quintessential, Garamond, 'Times New Roman', Times, serif;
+    letter-spacing: 2px;
+}
+
+div.cardDetails>p {
+    color: #F9BF65;
+    font-size: 1.3vw;
+    text-align: center;
+    letter-spacing: 2px;
+    margin: 5px 0 10px 0;
+}
+
+div.cardDetails div.btn {
+    text-align: center;
+    padding: 5%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 5%;
+}
+
+div.cardDetails div.btn p {
+    font-size: 1.2vw;
+}
+
+div.container>p {
+    position: relative;
+    color: #ffffff;
+    font-family: "Cinzel Regular", Garamond, 'Times New Roman', Times, serif;
+    letter-spacing: 3px;
+    font-size: 25px;
+    font-weight: bold;
+    font-variant: small-caps;
+    text-align: center;
+    margin-top: 10%;
+    margin-bottom: 1%;
+}
+
+div.visitMenu {
+    margin-top: 2%;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+/**Pop Up Menu Card**/
+div#popupMenu {
+    display: none;
+    width: 80vw;
+    top: 9.5%;
+    left: 50%;
+    transform: translateX(-50%);
+    position: fixed;
+    z-index: 999;
+    background-color: #101010;
+    padding: 0.5% 0% 0.5% 1.7%;
+    border-radius: 1vw;
+    margin-left: auto;
+}
+
+#close_popup {
+    position: absolute;
+    font-weight: bold;
+    font-size: 1.5vw;
+    height: 5vh;
+    line-height: 0vh;
+    top: 0;
+    right: 0;
+    border: none;
+    padding: 1.2vw;
+    color: #ffd988;
+    background-color: transparent;
+    transition: all 0.2s ease;
+    cursor: pointer;
+    border-radius: 0 1vw 0 0;
+}
+
+div.popupLeft {
+    width: 28%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    font-size: 1.2vw;
+    color: #ffffff;
+    margin-right: 2%;
+}
+
+img#popupImg {
+    margin-left: auto;
+    margin-right: auto;
+    width: 22vw;
+    height: 50vh;
+    
+    border-top-left-radius: 1vw;
+    border-top-right-radius: 1vw;
+    object-fit: cover;
+}
+
+div.popupLeft>h4 {
+    font-size: 2vw;
+    text-align: center;
+    margin: 2% 0;
+    font-weight: lighter;
+    color: #F9BF65;
+    letter-spacing: 0.2vw;
+    font-variant: small-caps;
+}
+
+div.popupLeft>p {
+    text-align: justify;
+    font-family: Lancelot, Garamond, 'Times New Roman', Times, serif;
+}
+
+div.popupRight {
+    color: #ffffff;
+    width: 70%;
+    padding: 0 2%;
+    padding-right: 5%;
+    border-left: 0.25vw double rgb(211, 179, 99);
+    overflow-y: auto;
+}
+
+div.popupRight>h3 {
+    font-family: Explora, Garamond, 'Times New Roman', Times, serif;
+    font-weight: lighter;
+    letter-spacing: 0.2vw;
+    line-height: 12vh;
+    text-transform: uppercase;
+}
+
+div.popupRight>p {
+    font-size: 1.2vw;
+    line-height: 1.2em;
+    text-align: justify;
+    font-family: Lancelot, Garamond, 'Times New Roman', Times, serif;
+}
+
+div.popupRight>h2 {
+    font-size: 2.5vw;
+    color: #ffd988;
+    font-family: Garamond, 'Times New Roman', Times, serif;
+    font-weight: lighter;
+    letter-spacing: 0.3vw;
+    text-align: center;
+    line-height: 2em;
+}
+
+div.popupRight button {
+    background-color: transparent;
+    border: 2px solid rgb(255, 230, 131);
+    color: rgb(211, 179, 99);
+    font-size: 1.2vw;
+    border-radius: 0.2em;
+    transition: all 0.2s ease;
+}
+
+div.popupQty button {
+    padding: 10%;
+    cursor: pointer;
+}
+
+div.popupOrder {
+    margin-top: 2%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+div.popupQty {
+    display: flex;
+    width: 20%;
+    justify-content: space-between;
+    align-items: center;
+    user-select: none;
+}
+
+div.popupQty h3 {
+    font-size: 1.5vw;
+}
+
+#popup-takeaway {
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+#popup-takeaway {
+    display: none;
+}
+
+#popup-takeaway label{
+    cursor: pointer;
+    user-select: none;
+    position: relative;
+    width: 1.5vw;
+    height: 1.5vw;
+    vertical-align: middle;
+    font-size: 1.5vw;
+    font-weight: bold;
+    color: rgb(255, 230, 131)
+}
+
+#popup-takeaway label:nth-of-type(2){
+    color: #ffffff;
+    font-size: 1.1vw;
+    font-weight: lighter;
+    margin-left: 25%;
+}
+
+#popup-takeaway input[type="checkbox"]{
+    user-select: none;
+    position: relative;
+    width: 1.5vw;
+    height: 1.5vw;
+    vertical-align: middle;
+    background-color: transparent;
+    border: 0.2vw solid rgb(255, 230, 131);
+    border-radius: 0.2vw;
+    cursor: pointer;
+    appearance: none;
+}
+
+#popup-takeaway input[type="checkbox"]:checked{
+    background-color: rgb(255, 230, 131);
+}
+
+#popup-takeaway input[type="checkbox"]::before{
+    content: '';
+    position: absolute;
+    top: 0.4vh;
+    left: 0.9vh;
+    width: 0.5vh;
+    height: 1.3vh;
+    border: 0.5vh solid transparent;
+    border-left: none;
+    border-top: none;
+    transform: rotate(45deg);
+}
+
+#popup-takeaway input[type="checkbox"]:checked::before{
+    border-color: #000000;
+}
+
+#close_popup:hover {
+    background-color: rgb(255, 230, 131);
+    box-shadow: 0px 0px 20px 1px rgb(255, 230, 131);
+    color: black;
+}
+
+#close_popup:active {
+    background-color: rgb(255, 255, 255);
+    box-shadow: 0px 0px 20px 1px rgb(255, 255, 255);
+    color: black;
+}
+
+div.popupRight button:hover {
+    border: 2px solid transparent;
+    background-color: rgb(255, 230, 131);
+    box-shadow: 0px 0px 20px 1px rgb(255, 230, 131);
+    color: black;
+}
+
+div.popupRight button:active {
+    background-color: rgb(255, 255, 255);
+    box-shadow: 0px 0px 20px 1px rgb(255, 255, 255);
+    color: black;
+}
+
+.popup-remark textarea {
+    padding: 0.5vw;
+    border-radius: 5%;
+    background: transparent;
+    color: rgb(255, 230, 131);
+    font-size: 1vw;
+    letter-spacing: 0.1vw;
+    border: 0.2vw solid rgb(255, 230, 131);
+    transition: 0.5s;
+    resize: none;
+}
+
+.popup-content input[type=submit] {
+    margin-left: 2%;
+    margin-right: 2%;
+}
+
+.popup-submit {
+    display: flex;
+    justify-content: center;
+    margin: 10vh 0;
+}
+
+.popup-submit button {
+    margin-left: 5%;
+    margin-right: 5%;
+    padding: 1.5%;
+    cursor: pointer;
+    user-select: none;
+}
+
+#decreaseBtn,
+#increaseBtn,
+#popupAddCart,
+#popupOrderNow{
+    border: 0.2vw solid rgb(255, 230, 131);
+}
+
+#popupAddCart,
+#popupOrderNow{
+    width: 9vw;
+}

@@ -1,0 +1,528 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="keywords" content="Lazy, Monday, western, burger, fries, restaurant, food" />
+    <title>About Us</title>
+    <link rel="icon" href="../images/icon-logo/logo/lm_logo_circle.png" type="image/x-icon" />
+    <link rel="stylesheet" href="../css_file/reset.css" />
+    <link rel="stylesheet" href="../css_file/lazyMonday.css" />
+    <link rel="stylesheet" href="../css_file/about.css" />
+
+    <script src="../js_file/lazyMonday.js" type="text/javascript" defer></script>
+</head>
+
+<body>
+    <audio autoplay id="musicPlayer">
+        <source src="../audios/musics/coffee_cup.mp3" type="audio/mp3" codecs="MP3"/>
+        <source src="../audios/musics/italy.mp3" type="audio/mp3">
+        <source src="../audios/musics/vintage.mp3" type="audio/mp3">
+        <source src="../audios/musics/dream.mp3" type="audio/mp3">
+        Your browser does not support the audio element.
+    </audio>
+
+    <header id="navBar">
+        <nav>
+            <div id="logo">
+                <a href="index.html" title="Home"><img src="../images/icon-logo/logo/lm_logo.png"
+                        alt="Lazy Monday Logo"></a>
+            </div>
+            <ul id="txtLink">
+                <li><a href="index.html" title="Home" onmouseover="hoverSound.play();"
+                        onmousedown="clickSound.play();"><img src="../images/icon-logo/icon/home.png"
+                            alt="Home" />&nbsp;HOME</a>
+                </li>
+                <li>
+                    <a href="menu.html" title="Menu" onmouseover="hoverSound.play();"
+                        onmousedown="clickSound.play();"><img src="../images/icon-logo/icon/menu.png"
+                            alt="Menu" />&nbsp;MENU&nbsp;&nbsp;</a>
+                </li>
+                <li><a href="news.html" title="News" onmouseover="hoverSound.play();"
+                        onmousedown="clickSound.play();"><img src="../images/icon-logo/icon/news.png"
+                            alt="News" />&nbsp;NEWS</a></li>
+                <li><a href="about.html" title="About Us" class="activePage" onmouseover="hoverSound.play();"
+                        onmousedown="clickSound.play();"><img src="../images/icon-logo/icon/about.png"
+                            alt="About Us" />&nbsp;ABOUT</a></li>
+                <li><a href="contact.html" title="Contact Us" onmouseover="hoverSound.play();"
+                        onmousedown="clickSound.play();"><img src="../images/icon-logo/icon/contact.png"
+                            alt="Contact Us" />&nbsp;CONTACT</a>
+                </li>
+                <li><a href="career.html" title="Career" onmouseover="hoverSound.play();"
+                        onmousedown="clickSound.play();"><img src="../images/icon-logo/icon/career.png"
+                            alt="Career" />&nbsp;CAREER</a></li>
+            </ul>
+
+            <ul id="iconLink">
+                <li class="dropdown">
+                    <a href="account.html" title="Account" class="toPage" onmouseover="hoverSound.play();"
+                        onmousedown="clickSound.play();"><img src="../images/icon-logo/icon/account.png"
+                            alt="Account" /></a>
+                    <ul class="dropdown-content">
+                        <li>
+                            <p class="User" id="Username"></p>
+                        </li>
+                        <li><a href="account.html" onclick="logout()" id="loginLogoutLink" title="logout"></a></li>
+                    </ul>
+                </li>
+                <li><a href="#cart.html" title="Cart" class="toPage" id="cart" style="display: none;"><img
+                            src="../images/icon-logo/icon/shopping-cart.png" alt="Cart" /></a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <!--SECTION 1 : INTRODUCTION-->
+        <section id="intro">
+            <div class="container">
+                <img src="../images/about/intro.jpg" alt="Intro Background Image" />
+                <div class="introBox">
+                    <img src="../images/about/intro.jpg" alt="Intro Image" />
+                    <div class="introText">
+                        <h3>Introduction</h3>
+                        <p>We are deeply grateful for your continued patronage. We cannot thank you enough for your
+                            unwavering support and trust with our team.</p>
+                        <p>We&rsquo;ve been known for crafting gourmet burgers and sides, starting with home delivery
+                            and expanding to retail outlets. Join us in savoring the leisurely spirit of Lazy Monday,
+                            where each bite embodies the simple pleasures of life.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!--SECTION 2 : OUR STORY-->
+        <section id="story">
+            <div class="container">
+                <h3 class="typeText">Our Story</h3>
+                <img src="../images/about/story/lazy_monday_kitchen.jpg" alt="Lazy Monday Chicken"
+                    class="storyImg reveal" id="lm_kitchen" />
+                <img src="../images/about/story/charity1.jpg" alt="Charity Photo 1" class="storyImg reveal"
+                    id="charity1" />
+                <img src="../images/about/story/charity2.jpg" alt="Charity Photo 2" class="storyImg reveal"
+                    id="charity2" />
+                <img src="../images/about/story/iskandar_puteri_branch.jpg" alt="Iskandar Puteri Branch"
+                    class="storyImg reveal" id="lm_iskandarPuteri" />
+                <img src="../images/about/story/johor_chief_minister_launch.jpg" alt="Tebing Dato' Onn Launching"
+                    class="storyImg reveal" id="lm_datoOnnLaunch" />
+                <img src="../images/about/story/lazy_monday_2024.jpg" alt="Lazy Monday 2024" class="storyImg reveal"
+                    id="lm_2024" />
+                <div class="timeline">
+                    <div class="checkpoint reveal">
+                        <div>
+                            <h2 class="storyYear">2018 - 2019</h2>
+                            <article>In 2018, Lazy Monday Kitchen (LMK) was born in downtown Johor Bahru, founded by
+                                Datuk Seri Syamsul Omar and his team of burger enthusiasts. Drawing inspiration from
+                                their global culinary adventures, they set out to redefine the burger experience in
+                                their hometown. LMK quickly gained popularity for its mouthwatering burgers made with
+                                locally sourced, fresh ingredients, offering a cozy atmosphere for guests to enjoy.
+                            </article>
+                        </div>
+                    </div>
+
+                    <div class="checkpoint reveal">
+                        <div>
+                            <h2 class="storyYear">2020 - 2021</h2>
+                            <article>By 2020, Lazy Monday had evolved into Lazy Monday restaurant, expanding its menu
+                                and offerings under Datuk Seri Syamsul's leadership. However, the onset of the COVID-19
+                                pandemic in 2021 brought unprecedented challenges. In response, Lazy Monday organized
+                                charity events, providing free meals to those in need as a testament to their commitment
+                                to community service during difficult times.
+                            </article>
+                        </div>
+                    </div>
+
+                    <div class="checkpoint reveal">
+                        <div>
+                            <h2 class="storyYear">2022 - 2023</h2>
+                            <article>In 2022, Lazy Monday continued to thrive, opening its second branch in Iskandar
+                                Puteri, Johor, further solidifying its presence in the region. The expansion was a
+                                testament to Lazy Monday's growing popularity and success under Datuk Seri Syamsul
+                                Omar's guidance. In January 2023, Lazy Monday Tebing Dato Onn JB opened its doors, with
+                                Datuk Seri Syamsul Omar personally overseeing the grand opening ceremony, attended by
+                                Johor Chief Minister Datuk Onn Hafiz Ghazi.
+                            </article>
+                        </div>
+                    </div>
+
+                    <div class="checkpoint reveal">
+                        <div>
+                            <h2 class="storyYear">2024</h2>
+                            <article>As Lazy Monday entered 2024, it stood as a symbol of culinary excellence and
+                                community spirit in Johor Bahru. With a commitment to quality and innovation, Lazy
+                                Monday continued to delight patrons with its gourmet burgers and friendly atmosphere
+                                under Datuk Seri Syamsul Omar's leadership. As Lazy Monday looked towards the future, it
+                                remained dedicated to providing unforgettable dining experiences and giving back to the
+                                community that had embraced it from the beginning.
+                            </article>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!--SECTION 3 : OUR CUSTOMERS-->
+        <section id="customers">
+            <div class="customersBg">
+                <div class="container reveal">
+                    <p>&#10023; Insights from Our Cherished Guests &#10023;</p>
+                    <div class="custCommentSection">
+                        <div class="custCommentBox">
+                            <article><span>&#x201C; T</span>he D.A.R.E burger challenge at Lazy Monday was thrilling!
+                                The mix of juicy beef patty, crispy chicken, and bacon cheesy fries was a burst of
+                                flavor. Despite the challenge, the attentive service made it enjoyable. The Lazy
+                                Signature and Classic Boston burgers were equally delicious. Overall, a fantastic dining
+                                experience at Lazy Monday, leaving me excited for more.</article>
+
+                            <div class="custCommentProfile">
+                                <div class="custCommentNameRate">
+                                    <h4>Zermatt Neo</h4>
+                                    <h5>Trainer | Nutritionist</h5>
+                                    <div class="custRate">
+
+                                    </div>
+                                </div>
+                                <img src="../images/about/customers/zermatt_neo.jpeg" alt="Zermatt Neo" />
+                            </div>
+                        </div>
+
+                        <div class="custCommentBox" id="alisha">
+                            <article><span>&#x201C; A</span>s a regular customer at Lazy Monday, I love the food and ambiance.
+                                The service here always suits my taste, making every visit enjoyable. From the friendly
+                                staff to the cozy atmosphere, Lazy Monday has become my favorite spot for delicious
+                                meals and great experiences. I can't wait to come back for more!</article>
+
+                            <div class="custCommentProfile">
+                                <div class="custCommentNameRate">
+                                    <h4>Alisha</h4>
+                                    <h5>Influencer | Blogger</h5>
+                                </div>
+                                <img src="../images/about/customers/alisha.jpg" alt="Alisha" />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <!--SECTION 4 : OUR INGREDIENT-->
+        <section id="ingredient">
+            <img src="../images/about/ingredient/ingredient_bg.jpg" alt="Ingredient Background" />
+            <div class="container reveal">
+                <div class="ingredientMain">
+                    <h3 class="typeText">Our Ingredient</h3>
+                    <div class="ingredientBox">
+                        <div class="ingredientMapBox">
+                            <img src="../images/about/ingredient/foods.png" alt="Lazy Monday Food"
+                                usemap="#ingredientMap" width="500" height="500" />
+
+                            <map name="ingredientMap">
+                                <!--Sides-->
+                                <area shape="poly" coords="38,70,211,51,223,220,56,261" href="#ingredient" alt="Sides"
+                                    title="Sides" id="sidesMap" onclick="displayMapItem(this);"  onmouseover="hoverSound.play();"
+                                    onmousedown="clickSound.play();"/>
+                                <!--Lobster Rolls-->
+                                <area shape="poly" coords="59,284,225,240,236,399,76,462" href="#ingredient"
+                                    alt="Lobster Rolls" title="Lobster Rolls" id="lobsterMap"
+                                    onclick="displayMapItem(this);"  onmouseover="hoverSound.play();"
+                        onmousedown="clickSound.play();"/>
+                                <!--Beverages-->
+                                <area shape="poly" coords="225,51,364,35,378,342,250,393" href="#ingredient"
+                                    alt="Beverages" title="Beverages" id="beverageMap"
+                                    onclick="displayMapItem(this);"  onmouseover="hoverSound.play();"
+                        onmousedown="clickSound.play();"/>
+                                <!--Burgers-->
+                                <area shape="poly" coords="375,34,481,23,490,297,388,336" href="#ingredient"
+                                    alt="Burgers" title="Burgers" id="burgerMap" onclick="displayMapItem(this);"  onmouseover="hoverSound.play();"
+                        onmousedown="clickSound.play();"/>
+                            </map>
+                        </div>
+
+                        <div class="ingredientDescBox">
+                            <div id="defaultMapDesc">
+                                <h3>Explore Our Ingredients Here</h3>
+                                <p>Click on any item from the image</p>
+                            </div>
+
+                            <div id="sidesDesc" class="descContentBox">
+                                <div class="descContent">
+                                    <img src="../images/about/ingredient/bacon.jpg" alt="Bacon" class="descImg" />
+                                    <p>Finest Bacon</p>
+                                    <article>Each strip is handpicked from the finest cuts of pork, ensuring optimal
+                                        flavor
+                                        and texture in every bite. Our Bacon is expertly cured and smoked to perfection,
+                                        imparting a rich, smoky aroma that tantalizes the senses. With a focus on
+                                        quality
+                                        and authenticity, we spare no effort in ensuring that only the best Bacon makes
+                                        it
+                                        to your plate.</article>
+                                </div>
+                            </div>
+
+                            <div id="lobsterDesc" class="descContentBox">
+                                <div class="descContent">
+                                    <img src="../images/about/ingredient/lobster.jpg" alt="Lobster" class="descImg" />
+                                    <p>Fresh Lobster</p>
+                                    <article>We pride ourselves on sourcing the finest lobster available, handpicked
+                                        from pristine waters and delivered directly to our kitchen. Our commitment to
+                                        excellence ensures that only the most premium lobster finds its way into our
+                                        dishes, including our beloved Classic Boston Lobster Rolls. From the first crack
+                                        of the shell to the last tantalizing bite, our lobster embodies the essence of
+                                        luxury and sophistication, elevating your dining experience to new heights.
+                                    </article>
+                                </div>
+                            </div>
+
+                            <div id="beverageDesc" class="descContentBox">
+                                <div class="descContent">
+                                    <img src="../images/about/ingredient/beverage_flavour.jpg" alt="Beverages Flavour"
+                                        class="descImg" />
+                                    <p>Diverse Flavour</p>
+                                    <article>From the refreshing burst of citrus to the indulgent richness of chocolate,
+                                        our beverages embody a diverse array of flavors that cater to every preference
+                                        and craving. Whether you're drawn to the tropical allure of coconut and
+                                        pineapple or the comforting warmth of cinnamon and nutmeg, our menu offers a
+                                        kaleidoscope of taste experiences that elevate your dining journey.
+                                    </article>
+                                </div>
+                                <div class="descContent">
+                                    <img src="../images/about/ingredient/beverage_blend.jpg" alt="Beverages Blending"
+                                        class="descImg" />
+                                    <p>Artful Blending</p>
+                                    <article>Our milkshakes are more than just a beverage &mdash; they're a work of art.
+                                        Each
+                                        flavor is meticulously blended to perfection, striking the ideal balance of
+                                        creaminess, sweetness, and flavor intensity. Whether you're craving the
+                                        nostalgic comfort of classic chocolate or the tropical paradise of fresh fruit,
+                                        our milkshakes offer an indulgent experience for every palate.
+                                    </article>
+                                </div>
+
+                            </div>
+
+
+                            <div id="burgerDesc" class="descContentBox">
+                                <div class="descContent">
+                                    <img src="../images/about/ingredient/burger_buns.jpg" alt="Burger Buns"
+                                        class="descImg" />
+                                    <p>Hand-Crafted Bun</p>
+                                    <article>Imbued with the skillful touch of our master bakers, each bun is a work of
+                                        art, boasting a perfect balance of softness and structure. Baked to golden
+                                        perfection, our buns offer a delicate yet sturdy embrace for the flavorful
+                                        delights nestled within. From the first taste to the last, our hand-crafted buns
+                                        impart a satisfying
+                                        texture and subtle sweetness that enhances the overall enjoyment of every burger
+                                        bite.
+                                    </article>
+                                </div>
+                                <div class="descContent">
+                                    <img src="../images/about/ingredient/burger_meat.jpg" alt="Authentic Meat"
+                                        class="descImg" />
+                                    <p>Authentic Meat Mastery</p>
+                                    <article>Sourced from trusted suppliers renowned for their commitment to excellence,
+                                        our meat undergoes a meticulous process to ensure unrivaled flavor and
+                                        tenderness. Crafted with precision and care, each burger patty is a testament to
+                                        our dedication to quality and authenticity. From the first juicy bite to the
+                                        last, you'll taste the rich, savory goodness that sets our burgers apart.
+                                    </article>
+                                </div>
+
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!--SECTION 5 : OUR ENVIRONMENT-->
+        <section id="environment" class="home">
+            <video class="video-slide active" autoplay muted loop>
+                <source src="../videos/env1.mp4" type="video/mp4"/>
+                <source src="../videos/env1.webm" type="video/webm"/>
+                This browser does not support HTML5 video.
+            </video>
+            <div class="content active">
+                <h1>Our <span>Environment</span></h1>
+            </div>
+        </section>
+        <div class="contentt">
+            Gallery
+        </div>
+        <div class="line">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+        <section class="img">
+            <div class="full-img" id="fullImgBox">
+                <img src="../images/about/environment/2.jpg" id="fullImg">
+                <span onclick="closeFullImg()">X</span>
+            </div>
+            <div class="img-galleryy">
+                <img src="../images/about/environment/1.jpg" onclick="openFullImg(this.src)" onmouseover="hoverSound.play();"
+                        onmousedown="clickSound.play();">
+                <img src="../images/about/environment/2.jpg" onclick="openFullImg(this.src)" onmouseover="hoverSound.play();"
+                        onmousedown="clickSound.play();">
+                <img src="../images/about/environment/3.jpg" onclick="openFullImg(this.src)" onmouseover="hoverSound.play();"
+                        onmousedown="clickSound.play();">
+                <img src="../images/about/environment/4.jpg" onclick="openFullImg(this.src)" onmouseover="hoverSound.play();"
+                        onmousedown="clickSound.play();">
+                <img src="../images/about/environment/5.jpg" onclick="openFullImg(this.src)" onmouseover="hoverSound.play();"
+                        onmousedown="clickSound.play();">
+                <img src="../images/about/environment/6.jpg" onclick="openFullImg(this.src)" onmouseover="hoverSound.play();"
+                        onmousedown="clickSound.play();">
+                <img src="../images/about/environment/7.jpg" onclick="openFullImg(this.src)" onmouseover="hoverSound.play();"
+                        onmousedown="clickSound.play();">
+                <img src="../images/about/environment/8.jpg" onclick="openFullImg(this.src)" onmouseover="hoverSound.play();"
+                        onmousedown="clickSound.play();">
+                <img src="../images/about/environment/9.jpg" onclick="openFullImg(this.src)" onmouseover="hoverSound.play();"
+                        onmousedown="clickSound.play();">
+                <img src="../images/about/environment/10.jpg" onclick="openFullImg(this.src)" onmouseover="hoverSound.play();"
+                        onmousedown="clickSound.play();">
+                <img src="../images/about/environment/11.jpg" onclick="openFullImg(this.src)" onmouseover="hoverSound.play();"
+                        onmousedown="clickSound.play();">
+                <img src="../images/about/environment/12.jpg" onclick="openFullImg(this.src)" onmouseover="hoverSound.play();"
+                        onmousedown="clickSound.play();">
+            </div>
+        </section>
+
+    </main>
+
+    <footer>
+        <hr />
+        <h2>&#10023;&nbsp;Find Us At&nbsp;&#10023;</h2>
+        <div class="socialMedia">
+            <a href="https://web.facebook.com/lazymondaykitchen" title="Lazy Monday Facebook"><img
+                    src="../images/icon-logo/icon/facebook.png" alt="Facebook" /></a>
+            <a href="https://www.tiktok.com/@lazymondayhq" title="Lazy Monday TikTok"><img
+                    src="../images/icon-logo/icon/tiktok.png" alt="TikTok" /></a>
+            <a href="https://www.instagram.com/lazymondayhq/" title="Lazy Monday Instagram"><img
+                    src="../images/icon-logo/icon/instagram.png" alt="Instagram" /></a>
+        </div>
+        <hr />
+
+        <div class="quickLinks">
+            <div class="contact">
+                <h3>Contacts</h3><br />
+                <a href="mailto:lazymonday@gmail.com" title="Lazy Monday Email"><img
+                        src="../images/icon-logo/icon/email.png" alt="Email" />&nbsp;lazymonday@gmail.com</a><br />
+                <a href="tel:+1072335546" title="Lazy Monday Contact Number"><img
+                        src="../images/icon-logo/icon/phone.png" alt="Phone">&nbsp;+07-233-5546</a>
+            </div>
+            <div class="about">
+                <h3>About Us</h3><br />
+                <a href="about.html#story">Our Story</a><br />
+                <a href="contact.html#location">Our Location</a><br />
+                <a href="about.html#customers">Our Customers</a><br />
+                <a href="about.html#ingredient">Our Ingredients</a><br />
+                <a href="about.html#environment">Our Environment</a>
+            </div>
+            <div class="menu">
+                <h3>Menu</h3><br />
+                <a href="menu.html#menu">Specials</a><br />
+                <a href="menu.html#menu">Lobster Rolls</a><br />
+                <a href="menu.html#menu">Burgers</a><br />
+                <a href="menu.html#menu">Pastas</a><br />
+                <a href="menu.html#menu">Sides</a><br />
+                <a href="menu.html#menu">Beverages</a><br />
+                <a href="menu.html#menu">Desserts</a><br />
+            </div>
+            <div class="help">
+                <h3>Get Help</h3><br />
+                <a href="account.html">Login</a><br />
+                <a href="account.html">Sign Up</a><br />
+                <a href="career.html">Career</a><br />
+                <a href="https://example.com">Privacy Policy</a><br />
+                <a href="https://example.com">Terms & Conditions</a><br />
+            </div>
+        </div>
+        <hr />
+        <p>Copyright 2024 &copy; Lazy Monday Malaysia. All Rights Reserved.</p>
+    </footer>
+
+    <script type="text/javascript">
+        function displayMapItem(itemMap) {
+            document.getElementById('defaultMapDesc').style.display = 'none';
+
+            if (itemMap.id == 'sidesMap') {
+                document.getElementById('sidesDesc').style.height = 'fit-content';
+                document.getElementById('sidesDesc').style.display = 'flex';
+                document.getElementById('sidesDesc').style.animation = 'animateMap 2s ease';
+                document.querySelector('#sidesDesc article').style.animation = 'animateMapText 4s ease';
+
+                document.getElementById('lobsterDesc').style.height = '0';
+                document.getElementById('lobsterDesc').style.display = 'none';
+
+                document.getElementById('beverageDesc').style.height = '0';
+                document.getElementById('beverageDesc').style.display = 'none';
+
+                document.getElementById('burgerDesc').style.height = '0';
+                document.getElementById('burgerDesc').style.display = 'none';
+            }
+            else if (itemMap.id == 'lobsterMap') {
+                document.getElementById('sidesDesc').style.height = '0';
+                document.getElementById('sidesDesc').style.display = 'none';
+
+                document.getElementById('lobsterDesc').style.height = 'fit-content';
+                document.getElementById('lobsterDesc').style.display = 'flex';
+                document.getElementById('lobsterDesc').style.animation = 'animateMap 2s ease';
+                document.querySelector('#lobsterDesc article').style.animation = 'animateMapText 4s ease';
+
+                document.getElementById('beverageDesc').style.height = '0';
+                document.getElementById('beverageDesc').style.display = 'none';
+
+                document.getElementById('burgerDesc').style.height = '0';
+                document.getElementById('burgerDesc').style.display = 'none';
+            }
+            else if (itemMap.id == 'beverageMap') {
+                document.getElementById('sidesDesc').style.height = '0';
+                document.getElementById('sidesDesc').style.display = 'none';
+
+                document.getElementById('lobsterDesc').style.height = '0';
+                document.getElementById('lobsterDesc').style.display = 'none';
+
+                document.getElementById('beverageDesc').style.height = 'fit-content';
+                document.getElementById('beverageDesc').style.display = 'flex';
+                document.getElementById('beverageDesc').style.animation = 'animateMap 2s ease';
+                document.querySelector('#beverageDesc .descContent:nth-of-type(1) article').style.animation = 'animateMapText 4s ease';
+                document.querySelector('#beverageDesc .descContent:nth-of-type(2) article').style.animation = 'animateMapText 4s ease';
+
+                document.getElementById('burgerDesc').style.height = '0';
+                document.getElementById('burgerDesc').style.display = 'none';
+            }
+            else if (itemMap.id == 'burgerMap') {
+                document.getElementById('sidesDesc').style.height = '0';
+                document.getElementById('sidesDesc').style.display = 'none';
+
+                document.getElementById('lobsterDesc').style.height = '0';
+                document.getElementById('lobsterDesc').style.display = 'none';
+
+                document.getElementById('beverageDesc').style.height = '0';
+                document.getElementById('beverageDesc').style.display = 'none';
+
+                document.getElementById('burgerDesc').style.height = 'fit-content';
+                document.getElementById('burgerDesc').style.display = 'flex';
+                document.getElementById('burgerDesc').style.animation = 'animateMap 2s ease';
+                document.querySelector('#burgerDesc .descContent:nth-of-type(1) article').style.animation = 'animateMapText 4s ease';
+                document.querySelector('#burgerDesc .descContent:nth-of-type(2) article').style.animation = 'animateMapText 4s ease';
+            }
+        }
+        var fullImgBox = document.getElementById("fullImgBox");
+        var fullImg = document.getElementById("fullImg");
+
+        function openFullImg(pic) {
+            fullImgBox.style.display = "flex";
+            fullImg.src = pic;
+        }
+
+        function closeFullImg() {
+            fullImgBox.style.display = "none";
+        }
+
+    </script>
+</body>
+
+</html>

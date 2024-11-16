@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="keywords" content="Lazy, Monday, western, burger, fries, restaurant, food" />
+    <title>Membership</title>
+    <link rel="icon" href="../images/icon-logo/logo/lm_logo_circle.png" type="image/x-icon" />
+    <link rel="stylesheet" href="../css_file/reset.css" />
+    <link rel="stylesheet" href="../css_file/lazyMonday.css" />
+    <link rel="stylesheet" href="../css_file/member.css" />
+
+    <script src="../js_file/lazyMonday.js" type="text/javascript" defer></script>
+</head>
+
+<body>
+    <audio autoplay id="musicPlayer">
+        <source src="../audios/musics/coffee_cup.mp3" type="audio/mp3">
+        <source src="../audios/musics/italy.mp3" type="audio/mp3">
+        <source src="../audios/musics/vintage.mp3" type="audio/mp3">
+        <source src="../audios/musics/dream.mp3" type="audio/mp3">
+        Your browser does not support the audio element.
+    </audio>
+
+    <header id="navBar">
+        <nav>
+            <div id="logo">
+                <a href="index.html" title="Home"><img src="../images/icon-logo/logo/lm_logo.png"
+                        alt="Lazy Monday Logo"></a>
+            </div>
+            <ul id="txtLink">
+                <li><a href="index.html" title="Home" onmouseover="hoverSound.play();"
+                        onmousedown="clickSound.play();"><img src="../images/icon-logo/icon/home.png"
+                            alt="Home" />&nbsp;HOME</a>
+                </li>
+                <li>
+                    <a href="menu.html" title="Menu" onmouseover="hoverSound.play();"
+                        onmousedown="clickSound.play();"><img src="../images/icon-logo/icon/menu.png"
+                            alt="Menu" />&nbsp;MENU&nbsp;&nbsp;</a>
+                </li>
+                <li><a href="news.html" title="News" onmouseover="hoverSound.play();"
+                        onmousedown="clickSound.play();"><img src="../images/icon-logo/icon/news.png"
+                            alt="News" />&nbsp;NEWS</a></li>
+                <li><a href="about.html" title="About Us" onmouseover="hoverSound.play();"
+                        onmousedown="clickSound.play();"><img src="../images/icon-logo/icon/about.png"
+                            alt="About Us" />&nbsp;ABOUT</a></li>
+                <li><a href="contact.html" title="Contact Us" onmouseover="hoverSound.play();"
+                        onmousedown="clickSound.play();"><img src="../images/icon-logo/icon/contact.png"
+                            alt="Contact Us" />&nbsp;CONTACT</a>
+                </li>
+                <li><a href="career.html" title="Career" onmouseover="hoverSound.play();"
+                        onmousedown="clickSound.play();"><img src="../images/icon-logo/icon/career.png"
+                            alt="Career" />&nbsp;CAREER</a></li>
+            </ul>
+
+            <ul id="iconLink">
+                <li class="dropdown">
+                    <a href="account.html" title="Account" class="toPage" onmouseover="hoverSound.play();"
+                        onmousedown="clickSound.play();"><img src="../images/icon-logo/icon/account.png"
+                            alt="Account" /></a>
+                    <ul class="dropdown-content">
+                        <li>
+                            <p class="User" id="Username"></p>
+                        </li>
+                        <li><a href="account.html" onclick="logout()" id="loginLogoutLink" title="logout"></a></li>
+                    </ul>
+                </li>
+                <li><a href="#cart.html" title="Cart" class="toPage" id="cart" style="display: none;"><img
+                            src="../images/icon-logo/icon/shopping-cart.png" alt="Cart" /></a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <h1>Membership</h1>
+        <h2>Yet to become our member? Join now to enjoy more discounts and mysterious gifts!</h2>
+        <table>
+            <tr>
+                <th>Membership</th>
+                <th><img src="../images/icon-logo/icon/guest.png" alt="guest-icon">&nbsp;Guest</th>
+                <th id="premium"><img src="../images/icon-logo/icon/vip.png" alt="vip-icon">&nbsp;Member</th>
+            </tr>
+
+            <tr>
+                <td>Discounts</td>
+                <td id="white">0% Discount</td>
+                <td id="whitep">30% Discount</td>
+            </tr>
+
+            <tr>
+                <td>Processing Fee</td>
+                <td id="white">Required</td>
+                <td id="whitep">No Processing Fee</td>
+            </tr>
+
+            <tr>
+                <td>Reward</td>
+                <td id="white">-</td>
+                <td id="whitep">FREE Chocolate<br />Brownie Cake</td>
+            </tr>
+
+        </table>
+        <br><br><br>
+        <div class="button-container">
+            <a href="account.html" title="joinmember" onmouseover="hoverSound.play();" onmousedown="clickSound.play();">
+                <div class="btn toPage" style="margin-left: 620px;">
+                    <p>Join As A Member Now!</p>
+                </div>
+            </a>
+        </div>
+
+        <br><br><br><br><br><br><br><br>
+
+        <div class="contenttt">
+            <h1>Join Us Today!</h1>
+        </div>
+
+        <div class="container">
+
+            <div class="gallery-container h-2" onmouseover="hoverSound.play();">
+                <div class="gallery-item">
+                    <div class="image">
+                        <img src="../images/member/1.jpg" />
+                    </div>
+                    <div class="text">
+                        By joining our member you will get to enjoy alots of benefits from us.
+                    </div>
+                </div>
+            </div>
+            <div class="gallery-container" onmouseover="hoverSound.play();">
+                <div class="gallery-item">
+                    <div class="image">
+                        <img src="../images/member/2.jpg">
+                    </div>
+                    <div class="text">
+                        Enjoy a 30% discount on your every meal, while get informed with our recent events.
+                    </div>
+                </div>
+            </div>
+            <div class="gallery-container" onmouseover="hoverSound.play();">
+                <div class="gallery-item">
+                    <div class="image">
+                        <img src="../images/member/3.jpg">
+                    </div>
+                    <div class="text">You just have to register your username and password and be our member in the next
+                        second.
+                    </div>
+                </div>
+            </div>
+            <div class="gallery-container" onmouseover="hoverSound.play();">
+                <div class="gallery-item">
+                    <div class="image">
+                        <img src="../images/member/4.jpg">
+                    </div>
+                    <div class="text">Carving for our burger? Join us to enjoy more.
+                    </div>
+                </div>
+            </div>
+            <div class="gallery-container" onmouseover="hoverSound.play();">
+                <div class="gallery-item">
+                    <div class="image">
+                        <img src="../images/member/5.jpg">
+                    </div>
+                    <div class="text">Events and discount are waiting for you
+                    </div>
+                </div>
+            </div>
+            <div class="gallery-container" onmouseover="hoverSound.play();">
+                <div class="gallery-item">
+                    <div class="image">
+                        <img src="../images/member/6.jpg">
+                    </div>
+                    <div class="text">You just have to register your username and password and be our member in the next
+                        second.
+                    </div>
+                </div>
+            </div>
+        </div>
+        <h4>How to join us?</h4>
+        <section id="how">
+            <div class="slider">
+                <div class="slideBtn">
+                    <button class="prev" onclick="prevSlide()" onmousedown="clickSound.play();">&#10094</button>
+                </div>
+                <div class="slides">
+                    <img src="../images/member/screenshot.png">
+                    <img src="../images/member/screenshot2.png">
+                    <img src="../images/member/screenshot3.png">
+                    <img src="../images/member/screenshot4.png">
+                    <img src="../images/member/screenshot5.png">
+                </div>
+                <div class="slideBtn" id="btn2">
+                    <button class="next" onclick="nextSlide()" onmousedown="clickSound.play();">&#10095</button>
+                </div>
+            </div>
+        </section>
+        <section id="qna">
+            <h5>Q&A</h5>
+            <div class="dropdown">
+                <button onclick="toggleDropdown('answer1')" class="button" onmousedown="clickSound.play();">What
+                    benefits do members of our burger store
+                    website
+                    enjoy?</button>
+                <div class="dropdown-content" id="answer1">
+                    <p>Members of our burger store website receive exclusive perks, including a 30% discount on their
+                        orders. This discount is our way of showing appreciation for their loyalty and support.
+                        Additionally, members gain access to special promotions, sneak peeks of new menu items, and
+                        priority booking for events or limited-time offers. Be sure to sign up as a member to unlock
+                        these exciting benefits and enjoy delicious burgers at a discounted price!</p>
+                </div>
+            </div>
+            <br>
+            <div class="dropdown">
+                <button onclick="toggleDropdown('answer2')" class="button" onmousedown="clickSound.play();">How can I
+                    become a member of our burger store
+                    website?</button>
+                <div class="dropdown-content" id="answer2">
+                    <p>Becoming a member of our burger store website is easy! Simply sign up for an account on our
+                        website and opt-in to join our loyalty program. Once registered, you'll start enjoying
+                        member-exclusive benefits, including a fantastic 30% discount on your orders. Don't miss out on
+                        this opportunity to indulge in our mouthwatering burgers while saving money as a valued member!
+                    </p>
+                </div>
+            </div>
+
+            <div class="dropdown">
+                <button onclick="toggleDropdown('answer3')" class="button" onmousedown="clickSound.play();">What about
+                    the perks of being a member of our
+                    burger
+                    store website?</button>
+                <div class="dropdown-content" id="answer3">
+                    <p>As a member of our burger store website, you'll receive a host of exciting perks designed to
+                        enhance your dining experience. Alongside the generous 30% discount on orders, members gain
+                        access to special promotions, such as buy-one-get-one-free deals or free upgrades on select menu
+                        items. You'll also be the first to know about new menu additions and limited-time offers,
+                        ensuring you never miss out on a delicious opportunity. Plus, members enjoy priority customer
+                        service and support, ensuring that your needs are always met promptly and efficiently. Join us
+                        as a member today and start enjoying these exclusive benefits with every bite!</p>
+                </div>
+            </div>
+            <br><br>
+            <div class="dropdown">
+                <button onclick="toggleDropdown('answer4')" class="button" onmousedown="clickSound.play();">Are there
+                    any restrictions or conditions
+                    associated
+                    with the 30% discount for members?</button>
+                <div class="dropdown-content" id="answer4">
+                    <p>All member are allow to enjoy this discount who dine in only. we strive to make your membership
+                        experience as rewarding as possible, and our team is always available to assist you with any
+                        questions or concerns. Join us as a member today and start saving on your favorite burgers!
+                    </p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <hr />
+        <h2>&#10023;&nbsp;Find Us At&nbsp;&#10023;</h2>
+        <div class="socialMedia">
+            <a href="https://web.facebook.com/lazymondaykitchen" title="Lazy Monday Facebook"><img
+                    src="../images/icon-logo/icon/facebook.png" alt="Facebook" /></a>
+            <a href="https://www.tiktok.com/@lazymondayhq" title="Lazy Monday TikTok"><img
+                    src="../images/icon-logo/icon/tiktok.png" alt="TikTok" /></a>
+            <a href="https://www.instagram.com/lazymondayhq/" title="Lazy Monday Instagram"><img
+                    src="../images/icon-logo/icon/instagram.png" alt="Instagram" /></a>
+        </div>
+        <hr />
+
+        <div class="quickLinks">
+            <div class="contact">
+                <h3>Contacts</h3><br />
+                <a href="mailto:lazymonday@gmail.com" title="Lazy Monday Email"><img
+                        src="../images/icon-logo/icon/email.png" alt="Email" />&nbsp;lazymonday@gmail.com</a><br />
+                <a href="tel:+1072335546" title="Lazy Monday Contact Number"><img
+                        src="../images/icon-logo/icon/phone.png" alt="Phone">&nbsp;+07-233-5546</a>
+            </div>
+            <div class="about">
+                <h3>About Us</h3><br />
+                <a href="about.html#story">Our Story</a><br />
+                <a href="contact.html#location">Our Location</a><br />
+                <a href="about.html#customers">Our Customers</a><br />
+                <a href="about.html#ingredient">Our Ingredients</a><br />
+                <a href="about.html#environment">Our Environment</a>
+            </div>
+            <div class="menu">
+                <h3>Menu</h3><br />
+                <a href="menu.html#menu">Specials</a><br />
+                <a href="menu.html#menu">Lobster Rolls</a><br />
+                <a href="menu.html#menu">Burgers</a><br />
+                <a href="menu.html#menu">Pastas</a><br />
+                <a href="menu.html#menu">Sides</a><br />
+                <a href="menu.html#menu">Beverages</a><br />
+                <a href="menu.html#menu">Desserts</a><br />
+            </div>
+            <div class="help">
+                <h3>Get Help</h3><br />
+                <a href="account.html">Login</a><br />
+                <a href="account.html">Sign Up</a><br />
+                <a href="career.html">Career</a><br />
+                <a href="https://example.com">Privacy Policy</a><br />
+                <a href="https://example.com">Terms & Conditions</a><br />
+            </div>
+        </div>
+        <hr />
+        <p>Copyright 2024 &copy; Lazy Monday Malaysia. All Rights Reserved.</p>
+    </footer>
+
+    <script type="text/javascript">
+        function displayValidationMessage() {
+            var modal = document.getElementById('myModal');
+            var modalButton = document.getElementById('modalButton');
+
+            modal.style.display = 'block';
+
+            modalButton.onclick = function () {
+                modal.style.display = 'none';
+            }
+        }
+
+        function prevSlide() {
+            clearInterval(intervalId);
+            slideIndex--;
+            showSlide(slideIndex);
+        }
+
+        function nextSlide(index) {
+            slideIndex++;
+            showSlide(slideIndex);
+        }
+
+        const slidesNews = document.querySelectorAll(".slides img");
+        let slideIndexNews = 0;
+        let intervalIdNews = null;
+
+        document.addEventListener("DOMContentLoaded", initializeSlider);
+
+        function initializeSlider() {
+            // If we have slides (pictures)
+            if (slidesNews.length > 0) {
+                slidesNews[slideIndexNews].classList.add("displaySlide");
+            }
+        }
+
+        function showSlide(index) {
+            // If reach to the end of slides
+            if (index >= slidesNews.length) {
+                slideIndexNews = 0;
+            }
+            else if (index < 0) {
+                slideIndexNews = slidesNews.length - 1;
+            }
+            slidesNews.forEach(slide => {
+                slide.classList.remove("displaySlide");
+            })
+            slidesNews[slideIndexNews].classList.add("displaySlide");
+        }
+
+        function prevSlide() {
+            clearInterval(intervalIdNews);
+            slideIndexNews--;
+            showSlide(slideIndexNews);
+        }
+
+        function nextSlide(index) {
+            slideIndexNews++;
+            showSlide(slideIndexNews);
+        }
+        function toggleDropdown(dropdownId) {
+            var dropdownContent = document.getElementById(dropdownId);
+            if (dropdownContent.style.display === "block") {
+                dropdownContent.style.display = "none";
+            } else {
+                dropdownContent.style.display = "block";
+            }
+        }
+
+    </script>
+</body>
+
+</html>

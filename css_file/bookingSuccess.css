@@ -1,0 +1,372 @@
+/*LOADER ANIMATION*/
+#loader {
+    width: 100%;
+    height: 100%;
+    background-color: rgb(36, 36, 36);
+    position: fixed;
+    flex-flow: column wrap;
+    justify-content: center;
+    align-content: center;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    margin: auto;
+    user-select: none;
+    z-index: 999999;
+    animation: screenLoad 2s;
+}
+
+#loader h2 {
+    font-size: 5vw;
+    font-family: Lancelot, Garamond, 'Times New Roman', Times, serif;
+    font-weight: lighter;
+    color: #F9BF65;
+}
+
+#loader p {
+    font-weight: lighter;
+    color: #F9BF65;
+    font-size: 1.5vw;
+    font-variant: small-caps;
+}
+
+.spinner {
+    display: inline-block;
+    height: 3vw;
+    width: 3vw;
+    border-radius: 50%;
+    border: 0.32vw dashed white;
+    animation: spin 5s infinite ease;
+}
+
+#loader span::after {
+    position: absolute;
+    width: 10vw;
+    margin-left: 1vw;
+    content: '     ';
+    animation: loadDot 2s infinite ease-in-out;
+}
+
+@keyframes screenLoad {
+    90% {
+        opacity: 1;
+        display: flex;
+    }
+
+    100% {
+        opacity: 0;
+        display: none;
+    }
+}
+
+@keyframes spin {
+    25% {
+        transform: rotate(90deg);
+    }
+
+    50% {
+        transform: rotate(180deg);
+    }
+
+    75% {
+        transform: rotate(270deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes loadDot {
+    25% {
+        content: '     ';
+    }
+
+    50% {
+        content: '.    ';
+    }
+
+    75% {
+        content: '. .  ';
+    }
+
+    100% {
+        content: '. . .';
+    }
+}
+
+
+/*Section : RESERVATION SUCCESS*/
+section#reservationSuccess {
+    padding-top: 8%;
+    padding-bottom: 5%;
+}
+
+section#reservationSuccess>img {
+    top: -20vh;
+    left: 1vw;
+    position: absolute;
+    z-index: -999;
+    overflow: hidden;
+    width: 100%;
+    left: 0;
+    filter: blur(0.2vw) brightness(30%);
+}
+
+section#reservationSuccess div.reserveSuccessCard {
+    display: flex;
+    justify-content: space-between;
+    padding: 2%;
+    background-color: #ffffff39;
+}
+
+.reserveDetailsCard {
+    padding-right: 2%;
+    width: 65%;
+    border-right: 0.25vw double #ffffff;
+}
+
+.reserveEnquiry>h2 {
+    font-family: "Cinzel Regular", Garamond, 'Times New Roman', Times, serif;
+    text-align: center;
+    color: white;
+    font-size: 2.5vw;
+    font-weight: lighter;
+    line-height: 8vh;
+    word-spacing: 1vw;
+    letter-spacing: 0.5vw;
+}
+
+.reserveDetails p#bookingID {
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+    color: #ffffff;
+    font-size: 1.7vw;
+    letter-spacing: 0vw;
+    margin-bottom: 1vh;
+    font-weight: bold;
+}
+
+.reserveDetails p#bookingStatusIcon {
+    user-select: none;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+    color: #0abea9;
+    font-size: 4vw;
+    font-weight: bold;
+    letter-spacing: 0.2vw;
+    border: 0.5vw solid #0abea9;
+    width: fit-content;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 1% 2%;
+    border-radius: 50%;
+    animation: statusIconSize 5s infinite ease;
+}
+
+@keyframes statusIconSize {
+    0% {
+        transform: scale(0.5) rotateZ(0deg);
+    }
+
+    50% {
+        transform: scale(1) rotateZ(360deg);
+    }
+
+    100% {
+        transform: scale(0.5) rotateZ(720deg);
+    }
+}
+
+.reserveDetails p#bookingThank {
+    margin-top: 2%;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+    color: #ffffff;
+    font-size: 1.7vw;
+    font-weight: lighter;
+    letter-spacing: 0vw;
+    font-weight: bold;
+}
+
+.reserveDetails p#bookingStatusWord {
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+    color: #bdbdbd;
+    font-size: 0.9vw;
+    font-weight: bold;
+    letter-spacing: 0.1vw;
+    padding: 1% 2%;
+}
+
+.reserveCustDetailsHead {
+    margin-top: 2%;
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 0.1vw solid #ffffff;
+}
+
+.reserveGuestNo,
+.reserveDate,
+.reserveTime,
+.reserveRequest {
+    width: 25%;
+    padding-top: 1%;
+    padding-bottom: 1%;
+}
+
+.reserveCustDetailsHead p {
+    align-content: center;
+    text-align: center;
+    font-variant: small-caps;
+    color: #ffffff;
+    margin-top: 2.5%;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1.2vw;
+    font-weight: bold;
+}
+
+.reserveCustDetailsData {
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 0.25vw double #ffffff;
+
+}
+
+.reserveCustDetailsData p {
+    text-align: center;
+    vertical-align: middle;
+    height: 100%;
+    color: #ffffff;
+    align-content: center;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1vw;
+}
+
+.reserveRequest p {
+    text-align: justify;
+}
+
+.reserveTnC h3 {
+    margin-top: 5%;
+    padding-bottom: 2%;
+
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+    color: #ffffff;
+    font-size: 1.7vw;
+    letter-spacing: 0vw;
+    font-weight: bold;
+    border-bottom: 0.1vw solid #d6d6d6;
+}
+
+.reserveTnC p {
+    margin-top: 2%;
+    font-family: Poppins, Arial, Helvetica, sans-serif;
+    text-align: center;
+    color: #ffffff;
+    font-size: 0.7vw;
+    letter-spacing: 0vw;
+    font-weight: bold;
+}
+
+.reserveSuccessBtn {
+    margin-top: 5%;
+    padding-left: 10%;
+    padding-right: 10%;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.reserveSuccessBtn button {
+    padding: 2%;
+    min-width: 10vw;
+    border: 0.5vw groove #ffc977;
+    font-size: 1vw;
+    text-transform: uppercase;
+    font-family: Poppins, Arial, Helvetica, sans-serif;
+    background-color: #ffc977;
+    cursor: pointer;
+    border-radius: 1vw;
+    transition: all 0.2s ease-in-out;
+}
+
+.reserveSuccessBtn button:hover {
+    background-color: #c09658;
+
+}
+
+/*------------------------------------------*/
+/*Booking Enquiries*/
+.reserveEnquiry .bookCall {
+    margin-top: 2%;
+    text-align: center;
+}
+
+.reserveEnquiry .bookCall>p {
+    color: #ffffff;
+    font-family: Poppins, Arial, Helvetica, sans-serif;
+    font-size: 1vw;
+}
+
+.reserveEnquiry .bookCall h3 {
+    margin-top: 5%;
+    position: relative;
+    font-size: 1vw;
+}
+
+.reserveEnquiry .bookCall h3>a {
+    border-bottom: 0.25vw double #ffc977;
+
+    color: #ffc977;
+    font-family: Poppins, Arial, Helvetica, sans-serif;
+    font-size: 1.5vw;
+    font-weight: lighter;
+    text-decoration: none;
+    letter-spacing: 0.1vw;
+}
+
+.reserveEnquiry .bookCall h3::after {
+    content: '\a\2662';
+    white-space: pre;
+    font-size: 1vw;
+
+    color: #ffc977;
+    font-weight: lighter;
+    position: absolute;
+    top: 100%;
+    right: 49%;
+}
+
+.bookInfo {
+    margin-top: 12%;
+    text-align: center;
+    width: 100%;
+}
+
+.bookInfo>h3 {
+    color: #ffc977;
+    font-family: Poppins, Arial, Helvetica, sans-serif;
+    font-size: 1.5vw;
+    font-variant: small-caps;
+    font-weight: lighter;
+    text-decoration: none;
+    letter-spacing: 0.1vw;
+}
+
+.bookInfo>p {
+    margin-top: 1%;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    width: 52%;
+
+    color: #ffffff;
+    font-family: Poppins, Arial, Helvetica, sans-serif;
+    font-size: 0.8vw;
+    line-height: 2.5vh;
+    font-weight: lighter;
+    text-decoration: none;
+}

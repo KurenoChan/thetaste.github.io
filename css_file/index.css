@@ -1,0 +1,615 @@
+/*Main Content*/
+/**Title Section**/
+section#title {
+    position: relative;
+    background-image: url("../images/home/bricks.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    padding-bottom: 14%;
+    overflow: hidden;
+    user-select: none;
+}
+
+section#title>div.container>img {
+    position: relative;
+    width: 25%;
+    float: inline-end;
+    top: 20%;
+    animation-name: moveLeft;
+    animation-duration: 2s;
+    animation-timing-function: ease-in-out;
+}
+
+@keyframes moveLeft {
+    from {
+        right: -100%;
+        opacity: 0;
+    }
+
+    to {
+        right: 0%;
+        opacity: 1;
+    }
+}
+
+section#title article {
+    position: relative;
+    top: 25vh;
+    left: 0vw;
+}
+
+section#title article h2 {
+    position: relative;
+    display: inline;
+    top: 6vh;
+    color: rgba(211, 179, 99, 0.927);
+    font-size: 1.5vw;
+    font-weight: lighter;
+    letter-spacing: 0.2vw;
+    animation-name: fillOpacity;
+    animation-duration: 2.5s;
+    animation-timing-function: ease-in-out;
+
+}
+
+section#title article h1 {
+    font-family: "Cinzel Regular", Garamond, 'Times New Roman', Times, serif;
+    position: relative;
+    display: inline;
+    top: 7vh;
+    color: #ffffff;
+    font-weight: lighter;
+    font-size: 3vw;
+    text-align: justify;
+    letter-spacing: 0.1vw;
+    line-height: 1.2em;
+    animation-name: fillOpacity;
+    animation-duration: 2.3s;
+    animation-timing-function: ease-in-out;
+}
+
+section#title article p {
+    position: relative;
+    top: 8vh;
+    color: #757575;
+    font-size: 1.2vw;
+    font-weight: bold;
+    text-align: justify;
+    letter-spacing: 0.1vw;
+    width: 41vw;
+    animation-name: fillOpacity;
+    animation-duration: 2s;
+    animation-timing-function: ease-in-out;
+}
+
+section#title a {
+    animation-name: fillOpacity-btn;
+    animation-duration: 3.7s;
+}
+
+@keyframes fillOpacity {
+    from {
+        opacity: 0;
+        left: -50vw;
+    }
+
+    to {
+        opacity: 1;
+        left: 0vw;
+    }
+}
+
+@keyframes fillOpacity-btn {
+    0% {
+        opacity: 0;
+    }
+
+    70% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+section#title div.btn {
+    position: relative;
+    top: 38vh;
+    margin-right: 2vw;
+}
+
+section#title div.btn a {
+    width: 50vw;
+}
+
+/**Signature Section**/
+section#signature {
+    background-color: #00000093;
+    user-select: none;
+    width: auto;
+    height: auto;
+}
+
+section#signature video {
+    position: absolute;
+    width: 100%;
+    height: 120%;
+    object-fit: cover;
+    overflow: hidden;
+    z-index: -99999;
+}
+
+.signatureBox {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 5vh;
+}
+
+section#signature h1 {
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 15vh;
+    text-align: center;
+    font-family: "Cinzel Regular", Garamond, 'Times New Roman', Times, serif;
+    color: white;
+    font-size: 4.5vw;
+    font-weight: lighter;
+    word-spacing: 1vw;
+    letter-spacing: 0.5vw;
+}
+
+section#signature h1.typeText {
+    border-right-color: #ffffff;
+}
+
+section#signature div.container>p {
+    padding-top: 5vh;
+    text-align: center;
+    font-family: "Cinzel Regular", Garamond, 'Times New Roman', Times, serif;
+    color: rgb(232, 191, 87);
+    font-size: 1.2vw;
+    font-weight: lighter;
+    word-spacing: 0.2vw;
+    letter-spacing: 0.1vw;
+}
+
+section#signature div.container>p::before {
+    content: open-quote;
+}
+
+section#signature div.container>p::after {
+    content: close-quote;
+}
+
+section#signature div.container>h5 {
+    padding-top: 2vh;
+    padding-bottom: 2vh;
+    text-align: center;
+    font-family: "Cinzel Regular", Garamond, 'Times New Roman', Times, serif;
+    color: white;
+    font-size: 1vw;
+    font-weight: lighter;
+    word-spacing: 0.2vw;
+    letter-spacing: 0.47vw;
+    text-transform: uppercase;
+}
+
+section#signature div.container>h5>span {
+    word-spacing: 0;
+    letter-spacing: 0;
+}
+
+div.signatureContent {
+    cursor: pointer;
+    padding: 1%;
+    height: fit-content;
+    margin-bottom: 20vh;
+    text-align: center;
+    border: 0.3vw double rgb(232, 191, 87);
+    border-radius: 2vw 0;
+    background-color: #00000083;
+    transition: all 0.5s ease-in-out;
+}
+
+div.signatureContent:hover {
+    transform: translateY(-2vh);
+    box-shadow: 0 0 3vw #F9BF65;
+}
+
+div.signatureContent img {
+    width: 12vw;
+    height: 15vw;
+    object-fit: cover;
+    overflow: hidden;
+    border-radius: 2vw 0 0 0;
+}
+
+div.signatureContent p.signatureItem {
+    padding-top: 1vh;
+    padding-bottom: 3vh;
+    color: #ffffff;
+    font-size: 1.5vw;
+    font-weight: lighter;
+    letter-spacing: 0.15vw;
+    font-variant: small-caps;
+}
+
+div.signatureContent div.visitMenu {
+    margin-bottom: 10%;
+}
+
+div.signatureContent div.btn {
+    border-radius: 10%;
+}
+
+/*About Us Section*/
+section#about {
+    border-top: 0.3vw dotted rgb(211, 179, 99);
+    border-bottom: 0.3vw dotted rgb(211, 179, 99);
+    padding-top: 8vh;
+    padding-bottom: 8vh;
+    background: rgb(29, 29, 29);
+    background-image: url('../images/home/aboutIngredient.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+section#about img {
+    width: 20vw;
+    position: relative;
+    float: inline-end;
+    border: 10px solid #ffffff;
+    user-select: none;
+}
+
+section#about img.reveal {
+    transform: rotateZ(720deg) scale(0);
+    transition: all 1s ease;
+}
+
+section#about img.reveal.revealActive {
+    transform: rotateZ(5deg) scale(1);
+}
+
+section#about h2 {
+    color: rgb(232, 191, 87);
+    letter-spacing: 3px;
+    font-style: italic;
+    font-size: 3.9vw;
+    quotes: '\203C \203D';
+    font-family: Lancelot, Garamond, 'Times New Roman', Times, serif;
+    font-weight: lighter;
+    user-select: none;
+}
+
+section#about h2::before {
+    content: open-quote;
+}
+
+section#about h2::after {
+    content: close-quote;
+}
+
+section#about article {
+    padding: 10px;
+    padding-left: 0px;
+    width: 60%;
+    text-align: justify;
+    color: #ffffff;
+    word-spacing: 2px;
+    line-height: 1.5vw;
+    font-size: 1.2vw;
+}
+
+section#about div.visitAbout {
+    margin-top: 2%;
+}
+
+/*Description Section*/
+section#description {
+    padding-bottom: 20vh;
+    user-select: none;
+    background-color: rgb(36, 36, 36);
+}
+
+section#description h2 {
+    color: #FFFFFF;
+    font-size: 3vw;
+    margin-top: 5%;
+    text-align: center;
+    font-family: Lancelot, Garamond, 'Times New Roman', Times, serif;
+    letter-spacing: 0.2vw;
+    font-weight: lighter;
+}
+
+div.strength {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 5vh;
+}
+
+div.strength>div.finestIngredients,
+div.strength>div.diverseFlavours,
+div.strength>div.cozyEnvironment {
+    width: 22vw;
+    height: 22vw;
+    border-radius: 10%;
+    overflow: hidden;
+    position: relative;
+}
+
+div.strength img {
+    width: 22vw;
+    height: 22vw;
+    border-radius: 10%;
+    transition: transform 2000ms;
+}
+
+div.strength>div:hover img {
+    transform: scale(1.3);
+}
+
+div.strengthDetails {
+    position: absolute;
+    top: 0;
+    width: 22vw;
+    height: 22vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 1700ms ease-in-out;
+}
+
+div.finestIngredients>div.strengthDetails {
+    background-color: #00000037;
+}
+
+div.finestIngredients>div.strengthDetails:hover {
+    background-color: #0000008a;
+}
+
+div.diverseFlavours>div.strengthDetails {
+    background-color: #ff730037;
+}
+
+div.diverseFlavours>div.strengthDetails:hover {
+    background-color: #ff73007c;
+}
+
+div.cozyEnvironment>div.strengthDetails {
+    background-color: #9700443a;
+}
+
+div.cozyEnvironment>div.strengthDetails:hover {
+    background-color: #9700446e;
+}
+
+div.strengthDetails>p {
+    font-size: 2vw;
+    color: #ffffff;
+    font-family: Kranky, 'Times New Roman', Times, serif;
+    letter-spacing: 0.2vw;
+    font-weight: lighter;
+    text-align: center;
+    font-variant: small-caps;
+}
+
+section#description>div.container>p {
+    position: relative;
+    color: #ffffff;
+    font-family: "Cinzel Regular", Garamond, 'Times New Roman', Times, serif;
+    letter-spacing: 3px;
+    font-size: 1.5vw;
+    font-weight: bold;
+    font-variant: small-caps;
+    text-align: center;
+    margin-top: 2.5%;
+    margin-bottom: 1%;
+}
+
+section#description div.visitMenu {
+    margin-top: 2.5%;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+/*Join Membership Section*/
+section#membership {
+    padding-top: 10%;
+    padding-bottom: 10%;
+    padding-left: 20%;
+    padding-right: 20%;
+    overflow: hidden;
+    position: relative;
+    user-select: none;
+}
+
+section#membership>img:nth-of-type(1) {
+    position: absolute;
+    top: -5vh;
+    z-index: -999;
+    overflow: hidden;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    left: 0;
+    filter: blur(0.2vw) brightness(40%);
+}
+
+section#membership>img:nth-of-type(2) {
+    position: absolute;
+    top: 35vh;
+    z-index: -999;
+    overflow: hidden;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    left: 0;
+    filter: blur(0.2vw) brightness(40%);
+}
+
+.memberCardBox {
+    display: flex;
+    justify-content: space-between;
+}
+
+.memberCard{
+    width: 20%;
+    text-align: center;
+}
+
+.memberCardImg {
+    margin-left: auto;
+    margin-right: auto;
+    border: 0.1vw solid #F9BF65;
+    background-color: transparent;
+    width: 5vw;
+    height: 5vw;
+    padding: 10%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.8s ease;
+}
+
+.memberCardImg:hover{
+    transform: rotateZ(360deg);
+    background-color: #F9BF65;
+}
+
+.memberCardImg img{
+    width: 3vw;
+    height: 3vw;
+}
+
+.memberCard p.memberCardCount {
+    font-size: 2vw;
+    color: #F9BF65;
+
+    margin-top: 25%;
+    margin-bottom: 25%;
+    font-variant: small-caps;
+    letter-spacing: 0.2vw;
+    text-align: center;
+    font-family: Poppins, Arial, Helvetica, sans-serif;
+}
+
+.memberCard p.memberCardDesc{
+    font-size: 0.8vw;
+    font-variant: small-caps;
+    letter-spacing: 0.2vw;
+    text-align: center;
+    font-family: Camellia, Arial, Helvetica, sans-serif;
+    color: #ffffff;
+}
+
+.memberJoin{
+    margin-top: 10%;
+}
+
+.memberJoin h3{
+    text-transform: uppercase;
+    font-size: 2.4vw;
+    letter-spacing: 0.4vw;
+    text-align: center;
+    font-family: Quintessential;
+    font-weight: lighter;
+    color: #ffffff;
+}
+
+.memberJoinBtn {
+    margin-top: 5%;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.memberJoinBtn .toPage{
+    display: block;
+    min-width: 15vw;
+}
+
+/*-----------------------------------*/
+/*Booking Section*/
+section#booking{
+    position: relative;
+    text-align: center;
+    height: 110vh;
+    display: flex;
+    user-select: none;
+
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    animation: bookingBgImg infinite 20s ease;
+} 
+
+section#booking .bookingBg{
+    padding-top: 5%;
+    padding-bottom: 5%;
+    width: 45%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    background-color: #00000037;
+}
+
+section#booking .container{
+    width: 55%;
+    height: 100%;
+    align-content: center;  
+    background-color: #000000;
+}
+
+section#booking h2, section#booking h2>span{
+    text-transform: uppercase;
+    font-weight: bolder;
+    font-size: 5vw;
+    color: #ffffff;
+    font-variant: small-caps;
+    letter-spacing: 0vw;
+    word-spacing: 1vw;
+    font-family: 'Poppins Bold', Poppins, Arial, Helvetica, sans-serif;
+}
+
+section#booking h2>span{
+    color: transparent;
+    -webkit-text-stroke: 0.1vw #ffffff;
+}
+
+section#booking .btn{
+    margin-left: auto;
+    margin-right: auto;
+    width: fit-content;
+    display: block;
+    margin-top: 5vh;
+}
+
+@keyframes bookingBgImg {
+    0% {
+        background-position: -30vw top;
+        background-image: url(../images/home/booking_bg1.jpg);
+    }
+    20% {
+        background-position: left -50vw;
+        background-image: url(../images/home/booking_bg2.jpg);
+    }
+    40% {
+        background-position: -27vw top;
+        background-image: url(../images/home/booking_bg3.jpg);
+    }
+    60% {
+        background-position: -27vw center;
+        background-image: url(../images/home/booking_bg4.jpg);
+    }
+    80% {
+        background-position: -10vw -50vw;
+        background-image: url(../images/home/booking_bg5.jpg);
+    }
+    100% {
+        background-position: -30vw top;
+        background-image: url(../images/home/booking_bg1.jpg);
+    }
+}

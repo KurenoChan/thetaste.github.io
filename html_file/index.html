@@ -1,0 +1,429 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="keywords" content="Lazy, Monday, western, burger, fries, restaurant, food" />
+    <title>Lazy Monday</title>
+    <link rel="icon" href="../images/icon-logo/logo/lm_logo_circle.png" type="image/x-icon" />
+    <link rel="stylesheet" href="../css_file/reset.css" />
+    <link rel="stylesheet" href="../css_file/lazyMonday.css" />
+    <link rel="stylesheet" href="../css_file/index.css" />
+    <script src="../js_file/lazyMonday.js" type="text/javascript" defer></script>
+</head>
+
+<body>
+    <audio autoplay id="musicPlayer">
+        <source src="../audios/musics/coffee_cup.mp3" type="audio/mp3">
+        <source src="../audios/musics/italy.mp3" type="audio/mp3">
+        <source src="../audios/musics/vintage.mp3" type="audio/mp3">
+        <source src="../audios/musics/dream.mp3" type="audio/mp3">
+        Your browser does not support the audio element.
+    </audio>
+
+    <header id="navBar">
+        <nav>
+            <div id="logo">
+                <a href="index.html" title="Home"><img src="../images/icon-logo/logo/lm_logo.png"
+                        alt="Lazy Monday Logo"></a>
+            </div>
+            <ul id="txtLink">
+                <li><a href="index.html" title="Home" class="activePage" onmouseover="hoverSound.play();"
+                        onmousedown="clickSound.play();"><img src="../images/icon-logo/icon/home.png"
+                            alt="Home" />&nbsp;HOME</a>
+                </li>
+                <li>
+                    <a href="menu.html" title="Menu" onmouseover="hoverSound.play();"
+                        onmousedown="clickSound.play();"><img src="../images/icon-logo/icon/menu.png"
+                            alt="Menu" />&nbsp;MENU&nbsp;&nbsp;</a>
+                </li>
+                <li><a href="news.html" title="News" onmouseover="hoverSound.play();"
+                        onmousedown="clickSound.play();"><img src="../images/icon-logo/icon/news.png"
+                            alt="News" />&nbsp;NEWS</a></li>
+                <li><a href="about.html" title="About Us" onmouseover="hoverSound.play();"
+                        onmousedown="clickSound.play();"><img src="../images/icon-logo/icon/about.png"
+                            alt="About Us" />&nbsp;ABOUT</a></li>
+                <li><a href="contact.html" title="Contact Us" onmouseover="hoverSound.play();"
+                        onmousedown="clickSound.play();"><img src="../images/icon-logo/icon/contact.png"
+                            alt="Contact Us" />&nbsp;CONTACT</a>
+                </li>
+                <li><a href="career.html" title="Career" onmouseover="hoverSound.play();"
+                        onmousedown="clickSound.play();"><img src="../images/icon-logo/icon/career.png"
+                            alt="Career" />&nbsp;CAREER</a></li>
+            </ul>
+
+            <ul id="iconLink">
+                <li class="dropdown">
+                    <a href="account.html" title="Account" class="toPage" onmouseover="hoverSound.play();"
+                        onmousedown="clickSound.play();"><img src="../images/icon-logo/icon/account.png"
+                            alt="Account" /></a>
+                    <ul class="dropdown-content">
+                        <li>
+                            <p class="User" id="Username"></p>
+                        </li>
+                        <li><a href="account.html" onclick="logout()" id="loginLogoutLink" title="logout"></a></li>
+                    </ul>
+                </li>
+                <li><a href="#cart.html" title="Cart" class="toPage" id="cart" style="display: none;"><img
+                            src="../images/icon-logo/icon/shopping-cart.png" alt="Cart" /></a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <!--Section 1 : Lazy Monday Title-->
+        <section id="title">
+            <div class="container">
+                <img src="../images/home/burgerTitle.png" alt="Burger">
+                <article>
+                    <h2>Sink Your Teeth into Savory Perfection</h2></br>
+                    <h1>Real Meat Burgers</h1></br>
+                    <h1>That Delight Every Bite</h1></br>
+                    <p>Experience the ultimate burger journey with our handcrafted patties and fresh toppings,
+                        delivering a taste sensation like no other.</p>
+                </article>
+                <a href="menu.html" title="Menu" onmouseover="hoverSound.play();" onmousedown="clickSound.play();">
+                    <div class="btn toPage">
+                        <p>ORDER NOW&nbsp;<img src="../images/icon-logo/icon/shopping-cart.png" alt="Cart" /></p>
+                    </div>
+                </a>
+                <a href="#signature" title="View More" onmouseover="hoverSound.play();"
+                    onmousedown="clickSound.play();">
+                    <div class="btn viewMore">
+                        <p>VIEW MORE&nbsp;<img src="../images/icon-logo/icon/arrowDown.png" alt="View More" /></p>
+                    </div>
+                </a>
+            </div>
+        </section>
+
+        <!--Section 2 : Signature Dish-->
+        <section id="signature">
+            <video autoplay loop muted>
+                <source src="../videos/lazyMondayShort.mp4" type="video/mp4" />
+                <source src="../videos/lazyMondayShort.webm" type="video/webm" />
+                This browser does not support HTML5 video.
+            </video>
+            <div class="container reveal">
+                <h1 class="typeText">Our Top Notch</h1>
+                <p>&nbsp;There is no sincere love than the love of food&nbsp;</p>
+                <h5>
+                    <span>&mdash;&mdash;&mdash;&mdash;&mdash;&nbsp;&nbsp;</span>
+                    George Bernard Shaw
+                    <span>&nbsp;&nbsp;&mdash;&mdash;&mdash;&mdash;&mdash;</span>
+                </h5>
+                <div class="signatureBox">
+                    <div class="signatureContent" id="signatureLobster" title="Lobsters"
+                        onclick="window.location.href = 'menu.html'" onmouseover="hoverSound.play();"
+                        onmousedown="clickSound.play();">
+                        <img src="../images/menu/lobster_rolls/classic_boston.jpg" alt="Lobsters" />
+                        <p class="signatureItem">Lobster Rolls</p>
+                        <div class="visitMenu">
+                            <a href="menu.html" title="Menu">
+                                <div class="btn toPage">
+                                    <p>View Menu</p>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="signatureContent" id="signatureBurger" title="Burgers"
+                        onclick="window.location.href = 'menu.html'" onmouseover="hoverSound.play();"
+                        onmousedown="clickSound.play();">
+                        <img src="../images/menu/burgers/lazy_signature.png" alt="Burgers" />
+                        <p class="signatureItem">Burgers</p>
+                        <div class="visitMenu">
+                            <a href="menu.html" title="Menu">
+                                <div class="btn toPage">
+                                    <p>View Menu</p>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="signatureContent" id="signatureSide" title="Sides"
+                        onclick="window.location.href = 'menu.html'" onmouseover="hoverSound.play();"
+                        onmousedown="clickSound.play();">
+                        <img src="../images/menu/sides/bacon_cheese_fries.jpg" alt="Sides" />
+                        <p class="signatureItem">Sides</p>
+                        <div class="visitMenu">
+                            <a href="menu.html" title="Menu">
+                                <div class="btn toPage">
+                                    <p>View Menu</p>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="signatureContent" id="signatureSide" title="Beverages"
+                        onclick="window.location.href = 'menu.html'" onmouseover="hoverSound.play();"
+                        onmousedown="clickSound.play();">
+                        <img src="../images/menu/beverages/watermelon_rush.jpg" alt="Beverages" />
+                        <p class="signatureItem">Beverages</p>
+                        <div class="visitMenu">
+                            <a href="menu.html" title="Menu">
+                                <div class="btn toPage">
+                                    <p>View Menu</p>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!--Section 3 : About Lazy Monday-->
+        <section id="about">
+            <div class="container">
+                <img src="../images/home/burgerAbout.jpg" alt="Burger" class="reveal" />
+                <h2>&nbsp;Story Behind The Burgers&nbsp;</h2>
+                <article>
+                    In the heart of downtown Johor Bahru, Lazy Monday restaurant was born from the dreams of three
+                    burger enthusiasts with a passion for global culinary exploration. Inspired by their adventures in
+                    Austin, United States, and Tokyo, they set out to create the ultimate burger experience in their
+                    hometown. Since opening its doors in 2018, Lazy Monday has been committed to using locally sourced,
+                    fresh ingredients to craft mouthwatering burgers. From juicy grass-fed beef patties to artisanal
+                    brioche buns, every element is carefully chosen for maximum flavor. With a relaxed atmosphere and
+                    friendly service, Lazy Monday invites guests to indulge in the simple pleasure of a perfectly made
+                    burger. Whether opting for their signature classic burger or a gourmet creation with unique
+                    toppings, patrons are promised a culinary journey that satisfies and leaves them yearning for more.
+                </article>
+                <div class="visitAbout">
+                    <a href="about.html" title="About Us" onmouseover="hoverSound.play();"
+                        onmousedown="clickSound.play();">
+                        <div class="btn toPage">
+                            <p>Learn More</p>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!--Section 4 : Strength of Lazy Monday-->
+        <section id="description">
+            <div class="container reveal">
+                <h2>Why Choose Us?</h2>
+                <div class="strength">
+                    <div class="finestIngredients">
+                        <img src="../images/about/ingredient/burger_meat.jpg" alt="Fresh Ingredients" id="ingredients">
+                        <div class="strengthDetails">
+                            <p>Finest Ingredients</p>
+                        </div>
+                    </div>
+                    <div class="diverseFlavours">
+                        <img src="../images/about/diverse.jpg" alt="Diverse Flavours" id="flavours">
+                        <div class="strengthDetails">
+                            <p>Diverse Flavours</p>
+                        </div>
+                    </div>
+                    <div class="cozyEnvironment">
+                        <img src="../images/about/environment/environment.jpg" alt="Cozy Environment" id="environment">
+                        <div class="strengthDetails">
+                            <p>Cozy Environment</p>
+                        </div>
+                    </div>
+                </div>
+
+                <p>Feeling Hungry ?</p>
+                <div class="visitMenu">
+                    <a href="menu.html" title="Menu" onmouseover="hoverSound.play();" onmousedown="clickSound.play();">
+                        <div class="btn toPage">
+                            <p>ORDER NOW&nbsp;<img src="../images/icon-logo/icon/shopping-cart.png" alt="Cart" /></p>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!--Section 5 : Join Membership-->
+        <section id="membership">
+            <img src="../images/home/membership_bg1.jpg" alt="Join Member Background" />
+            <img src="../images/home/membership_bg2.jpg" alt="Join Member Background" />
+            <div class="container">
+                <div class="memberCardBox">
+                    <div class="memberCard" onmouseover="hoverSound.play();">
+                        <div class="memberCardImg" id="lm_branch" onmouseover="changeMembIcon(this);"
+                            onmouseleave="revertMembIcon(this);">
+                            <img src="../images/icon-logo/icon/branch.png" alt="Lazy Monday Branch" />
+                        </div>
+                        <p class="memberCardCount" id="branch" data-num="350">0</p>
+                        <p class="memberCardDesc">Branch</p>
+                    </div>
+                    <div class="memberCard" onmouseover="hoverSound.play();">
+                        <div class="memberCardImg" id="lm_award" onmouseover="changeMembIcon(this);"
+                            onmouseleave="revertMembIcon(this);">
+                            <img src="../images/icon-logo/icon/award.png" alt="Lazy Monday Awards" />
+                        </div>
+                        <p class="memberCardCount" id="awards" data-num="50">0</p>
+                        <p class="memberCardDesc">Awards</p>
+                    </div>
+                    <div class="memberCard" onmouseover="hoverSound.play();">
+                        <div class="memberCardImg" id="lm_customer" onmouseover="changeMembIcon(this);"
+                            onmouseleave="revertMembIcon(this);">
+                            <img src="../images/icon-logo/icon/customer.png" alt="Lazy Monday Customers" />
+                        </div>
+                        <p class="memberCardCount" id="customers" data-num="7800">0</p>
+                        <p class="memberCardDesc">Customers</p>
+                    </div>
+                    <div class="memberCard" onmouseover="hoverSound.play();">
+                        <div class="memberCardImg" id="lm_staff" onmouseover="changeMembIcon(this);"
+                            onmouseleave="revertMembIcon(this);">
+                            <img src="../images/icon-logo/icon/staff.png" alt="Lazy Monday Staff" />
+                        </div>
+                        <p class="memberCardCount" id="staff" data-num="4500">0</p>
+                        <p class="memberCardDesc">Staff</p>
+                    </div>
+                </div>
+
+                <div class="memberJoin">
+                    <h3>Join As Member Today</h3>
+                    <div class="memberJoinBtn">
+                        <a href="member.html" title="View Membership Details" onmouseover="hoverSound.play();"
+                            onmousedown="clickSound.play();">
+                            <div class="btn toPage">
+                                <p>VIEW DETAILS</p>
+                            </div>
+                        </a>
+                        <a href="account.html" title="Join As Member Now" onmouseover="hoverSound.play();"
+                            onmousedown="clickSound.play();">
+                            <div class="btn toPage">
+                                <p>JOIN NOW</p>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!--Section 6 : Booking Table-->
+        <section id="booking">
+            <div class="bookingBg"></div>
+            <div class="container">
+                <h2><span>Book</span> A Table</h2>
+                <a href="booking.html" title="Make Reservation" onmouseover="hoverSound.play();"
+                    onmousedown="clickSound.play();">
+                    <div class="btn toPage">
+                        <p>RESERVE NOW</p>
+                    </div>
+                </a>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <hr />
+        <h2>&#10023;&nbsp;Find Us At&nbsp;&#10023;</h2>
+        <div class="socialMedia">
+            <a href="https://web.facebook.com/lazymondaykitchen" title="Lazy Monday Facebook"><img
+                    src="../images/icon-logo/icon/facebook.png" alt="Facebook" /></a>
+            <a href="https://www.tiktok.com/@lazymondayhq" title="Lazy Monday TikTok"><img
+                    src="../images/icon-logo/icon/tiktok.png" alt="TikTok" /></a>
+            <a href="https://www.instagram.com/lazymondayhq/" title="Lazy Monday Instagram"><img
+                    src="../images/icon-logo/icon/instagram.png" alt="Instagram" /></a>
+        </div>
+        <hr />
+
+        <div class="quickLinks">
+            <div class="contact">
+                <h3>Contacts</h3><br />
+                <a href="mailto:lazymonday@gmail.com" title="Lazy Monday Email"><img
+                        src="../images/icon-logo/icon/email.png" alt="Email" />&nbsp;lazymonday@gmail.com</a><br />
+                <a href="tel:+1072335546" title="Lazy Monday Contact Number"><img
+                        src="../images/icon-logo/icon/phone.png" alt="Phone">&nbsp;+07-233-5546</a>
+            </div>
+            <div class="about">
+                <h3>About Us</h3><br />
+                <a href="about.html#story">Our Story</a><br />
+                <a href="contact.html#location">Our Location</a><br />
+                <a href="about.html#customers">Our Customers</a><br />
+                <a href="about.html#ingredient">Our Ingredients</a><br />
+                <a href="about.html#environment">Our Environment</a>
+            </div>
+            <div class="menu">
+                <h3>Menu</h3><br />
+                <a href="menu.html#menu">Specials</a><br />
+                <a href="menu.html#menu">Lobster Rolls</a><br />
+                <a href="menu.html#menu">Burgers</a><br />
+                <a href="menu.html#menu">Pastas</a><br />
+                <a href="menu.html#menu">Sides</a><br />
+                <a href="menu.html#menu">Beverages</a><br />
+                <a href="menu.html#menu">Desserts</a><br />
+            </div>
+            <div class="help">
+                <h3>Get Help</h3><br />
+                <a href="account.html">Login</a><br />
+                <a href="account.html">Sign Up</a><br />
+                <a href="career.html">Career</a><br />
+                <a href="https://example.com">Privacy Policy</a><br />
+                <a href="https://example.com">Terms & Conditions</a><br />
+            </div>
+        </div>
+        <hr />
+        <p>Copyright 2024 &copy; Lazy Monday Malaysia. All Rights Reserved.</p>
+    </footer>
+
+    <script type="text/javascript">
+        function changeMembIcon(membIcon) {
+            if (membIcon.id === 'lm_branch') {
+                document.querySelector('#lm_branch img').src = '../images/icon-logo/icon/branch_hover.png';
+            }
+            else if (membIcon.id === 'lm_award') {
+                document.querySelector('#lm_award img').src = '../images/icon-logo/icon/award_hover.png';
+            }
+            else if (membIcon.id === 'lm_customer') {
+                document.querySelector('#lm_customer img').src = '../images/icon-logo/icon/customer_hover.png';
+            }
+            else if (membIcon.id === 'lm_staff') {
+                document.querySelector('#lm_staff img').src = '../images/icon-logo/icon/staff_hover.png';
+            }
+
+        }
+
+        function revertMembIcon(membIcon) {
+            if (membIcon.id === 'lm_branch') {
+                document.querySelector('#lm_branch img').src = '../images/icon-logo/icon/branch.png';
+            }
+            else if (membIcon.id === 'lm_award') {
+                document.querySelector('#lm_award img').src = '../images/icon-logo/icon/award.png';
+            }
+            else if (membIcon.id === 'lm_customer') {
+                document.querySelector('#lm_customer img').src = '../images/icon-logo/icon/customer.png';
+            }
+            else if (membIcon.id === 'lm_staff') {
+                document.querySelector('#lm_staff img').src = '../images/icon-logo/icon/staff.png';
+            }
+        }
+
+        let membCount = document.querySelectorAll('.memberCardCount');
+        let membBox = document.querySelector('.memberCardBox');
+
+        let test = false; // Flag to track whether the function has started
+
+        window.onscroll = () => {
+            // Check if membBox exists and is not null
+            if (membBox) {
+                // Get the top position of membBox relative to the viewport
+                let boxTop = membBox.getBoundingClientRect().top;
+
+                // Check if membBox is in view (its top position is less than or equal to the viewport height)
+                if (boxTop <= window.innerHeight) {
+                    // If the function hasn't started yet, start it
+                    if (!test) {
+                        membCount.forEach((e) => {
+                            let start = 0;
+                            let end = e.dataset.num;
+
+                            let count = setInterval(() => {
+                                start++;
+                                e.textContent = start;
+                                if (start == end) {
+                                    clearInterval(count);
+                                }
+                            }, 10000 / end);
+                        });
+                        test = true; // Update the flag to indicate that the function has started
+                    }
+                }
+            }
+        };
+    </script>
+</body>
+
+</html>

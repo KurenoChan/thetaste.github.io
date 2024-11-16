@@ -1,0 +1,227 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Garamond, 'Times New Roman', Times, serif;
+}
+
+body {
+    background-image: url("../images/account/account.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    overflow: hidden;
+}
+
+.User {
+    color: #ffffff;
+}
+
+.logout {
+    font-size: 5px;
+}
+
+.account_page {
+    align-items: center;
+    justify-content: center;
+    min-height: 110vh;
+}
+
+.account_menu_button {
+    text-align: center;
+    margin-top: 66px;
+}
+
+.link:hover,
+.active {
+    border-bottom: 2px solid #fff;
+}
+
+.account_menu_button .account_button {
+    background-color: rgb(92, 78, 43);
+    border: 2px solid rgb(211, 179, 99);
+    color: rgb(211, 179, 99);
+    padding: 10px;
+    margin-top: 5vh;
+    min-width: 150px;
+    border-radius: 1vw;
+    font-size: 25px;
+    letter-spacing: 1.5px;
+    cursor: pointer;
+    box-shadow: inset 0px 3px 10px 1px #000000;
+    transition: all 0.2s ease-in-out;
+}
+
+.account_button:hover,
+.account_button.white-btn:hover {
+    background-color: rgb(172, 120, 51);
+    color: #ffffff;
+}
+
+#registerBtn {
+    margin-left: 15px;
+}
+
+.account_button.white-btn {
+    background: rgb(192, 192, 192);
+    color: #000000;
+}
+
+.account_page {
+    align-items: center;
+    justify-content: center;
+}
+
+.form_box {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    height: 420px;
+    border: 1px solid #fff;
+    z-index: 2;
+}
+
+.login-container {
+    position: absolute;
+    margin-top: 50px;
+    left: 500px;
+    width: 500px;
+    display: flex;
+    flex-direction: column;
+    transition: .5s ease-in-out;
+}
+
+.register-container {
+    position: absolute;
+    margin-top: 50px;
+    right: -500px;
+    width: 500px;
+    display: flex;
+    flex-direction: column;
+    transition: .5s ease-in-out;
+
+}
+
+.top span {
+    color: aliceblue;
+    font-size: 1.2vw;
+    padding: 10px 0;
+    display: flex;
+    justify-content: center;
+}
+
+.top span a {
+    font-weight: 500;
+    color: rgb(211, 179, 99);
+    margin-left: 5px;
+}
+
+h1 {
+    color: rgb(211, 179, 99);
+    font-size: 2vw;
+    text-align: center;
+    padding: 10px 0 30px 0;
+    text-transform: uppercase;
+    letter-spacing: 0.5vw;
+}
+
+.two-forms {
+    display: flex;
+    gap: 10px;
+}
+
+.input-field {
+    font-size: 15px;
+    background: rgba(255, 255, 255, 0.2);
+    color: #fff;
+    height: 50px;
+    width: 100%;
+    padding: 0 10px 0 45px;
+    border: none;
+    border-radius: 1vw;
+    outline: none;
+    transition: .2s ease;
+}
+
+.input-field:hover,
+.input-field:focus {
+    background: rgba(255, 255, 255, 0.25);
+}
+
+::-webkit-input-placeholder {
+    color: #fff;
+}
+
+.input-box i {
+    margin-bottom: 10px;
+    position: relative;
+    top: -35px;
+    left: 17px;
+    color: #fff;
+}
+
+.input-box {
+    margin-top: 10px;
+}
+
+.submit {
+    font-size: 1.5vw;
+    letter-spacing: 0.2vw;
+    font-weight: 500;
+    border: 2px solid rgb(211, 179, 99);
+    color: rgb(255, 183, 0);
+    height: 45px;
+    width: 100%;
+    border: none;
+    border-radius: 1vw;
+    outline: none;
+    background-color: rgb(134, 112, 62);
+    cursor: pointer;
+    transition: .3s ease-in-out;
+}
+
+.submit:hover {
+    background-color: rgb(165, 140, 78);
+    color: #ffffff;
+}
+
+.two-col {
+    display: flex;
+    justify-content: space-between;
+    color: #fff;
+    font-size: small;
+    margin-top: 10px;
+}
+
+.two-col .one {
+    display: flex;
+    gap: 5px;
+}
+
+.two label a {
+    text-decoration: none;
+    color: #fff;
+}
+
+.two label a:hover {
+    text-decoration: underline;
+}
+
+p {
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    background-color: #000000;
+    width: 50px;
+    height: 20px;
+}
+
+.output {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    color: red;
+    display: none;
+    z-index: 1000;
+}
