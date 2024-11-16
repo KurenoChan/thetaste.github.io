@@ -1,0 +1,324 @@
+::-webkit-scrollbar{
+    width: 15px;
+}
+::-webkit-scrollbar-track{
+    box-shadow: 0 0 5px inset rgb(255, 255, 255);
+}
+::-webkit-scrollbar-thumb{
+    background:rgb(255, 230, 131);
+    transition: 0.2s;
+}
+::-webkit-scrollbar-thumb:hover {
+    background: #ffffff;
+    transition: 0.2s;
+}
+
+/*Preloader Scene*/
+/**Preloader Whole Screen**/
+.preloader{
+    position: fixed;
+    z-index: 99999;
+    background: #000000;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    animation: loader 4s ease-in forwards;
+}
+
+/**Preloader Text**/
+.load-text{     
+    color: rgb(255, 230, 131);
+    text-shadow: 5px 5px 15px goldenrod;
+    font-size: 30px;
+    letter-spacing: 10px;
+    font-style: italic;
+}
+
+/**Preloader Content Container**/
+.loading{
+    display: flex;
+    width: 100%;
+    height: auto;
+    justify-content: center;
+    align-items: center;
+}
+
+/**--Preloader Loading Box--**/
+.loading .load-box{
+    padding: 2px;
+    width: 40%;
+    height: 10px;
+    border: 2px solid rgb(255, 230, 131);
+}
+
+/**--Preloader Loading Line--**/
+.loading .load-box .load-line{
+    height: 10px;
+    box-shadow: 0 0 40px 8px rgb(255, 230, 131);
+    background: rgb(255, 219, 75);
+    animation: loading 1s ease-in-out forwards;
+}
+
+.load-box, .load-line, .load-text{
+    animation: load-content 3s ease-in forwards;
+}
+
+/***Animation on Loading Line***/
+@keyframes loading{
+    0%{width: 0%;}
+    100%{width: 100%;}
+}
+
+/***Animation on Whole Screen***/
+@keyframes loader{
+    0%{opacity: 100%;}
+    70%{opacity: 100%;}
+    100%{opacity: 0%; z-index: -99;}
+}
+
+/***Animation on Loading Text, Loading Box, Loading Line***/
+@keyframes load-content{
+    0%{opacity: 100%;}
+    20%{opacity: 100%;}
+    100%{opacity: 0%;}
+}
+
+
+*{
+    font-family: Garamond, 'Times New Roman', Times, serif;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+body{
+    margin: 0;
+    background-color: black;
+    color: white;
+}
+
+/*Top Navigation Bar & Logo*/
+header{
+    background-color: rgb(0, 0, 0);
+}
+
+header img{
+    display: flex;
+    height: 100px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+nav{
+    padding-top: 0.5%;
+    line-height: 150%;
+    width: 100%;
+    background-color: rgb(0, 0, 0);
+    z-index: 200;
+    top: 0;
+    position: sticky;
+}
+
+nav ul{
+    list-style-type: none;
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 0;
+}
+
+nav li a{
+    color: rgb(255, 230, 131);
+    text-decoration: none;
+    letter-spacing: 3px;
+    padding: 10px;
+    font-size: 17px;
+}
+
+nav li{
+    transform: translateY(30px);
+    height: fit-content;
+}
+
+.navText:link{
+    color: rgb(255, 230, 131);
+}
+.navText:visited{
+    color: #ffffff;
+}
+.navText:hover{
+    border-bottom: 5px double rgb(255, 230, 131);
+    border-top: 5px double rgb(255, 230, 131);
+    border-radius: 7px;
+    transition: 0.2s;
+}
+.navText:active{
+    background: rgb(255, 230, 131);
+    transition: 0.2s;
+    color: black;
+}
+.dropdown-content{
+    display: none;
+    position: absolute;
+    width: 100%;
+    background-color: #000000;
+    text-align: center;
+}
+.dropdown-content a{
+    display: block;
+}
+.dropdown-content a:hover{
+    background: rgb(255, 230, 131);
+    color: black;
+    transition: 0.2s;
+}
+.dropdown-content a:active{
+    color: black;
+    background: #ffffff;
+    transition: 0.2s;
+}
+
+nav #menu:hover .dropdown-content{
+    display: block;
+    transition: 0.2s;
+}
+nav #booking:hover .dropdown-content{
+    display: block;
+    transition: 0.2s;
+}
+nav #about:hover .dropdown-content{
+    display: block;
+    transition: 0.2s;
+}
+nav #contact:hover .dropdown-content{
+    display: block;
+    transition: 0.2s;
+}
+nav #account:hover .dropdown-content{
+    display: block;
+    transition: 0.2s;
+}
+
+/*Main Area*/
+main{
+    text-align: center;
+}
+
+/*Footer Area*/
+footer{
+    margin-top: 25px;
+    padding: 0px 0 10px 0;
+    text-align: center;
+}
+
+footer *{
+    font-family: Garamond, serif;
+    font-weight: lighter;
+    font-size: large;
+    letter-spacing: 1px;
+    margin-bottom: 10px;
+}
+
+footer a{
+    color: rgb(255, 230, 131);
+    text-decoration: none;
+    font-weight: bold;
+}
+
+footer a:hover{
+    color: goldenrod;
+    transition: 0.2s;
+}
+
+footer a:active{
+    color: #ffffff;
+    transition: 0.2s;
+}
+
+/**Follow Us**/
+#follow{
+    padding-bottom: 1%;
+    border-bottom: 2px solid rgba(255, 230, 131, 0.245);
+}
+#follow h3{
+    font-size: 30px;
+    margin-bottom: 1%;
+}
+#follow i{
+    font-size: 40px;
+    color:rgb(255, 230, 131);
+    margin-left: 5px;
+    margin-right: 5px;
+    transition: 0.3s;
+}
+
+#follow i:hover{
+    font-size: 47px;
+    color: goldenrod;
+    transition: 0.3s;
+}
+
+/***Facebook Page Icon**/
+#follow #facebook:active{
+    color: rgb(66, 103, 178);
+    font-size: 47px;
+    transition: 0.3s;
+}
+
+/***Twitter Page Icon**/
+#follow #twitter:active{
+    background: linear-gradient(rgb(0, 172, 238), rgb(72, 203, 255), rgb(181, 234, 255));
+    color: #ffffff;
+    border-radius: 15px;
+    font-size: 40px;
+    padding: 5px;
+    transition: 0.3s;
+}
+
+/***Instagram Page Icon**/
+#follow #instagram:active{
+    background: linear-gradient(#285AEB, #d6249f, #fd5949, #fdf497);
+    border-radius: 15px;
+    color: #ffffff;
+    font-size: 40px;
+    padding: 5px;
+    transition: 0.3s;
+}
+
+/***Linkedin Page Icon**/
+#follow #linkedin:active{
+    color:rgb(0, 119, 181);
+    font-size: 47px;
+    transition: 0.3s;
+}
+
+/**Enquiry: Contact, About, Food, Help**/
+.enquiry{
+    display: flex;
+    justify-content: space-evenly;
+    border-bottom: 2px solid rgba(255, 230, 131, 0.245);
+}
+
+.enquiry h3{
+    text-align: center;
+    font-size: 30px;
+    font-weight: bold;
+}
+
+.enquiry ul{
+    list-style-type: none;
+    transform: translateX(-17px);
+}
+
+.enquiry #contact{
+    text-align: left;
+}
+
+#copyright{
+    text-align: center;
+    margin-bottom: 10px;
+}
